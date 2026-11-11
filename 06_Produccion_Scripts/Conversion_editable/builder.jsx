@@ -35,9 +35,12 @@ function Y(y) { return -y * S; }
 function makeDoc() {
   var W = 0, H = 0, i;
   doc = app.documents.add(DocumentColorSpace.RGB, DOC.pages[0].w * S, DOC.pages[0].h * S);
-  var x = 0;
+  var tot = 0;
+  for (i = 0; i < DOC.pages.length; i++) tot += DOC.pages[i].w * S + GAP;
+  // fila muy ancha: centrarla en el lienzo (limite ~ +-8191 pt desde el centro)
+  var x = tot > 7000 ? -Math.round(tot / 2) : 0;
   for (i = 0; i < DOC.pages.length; i++) { ABX.push(x); x += DOC.pages[i].w * S + GAP; }
-  doc.artboards[0].artboardRect = [0, 0, DOC.pages[0].w * S, -DOC.pages[0].h * S];
+  doc.artboards[0].artboardRect = [ABX[0], 0, ABX[0] + DOC.pages[0].w * S, -DOC.pages[0].h * S];
   doc.artboards[0].name = DOC.pages[0].name;
   for (i = 1; i < DOC.pages.length; i++) {
     var ab = doc.artboards.add([ABX[i], 0, ABX[i] + DOC.pages[i].w * S, -DOC.pages[i].h * S]); ab.name = DOC.pages[i].name;

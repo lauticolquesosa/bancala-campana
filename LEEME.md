@@ -5,11 +5,11 @@ Campaña de UCASAL Sustentable para cuidar los bancos de los espacios comunes de
 | Carpeta | Contenido |
 |---|---|
 | `01_Presentacion` | PDF final de presentación del proyecto (28 láminas, 16:9) y `Bancala_Presentacion_Editable.pptx` (todo nativo: cajas de texto, formas e imágenes sueltas). |
-| `02_Piezas` | Todas las piezas exportadas por separado: redes (posteos 4:5, 3 carruseles, 7 historias 9:16, destacadas), impresos (infografía A3, 5 afiches A3, stickers A4) y arquigrafía de la Estación Bancala (plano, artes finales y mockups). **Cada carpeta tiene su `.ai` editable** con una mesa de trabajo por pieza o lámina. |
+| `02_Piezas` | Todas las piezas exportadas por separado: redes (posteos 4:5, 3 carruseles, 7 historias 9:16, destacadas), impresos (infografía A3, 5 afiches A3, stickers A4) y arquigrafía de la Estación Bancala (plano, artes finales y mockups) y el **Stand Bancala** (`04_Stand_Bancala`: mockup, backwall 300 × 220 cm, mostrador, roll-up, figura 3D de Quito, folleto A5, afiche A3, display de mesa con QR y planta). **Cada carpeta tiene su `.ai` editable** con una mesa de trabajo por pieza o lámina. |
 | `03_Concepto_y_Fundamentacion` | PDF de síntesis estratégica (A4, 9 páginas). |
 | `04_Recursos` | Logos (Bancala, UCASAL, UCASAL Sustentable), 12 poses de Quito en PNG transparente + stickers, tipografías, tramas limpias y fotos del campus (originales y editadas con el look Bancala). |
 | `05_Material_Original` | Presentación anterior, infografía y pieza anteriores, contexto escrito y referencias tipográficas. |
-| `06_Produccion_Scripts` | Scripts que generan el look fotográfico (`look.py`), la integración de Quito en las fotos (`comp.py`, `scenes.py`) y todas las piezas (HTML → PNG/PDF). En `Conversion_editable/` está el conversor HTML → Illustrator (`.ai`) y HTML → PowerPoint (`.pptx`). |
+| `06_Produccion_Scripts` | Scripts que generan el look fotográfico (`look.py`), la integración de Quito en las fotos (`comp.py`, `scenes.py`) y todas las piezas (HTML → PNG/PDF). El stand se genera con `figura3d.py` (Quito 3D), `p_stand.py` (piezas) y `mockup_stand.py` (render del mockup). En `Conversion_editable/` está el conversor HTML → Illustrator (`.ai`) y HTML → PowerPoint (`.pptx`). |
 
 ## Archivos editables
 
@@ -21,6 +21,7 @@ Campaña de UCASAL Sustentable para cuidar los bancos de los espacios comunes de
 - Los colores de marca están cargados como **muestras globales** (grupo "Bancala"). Si cambiás una muestra, se actualiza en toda la pieza.
 - La plancha de stickers y el corpóreo traen una capa **Troquel** (línea de corte magenta, no imprimible).
 - La arquigrafía suma una mesa de trabajo con el mockup fotográfico como referencia.
+- El stand (`Stand_Bancala.ai`) tiene el gran formato (backwall, mostrador, roll-up, planta) dibujado a escala 1:10 y los impresos (folleto, afiche, display) a tamaño real.
 - Afiches e infografía están a tamaño A3 real y los stickers a A4. Las piezas de redes miden 1 pt = 1 px (1080 × 1350, 1080 × 1920, etc.).
 - Antes de abrirlos, instalá las fuentes de `04_Recursos/Tipografias`: `TitanOne-Regular_Display.ttf` y las instancias de `Instancias_estaticas_para_Illustrator/`.
 

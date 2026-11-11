@@ -1,0 +1,44 @@
+@font-face{font-family:Titan;src:url(../fonts/TitanOne-Regular.ttf)}
+@font-face{font-family:Brico;src:url(../fonts/Bricolage.ttf);font-weight:200 800;font-stretch:75% 100%}
+:root{--navy:#1b4d8b;--blue:#2d7cde;--green:#539f73;--mint:#7ae2a6;--white:#fff;--char:#2a2829;
+--ink:#3a1d0c;--wood:#e8892f;--cream:#fbf1df;--paper:#f5f1e8}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;height:100%}
+body{font-family:Brico,sans-serif;color:var(--char);-webkit-font-smoothing:antialiased;font-optical-sizing:auto}
+.pc{position:relative;overflow:hidden}
+.abs{position:absolute}
+.fill{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+/* display: tipo Quito */
+.dsp{font-family:Titan;font-weight:400;line-height:.9;letter-spacing:.005em;color:var(--white);
+ -webkit-text-stroke:.085em var(--ink);paint-order:stroke fill;text-shadow:.055em .07em 0 var(--ink)}
+.dsp.thin{-webkit-text-stroke:.07em var(--ink)}
+.dsp .l{display:inline-block}
+.kick{font-family:Brico;font-weight:800;font-stretch:80%;text-transform:uppercase;letter-spacing:.06em}
+.body{font-family:Brico;font-weight:450;line-height:1.3}
+.b7{font-weight:700}
+.bubble{position:absolute;background:#fff;border:.18em solid var(--ink);border-radius:1.1em;padding:.55em .8em;
+ font-family:Brico;font-weight:700;line-height:1.12;color:var(--ink);box-shadow:.12em .16em 0 var(--ink)}
+.bubble:after{content:"";position:absolute;width:1.1em;height:1.1em;background:#fff;border-right:.18em solid var(--ink);border-bottom:.18em solid var(--ink);
+ transform:rotate(45deg) skew(12deg,12deg)}
+.bubble.tl:after{left:1.2em;bottom:-.66em}.bubble.tr:after{right:1.2em;bottom:-.66em}
+.bubble.tb:after{left:50%;bottom:-.66em;margin-left:-.55em}
+.logos{display:flex;align-items:center;gap:0}
+.logos img{display:block}
+.logos .sep{width:2px;align-self:stretch;margin:0 .9em;background:currentColor;opacity:.55}
+.scrimT{position:absolute;left:0;right:0;top:0;background:linear-gradient(180deg,rgba(14,22,36,.62),rgba(14,22,36,.28) 55%,rgba(14,22,36,0))}
+.scrimB{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(0deg,rgba(14,22,36,.72),rgba(14,22,36,.35) 55%,rgba(14,22,36,0))}
+.trama-b{background-image:url(../brand/trama_blanca.png);background-size:900px auto}
+.trama-n{background-image:url(../brand/trama_negra.png);background-size:900px auto}
+.tag{display:inline-block;font-family:Brico;font-weight:800;font-stretch:85%;text-transform:uppercase;letter-spacing:.05em;
+ padding:.35em .7em .3em;border-radius:.4em;background:var(--ink);color:#fff}
+.swipe{font-family:Brico;font-weight:700;letter-spacing:.02em}
+.paper{background:var(--paper)}
+/* v2 */
+.bub{position:absolute;background:#fff;border:.17em solid var(--ink);border-radius:1em;padding:.5em .75em .55em;
+ font-family:Brico;font-weight:700;line-height:1.14;color:var(--ink);box-shadow:.1em .14em 0 var(--ink);text-wrap:balance}
+.bub .tail{position:absolute;bottom:-.6em;width:1em;height:1em;background:#fff;border-right:.17em solid var(--ink);border-bottom:.17em solid var(--ink);transform:rotate(45deg)}
+.hl{font-family:Titan;line-height:.96;color:#fff;-webkit-text-stroke:.07em var(--ink);paint-order:stroke fill;text-shadow:.05em .065em 0 var(--ink)}
+.hl em{font-style:normal;color:var(--mint)}
+.fade{-webkit-mask-image:linear-gradient(180deg,transparent 0,transparent 9%,rgba(0,0,0,.55) 17%,#000 27%);mask-image:linear-gradient(180deg,transparent 0,transparent 9%,rgba(0,0,0,.55) 17%,#000 27%)}
+.lede{text-shadow:0 1px 10px rgba(17,40,72,.55)}
+.lede{font-family:Brico;font-weight:500;line-height:1.32;color:#fff}

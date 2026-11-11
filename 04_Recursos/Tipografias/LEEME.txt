@@ -1,0 +1,2 @@
+Titan One (display, licencia OFL) y Bricolage Grotesque (texto, licencia OFL), ambas de Google Fonts.
+Tratamiento del display: contorno #3a1d0c al 8,5 % del cuerpo + sombra desplazada (5,5 % / 7 %) + leve rotación alternada por letra.

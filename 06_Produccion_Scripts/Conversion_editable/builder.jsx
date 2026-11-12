@@ -9,6 +9,8 @@ function font(f, w, st) {
   var n;
   if (f == 'Titan') n = 'TitanOne';
   else if (f == 'Sym') n = 'SegoeUISymbol';
+  else if (f == 'Hand') n = 'PatrickHandSC-Regular';
+  else if (f == 'Mono') n = 'SpaceMono-Bold';
   else {
     var ws = 'ExtraBold';
     if (w <= 750) ws = 'Bold';

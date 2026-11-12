@@ -86,38 +86,42 @@ def build_scene():
     bw = tex(ART + '/backwall.png', 3000)
     box(-1.5, 0.02, -0.08, 1.5, 2.22, 0.0, lin('#d9d9d9'), front=bw, name='backwall')
     for sx in (-1.47, 1.47): box(sx - 0.02, 0, -0.35, sx + 0.02, 0.03, 0.05, lin('#bfc3c7'), spec=0.3, name='pie')
-    # banco real del campus (asiento de tablas + estructura roja)
-    wood = lin('#b9773a'); red = lin('#c8202a')
+    # banco real del campus (asiento de tablas + estructura roja), a la izquierda de la estatua
+    wood = lin('#b9773a'); red = lin('#c8202a'); BX0, BX1 = -1.30, 0.12
     for i in range(4):
         z0 = 0.44 + i * 0.112
-        box(-0.95, 0.43, z0, 0.95, 0.46, z0 + 0.095, wood * (0.95 + 0.06 * (i % 2)), spec=0.05, name='tabla')
-    for sx in (-0.82, 0.82):
+        box(BX0, 0.43, z0, BX1, 0.46, z0 + 0.095, wood * (0.95 + 0.06 * (i % 2)), spec=0.05, name='tabla')
+    for sx in (BX0 + 0.13, BX1 - 0.13):
         box(sx - 0.03, 0.0, 0.44, sx + 0.03, 0.43, 0.50, red, spec=0.25, name='pata')
         box(sx - 0.03, 0.0, 0.81, sx + 0.03, 0.43, 0.87, red, spec=0.25, name='pata')
         box(sx - 0.03, 0.38, 0.44, sx + 0.03, 0.43, 0.87, red, spec=0.25, name='travesano')
+    # Quito en tamano real: estatua de piso apoyada contra el backwall (foto recortada como billboard).
+    # 110 cm de ancho, base O 90 cm; el borde delantero de la base toca el piso en z = SZ + 0.45
+    qr_ = tex(ART + '/quito_real_recorte.png', 1400)
+    qw = 1.10; qh = qw * qr_.shape[0] / qr_.shape[1]
+    zf = STATUE[2] + 0.45
+    d = CAM - np.array([STATUE[0], 0, zf]); d[1] = 0; d /= np.linalg.norm(d)
+    ux = np.array([d[2], 0, -d[0]])                       # horizontal, perpendicular a la camara
+    quad(np.array([STATUE[0], 0.0, zf]) - ux * qw / 2, ux * qw, [0, qh, 0], tx=qr_, alpha=True, shadow=True, spec=0.0, name='estatua')
     # vinilo de piso
     quad([-0.7, 0.002, 2.48], [1.4, 0, 0], [0, 0, -1.4], tx=piso_tex(), spec=0.02, alpha=True, shadow=False, name='vinilo')
     # 2 mostrador 1.2 x 1.0 x 0.5 con frente impreso, tapa blanca laqueada
     mo = tex(ART + '/mostrador.png', 1600)
     box(-1.95, 0.0, 1.20, -0.75, 1.0, 1.70, lin('#f2efe8'), front=mo, top=lin('#f6f4ef'), spec=0.10, name='mostrador')
     box(-1.97, 1.0, 1.18, -0.73, 1.03, 1.72, lin('#f8f6f1'), spec=0.18, name='tapa')
-    # figura 3D (billboard con base y sombra horneadas)
-    fg = tex(ART + '/figura_recorte.png', 1400)
-    fh = 0.62; fw = fh * fg.shape[1] / fg.shape[0]
-    quad([-1.20 - fw / 2, 1.03 - 0.075 * fh, 1.47], [fw, 0, 0], [0, fh, 0], tx=fg, alpha=True, shadow=True, spec=0.0, name='figura')
     # display A5 en atril acrilico (inclinado)
     dp = tex(ART + '/display.png', 1000)
     t = np.radians(14)
-    quad([-1.86, 1.035, 1.55], [0.148, 0, 0], [0, 0.21 * np.cos(t), -0.21 * np.sin(t)], tx=dp, spec=0.25, name='display')
+    quad([-1.50, 1.035, 1.50], [0.148, 0, 0], [0, 0.21 * np.cos(t), -0.21 * np.sin(t)], tx=dp, spec=0.25, name='display')
     # pila de folletos
     fo = tex(ART + '/folleto_exterior.png', 1200)[:, 1485 * 1200 // 2970:]
     box(-0.98, 1.03, 1.42, -0.83, 1.05, 1.63, lin('#f4f1ea'), name='folletos')
     quad([-0.98, 1.0501, 1.63], [0.148, 0, 0], [0, 0, -0.21], tx=fo, spec=0.05, name='folleto tapa')
     # 3 roll-up 0.85 x 2.0, girado hacia el publico
     ru = tex(ART + '/rollup.png', 1200)
-    box(1.10, 0.0, 0.95, 1.95, 0.09, 1.17, lin('#c4c8cc'), spec=0.4, name='base rollup', ry=-18, piv=(1.52, 1.06))
-    c, s = np.cos(np.radians(-18)), np.sin(np.radians(-18))
-    quad([1.52 - 0.425 * c, 0.09, 1.06 + 0.425 * s], [0.85 * c, 0, -0.85 * s], [0, 2.0, 0], tx=ru, spec=0.03, name='rollup')
+    box(RU[0] - 0.425, 0.0, RU[1] - 0.11, RU[0] + 0.425, 0.09, RU[1] + 0.11, lin('#c4c8cc'), spec=0.4, name='base rollup', ry=RU[2], piv=(RU[0], RU[1]))
+    c, s = np.cos(np.radians(RU[2])), np.sin(np.radians(RU[2]))
+    quad([RU[0] - 0.425 * c, 0.09, RU[1] + 0.425 * s], [0.85 * c, 0, -0.85 * s], [0, 2.0, 0], tx=ru, spec=0.03, name='rollup')
 
 
 def intersect(O, D, q, need_alpha=True):
@@ -177,10 +181,18 @@ def albedo(I, A, Bb):
             col[m] = s[:, :3] * s[:, 3:4] + base * (1 - s[:, 3:4]) if q['alpha'] and q['name'] == 'vinilo' else s[:, :3]
         else:
             col[m] = q['col']
+        if q['name'] == 'piso':
+            P = q['p'] + A[m, None] * q['u'] + Bb[m, None] * q['v']
+            r = np.hypot(P[:, 0] - STATUE[0], (P[:, 2] - STATUE[2]) * 1.0)
+            col[m] *= (1 - 0.55 * np.exp(-np.clip(r - 0.40, 0, None) / 0.07) * (r > 0.30)
+                       - 0.18 * np.exp(-np.clip(r - 0.40, 0, None) / 0.30))[:, None]
         spec[m] = q['spec']; nrm[m] = q['n']
     return col, spec, nrm
 
 
+CAM = np.array([0.40, 1.52, 6.0]); LOOK = np.array([0.02, 1.0, 0.60]); FOV = 37
+STATUE = (0.78, 0, 0.42)        # centro de la base de la estatua
+RU = (1.90, 1.20, -24)         # roll-up: centro x, z, giro
 LIGHT = np.array([-2.8, 4.2, 4.8]); LRAD = 0.9
 FILL = np.array([0.35, 0.37, 0.40])
 
@@ -225,7 +237,7 @@ def shade(O, D, T, I, A, Bb, ks=10, ka=6, bounce=False):
 
 def render(W, Hh, out):
     build_scene()
-    cam = np.array([0.95, 1.50, 5.7]); look = np.array([-0.15, 1.05, 0.60]); fov = 34
+    cam, look, fov = CAM, LOOK, FOV
     f = look - cam; f /= np.linalg.norm(f); r = np.cross(f, [0, 1, 0]); r /= np.linalg.norm(r); u = np.cross(r, f)
     th = np.tan(np.radians(fov / 2)); tw = th * W / Hh
     img = np.zeros((Hh, W, 3), np.float32)

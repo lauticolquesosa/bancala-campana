@@ -67,9 +67,10 @@ def backwall():
 {H('Mucho más<br><em>que un banco.</em>', 140, 360, 250, k=.5)}
 {T('Sentate un rato con Quito, sacate una foto<br>y contanos tu historia en un banco.', 150, 1010, 1500, 66, wt=600, extra='text-shadow:0 2px 20px rgba(17,40,72,.5)')}
 {tag('#TeBancoEnTodas', 150, 1290, 64, 'var(--mint)', 'var(--ink)')}
-<div class="abs" style="left:1900px;top:1890px;width:1100px;height:100px;border-radius:50%;background:radial-gradient(closest-side,rgba(20,30,20,.35),rgba(20,30,20,0))"></div>
-<img class="abs" src="{Q}q_sentado_feliz.png" style="left:1820px;top:560px;height:1380px">
-{bub('¡Sacate una foto conmigo!', 2120, 180, 720, 62, .35)}
+<div class="abs" style="left:1770px;top:760px;width:1120px;height:1120px;border-radius:50%;background:radial-gradient(circle,#8fe8b5 0,var(--mint) 62%,#5fcf92 100%);
+  box-shadow:0 0 0 34px rgba(122,226,166,.30),0 0 0 80px rgba(122,226,166,.13)"></div>
+<div class="abs trama-n" style="left:1770px;top:760px;width:1120px;height:1120px;border-radius:50%;opacity:.10;background-size:1500px auto"></div>
+{bub('¡Sacate una foto conmigo!', 1960, 250, 720, 62, .42)}
 <div class="abs" style="left:150px;top:1965px;font:800 64px Brico;color:#fff;letter-spacing:.01em">Seguinos en {IG}</div>
 <div class="abs" style="right:150px;top:1950px"><div class="hl" style="font-size:96px;color:#fff">Bancala.</div></div>'''
     render('stand_backwall', body, W, Hh, f'{ART}/backwall.png')
@@ -130,8 +131,8 @@ def folleto():
 <div class="abs trama-b" style="left:{P}px;top:0;width:{P}px;height:{Hh}px;opacity:.10;background-size:1300px auto"></div>
 <div class="abs" style="left:{P + m}px;top:150px">{logos(52)}</div>
 {H('Mucho más<br><em>que un banco.</em>', P + m - 6, 300, 158, k=.5)}
-<img class="abs" src="{A}figura_recorte.png" style="left:{P + 330}px;top:860px;width:1000px">
-{bub('¡Hola! Soy Quito, el banquito de la facu.', P + m, 760, 520, 46, .7)}'''
+<img class="abs" src="{A}quito_real_recorte.png" style="left:{P + 470}px;top:890px;height:1170px">
+{bub('¡Hola! Soy Quito, el banquito de la facu.', P + m, 690, 500, 46, .75)}'''
     render('stand_folleto_ext', ext, W, Hh, f'{ART}/folleto_exterior.png')
     rh = ''.join(f'<div style="display:flex;gap:44px;align-items:flex-start;margin-bottom:60px"><div class="hl" style="font-size:118px;color:var(--mint);width:96px;flex:none">{i + 1}</div>'
                  f'<div><div style="font:800 64px/1.05 Brico;color:#fff">{a}</div><div style="font:500 44px/1.3 Brico;color:#fff;opacity:.85;margin-top:12px">{b}</div></div></div>' for i, (a, b) in enumerate(RULES))
@@ -161,7 +162,8 @@ def afiche():
 <div class="abs" style="left:200px;top:190px">{logos(90, 'color')}</div>
 {H('Quito te espera<br><em style="color:var(--blue)">en persona.</em>', 190, 420, 300, k=.5)}
 {T('Vení al stand de Bancala: sacate una foto con él, contanos tu historia en un banco y llevate tu sticker.', 200, 1180, 2400, 86, 'var(--ink)', 600, 1.25)}
-<img class="abs" src="{A}figura_recorte.png" style="left:385px;top:1560px;width:2200px">
+<div class="abs" style="left:560px;top:3420px;width:1850px;height:200px;border-radius:50%;background:radial-gradient(closest-side,rgba(20,50,40,.35),rgba(20,50,40,0))"></div>
+<img class="abs" src="{A}quito_real_recorte.png" style="left:690px;top:1530px;height:2060px">
 <div class="abs" style="left:0;right:0;bottom:0;height:640px;background:var(--navy)"></div>
 <div class="abs trama-b" style="left:0;right:0;bottom:0;height:640px;opacity:.10;background-size:2200px auto"></div>
 <div class="abs" style="left:200px;top:3650px;font:800 110px/1 Brico;color:#fff">Hall de la Facultad</div>
@@ -184,24 +186,51 @@ def display():
     render('stand_display', body, W, Hh, f'{ART}/display.png')
 
 
-# 7 · FICHA FIGURA 3D (A3 apaisado)
+# 7 · FICHA QUITO 3D EN TAMANO REAL (A3 apaisado)
+PERSONA = """<svg viewBox="-270 0 540 1700" style="width:100%;height:100%;display:block" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor">
+<circle cx="0" cy="112" r="102"/><rect x="-38" y="200" width="76" height="70" rx="20"/>
+<path d="M-205 300 Q-205 245 -150 245 L150 245 Q205 245 205 300 L180 900 Q178 935 145 935 L-145 935 Q-178 935 -180 900 Z"/>
+<rect x="-262" y="262" width="82" height="660" rx="41" transform="rotate(4 -221 262)"/><rect x="180" y="262" width="82" height="660" rx="41" transform="rotate(-4 221 262)"/>
+<rect x="-150" y="880" width="138" height="820" rx="60"/><rect x="12" y="880" width="138" height="820" rx="60"/></g></svg>"""
+
+
 def ficha_figura():
     W, Hh = 4200, 2970
-    specs = [('Alto total', '55 cm (figura 45 cm + base 10 cm)'), ('Figura', 'Impresión 3D en resina (SLA), lijada, pintada a mano y barniz satinado.'),
-             ('Base', 'Disco de MDF laqueado Ø 40 cm, azul Bancala #1B4D8B, logo en vinilo de corte blanco.'),
-             ('Ubicación', 'Sobre el mostrador, a 1 m de altura: queda a la altura de la cámara del celular.'),
-             ('Fijación', 'Perno roscado oculto en la base; anti-vuelco en el mostrador.')]
-    sh = ''.join(f'<div style="display:flex;gap:40px;border-top:5px solid var(--ink);padding:34px 0 30px"><div style="width:380px;flex:none;font:800 50px Brico;color:var(--blue)">{a}</div>'
-                 f'<div style="font:500 50px/1.25 Brico;color:var(--ink)">{b}</div></div>' for a, b in specs)
-    sw = ''.join(f'<div style="display:flex;align-items:center;gap:22px;margin-right:50px"><div style="width:90px;height:90px;border-radius:50%;background:{c};border:6px solid var(--ink)"></div><div style="font:700 38px/1.15 Brico;color:var(--ink)">{n}<br><span style="font-weight:500;opacity:.7">{h}</span></div></div>'
-                 for c, n, h in [('#e8892f', 'Madera', '#E8892F'), ('#3a1d0c', 'Tinta', '#3A1D0C'), ('#fbf1df', 'Guantes', '#FBF1DF'), ('#1b4d8b', 'Base', '#1B4D8B')])
+    specs = [('Medidas', 'Alto 130 cm · ancho 110 cm · base Ø 90 × 8 cm. Tamaño real: más grande que el banco de al lado.'),
+             ('Escultura', 'Núcleo de EPS de alta densidad fresado por CNC, laminado en fibra de vidrio y resina, masillado y lijado.'),
+             ('Terminación', 'Pintura poliuretánica a mano, textura mate y barniz satinado anti-UV. Mate, termo, buzo y mochila esculpidos en la misma pieza: nada suelto.'),
+             ('Base', 'Disco de MDF 25 mm sobre chapa de acero, laqueado negro, con lastre (≈ 45 kg en total) y regatones antideslizantes.'),
+             ('Ubicación', 'En el piso, apoyada contra el backwall, al lado del banco real y bajo el globo “¡Sacate una foto conmigo!”.'),
+             ('Fijación', 'Dos escuadras ocultas al bastidor del backwall (anti-vuelco). Viaja en dos partes: estatua y base.')]
+    sh = ''.join(f'<div style="display:flex;gap:36px;border-top:5px solid var(--ink);padding:22px 0 20px"><div style="width:320px;flex:none;font:800 44px Brico;color:var(--blue)">{a}</div>'
+                 f'<div style="font:500 39px/1.25 Brico;color:var(--ink)">{b}</div></div>' for a, b in specs)
+    sw = ''.join(f'<div style="display:flex;align-items:center;gap:20px;margin-right:40px"><div style="width:76px;height:76px;border-radius:50%;background:{c};border:6px solid var(--ink)"></div><div style="font:700 32px/1.15 Brico;color:var(--ink)">{n}<br><span style="font-weight:500;opacity:.7">{h}</span></div></div>'
+                 for c, n, h in [('#D17D2E', 'Madera', '#D17D2E'), ('#7D3F16', 'Brazos', '#7D3F16'), ('#EFE0C8', 'Guantes', '#EFE0C8'), ('#2E2A29', 'Base', '#2E2A29')])
+    k, fl = 1364, 2560          # escala 1 m = 1364 px, piso en y = 2560
+
+    def vdim(x, y0, y1, txt):
+        return (f'<div class="abs" style="left:{x}px;top:{y0}px;width:0;height:{y1 - y0}px;border-left:5px solid var(--ink)"></div>'
+                f'<div class="abs" style="left:{x - 24}px;top:{y0 - 2}px;width:48px;height:5px;background:var(--ink)"></div>'
+                f'<div class="abs" style="left:{x - 24}px;top:{y1 - 3}px;width:48px;height:5px;background:var(--ink)"></div>'
+                f'<div class="abs" style="left:{x + 26}px;top:{(y0 + y1) / 2 - 30:.0f}px;font:800 54px Brico;color:var(--ink);white-space:nowrap">{txt}</div>')
+    qh = 1.10 * k * 1281 / 990; qtop = fl + 183 - qh
+    pw = 1.70 * k * 540 / 1700
+    stage = f'''<div class="abs" style="left:0;top:0;width:{Hh}px;height:{Hh}px;background:radial-gradient(90% 70% at 55% 45%,#e3f6ea 0,#cfe9da 50%,#b9d6c5 100%)"></div>
+<div class="abs" style="left:0;top:{fl + 40}px;width:{Hh}px;height:{Hh - fl - 40}px;background:linear-gradient(180deg,rgba(58,29,12,.10),rgba(58,29,12,0))"></div>
+<div class="abs" style="left:180px;top:{fl + 38}px;width:2650px;height:5px;background:rgba(58,29,12,.35)"></div>
+<div class="abs" style="left:300px;top:{fl + 40 - 1.70 * k:.0f}px;width:{pw:.0f}px;height:{1.70 * k:.0f}px;color:#1b4d8b;opacity:.2">{PERSONA}</div>
+<div class="abs" style="left:240px;top:{fl + 80}px;width:{pw + 120:.0f}px;text-align:center;font:700 40px Brico;color:rgba(27,77,139,.8)">Persona de 1,70 m</div>
+<div class="abs" style="left:1060px;top:{fl - 30}px;width:1700px;height:200px;border-radius:50%;background:radial-gradient(closest-side,rgba(20,40,30,.40),rgba(20,40,30,0))"></div>
+<img class="abs" src="{A}quito_real_recorte.png" style="left:1160px;top:{qtop:.0f}px;height:{qh:.0f}px">
+{vdim(2800, int(qtop) + 8, fl + 40, '130 cm')}'''
     body = f'''<div class="abs" style="inset:0;background:var(--paper)"></div>
-<img class="abs" src="{A}figura_render.png" style="left:0;top:0;width:{Hh}px;height:{Hh}px">
-{tag('Pieza 04 · Stand Bancala', 3100, 170, 44, 'var(--green)', '#fff')}
-{H('Quito 3D', 3090, 290, 220, 'var(--blue)', k=.5)}
-{T('Figura de mostrador: el personaje sale de la pantalla y se sienta con vos. Es el punto de foto del stand.', 3100, 560, 980, 52, 'var(--ink)', 600, 1.25)}
-<div class="abs" style="left:3100px;top:900px;width:1000px">{sh}</div>
-<div class="abs" style="left:3100px;top:2520px;display:flex;flex-wrap:wrap;width:1050px;row-gap:30px">{sw}</div>'''
+{stage}
+{tag('Pieza 04 · Stand Bancala', 3100, 150, 44, 'var(--green)', '#fff')}
+{H('Quito 3D', 3090, 250, 200, 'var(--blue)', k=.5)}
+<div class="abs" style="left:3100px;top:480px;font:800 64px Brico;color:var(--green)">en tamaño real</div>
+{T('Estatua de piso: Quito sale de la pantalla y se queda en el stand. Es el punto de foto: te sentás al lado, como en cualquier banco.', 3100, 590, 1000, 42, 'var(--ink)', 600, 1.25)}
+<div class="abs" style="left:3100px;top:830px;width:1000px">{sh}</div>
+<div class="abs" style="left:3100px;top:2640px;display:flex;flex-wrap:wrap;width:1080px;row-gap:24px">{sw}</div>'''
     render('stand_figura', body, W, Hh, f'{ART}/ficha_figura.png')
 
 
@@ -225,10 +254,10 @@ def planta():
                 f'<div class="abs" style="left:{x - 150:.0f}px;top:{oy + (y1 + y2) / 2 * k - 20:.0f}px;width:120px;text-align:right;font:800 40px Brico;color:var(--blue)">{txt}</div>')
     plan = (f'<div class="abs" style="left:{ox}px;top:{oy}px;width:{4000 * k:.0f}px;height:{3000 * k:.0f}px;border:5px dashed rgba(58,29,12,.35);border-radius:10px"></div>'
             + r(500, 150, 3000, 120, 'var(--navy)', txt='<span style="color:#fff">1 · Backwall 300 × 220</span>')
-            + r(1100, 700, 1800, 450, '#e8892f', txt='Banco real del campus', rad=10)
+            + r(700, 710, 1420, 430, '#e8892f', txt='Banco real', rad=10)
+            + f'<div class="abs" style="left:{ox + 2330 * k:.0f}px;top:{oy + 280 * k:.0f}px;width:{900 * k:.0f}px;height:{900 * k:.0f}px;border-radius:50%;background:#2E2A29;border:6px solid var(--ink);display:flex;align-items:center;justify-content:center;font:800 34px/1.1 Brico;color:#fff;text-align:center">4 · Quito 3D<br>Ø 90</div>'
             + f'<div class="abs" style="left:{ox + 1300 * k:.0f}px;top:{oy + 1350 * k:.0f}px;width:{1400 * k:.0f}px;height:{1400 * k:.0f}px;border-radius:50%;background:var(--blue);border:6px solid var(--ink);display:flex;align-items:center;justify-content:center;font:800 40px/1.1 Brico;color:#fff;text-align:center">Vinilo de piso<br>Ø 140</div>'
             + r(150, 1500, 1200, 500, '#f2a04a', txt='2 · Mostrador<br>120 × 50', rad=6).replace('justify-content:center','justify-content:flex-start;padding-left:30px')
-            + f'<div class="abs" style="left:{ox + 1000 * k:.0f}px;top:{oy + 1600 * k:.0f}px;width:{400 * k:.0f}px;height:{400 * k:.0f}px;border-radius:50%;background:var(--navy);border:5px solid var(--ink)"></div>'
             + r(3150, 1250, 850, 220, 'var(--mint)', txt='3 · Roll-up', fs=36, rad=6)
             + dim(500, 0, 3500, 0, '300 cm', off=-30) + dim(0, 0, 0, 3000, '300 cm', off=-30, vert=True)
             + dim(150, 2000, 1350, 2000, '120 cm', off=70) + dim(0, 1500, 0, 2000, '50', off=60, vert=True))
@@ -237,9 +266,11 @@ def planta():
     def fr(x, y, w, h, fill, txt='', c='#fff', bw=6):
         return (f'<div class="abs" style="left:{fx + x * fk:.0f}px;top:{fy + (2300 - y - h) * fk:.0f}px;width:{w * fk:.0f}px;height:{h * fk:.0f}px;background:{fill};'
                 f'border:{bw}px solid var(--ink);display:flex;align-items:center;justify-content:center;text-align:center;font:700 36px/1.1 Brico;color:{c}">{txt}</div>')
-    front = (fr(100, 0, 3000, 2200, 'var(--navy)', 'Backwall 300 × 220') + fr(800, 0, 1500, 450, '#e8892f', 'Banco 45', 'var(--ink)')
-             + fr(-150, 0, 1200, 1000, '#f2a04a', 'Mostrador 100', 'var(--ink)') + fr(200, 1000, 400, 100, 'var(--navy)', '', bw=4)
-             + f'<img class="abs" src="{A}figura_recorte.png" style="left:{fx + 110 * fk:.0f}px;top:{fy + (2300 - 1560) * fk:.0f}px;width:{600 * fk:.0f}px">'
+    front = (fr(100, 0, 3000, 2200, 'var(--navy)', '') + fr(300, 0, 1420, 450, '#e8892f', '', 'var(--ink)')
+             + f'<div class="abs" style="left:{fx + 300 * fk:.0f}px;top:{fy + 120 * fk:.0f}px;width:{1450 * fk:.0f}px;text-align:center;font:700 36px Brico;color:#fff">Backwall 300 × 220</div>'
+             + f'<div class="abs" style="left:{fx + 1050 * fk:.0f}px;top:{fy + (2300 - 300) * fk:.0f}px;width:{670 * fk:.0f}px;text-align:center;font:700 34px Brico;color:var(--ink)">Banco 45</div>'
+             + f'<div class="abs" style="left:{fx + 1830 * fk:.0f}px;top:{fy + (2300 - 1560) * fk:.0f}px;width:{1100 * fk:.0f}px;text-align:center;font:700 34px Brico;color:#fff">4 · Quito 3D 130</div>'
+             + fr(-150, 0, 1200, 1000, '#f2a04a', 'Mostrador 100', 'var(--ink)') + f'<img class="abs" src="{A}quito_real_recorte.png" style="left:{fx + 1830 * fk:.0f}px;top:{fy + (2300 - 1423) * fk:.0f}px;width:{1100 * fk:.0f}px">'
              + fr(2950, 0, 850, 2000, 'var(--mint)', 'Roll-up<br>85 × 200', 'var(--ink)')
              + f'<div class="abs" style="left:{fx - 150 * fk - 40:.0f}px;top:{fy + 2300 * fk:.0f}px;width:{4100 * fk:.0f}px;height:6px;background:var(--ink)"></div>')
     body = f'''<div class="abs" style="inset:0;background:var(--paper)"></div>
@@ -249,7 +280,7 @@ def planta():
 <div class="abs" style="left:2280px;top:2000px;font:800 52px Brico;color:var(--ink)">Vista frontal</div>
 {plan}{front}
 <div class="abs" style="left:260px;top:2180px;width:3680px;font:500 40px/1.4 Brico;color:var(--ink)">
-<b>1 · Backwall</b> lona tensada sobre bastidor de aluminio desarmable. <b>2 · Mostrador</b> MDF 18 mm con frente impreso en vinilo laminado mate y tapa laqueada; adentro, estante para folletos y stickers. <b>3 · Roll-up</b> 85 × 200 cm con base de aluminio. <b>Banco real</b>: un banco del campus restaurado por Mantenimiento, para sentarse en la foto. <b>Vinilo de piso</b> antideslizante Ø 140 cm “Sentate, te bancamos”. Medidas en cm.</div>'''
+<b>1 · Backwall</b> lona tensada sobre bastidor de aluminio desarmable. <b>2 · Mostrador</b> MDF 18 mm con frente impreso en vinilo laminado mate y tapa laqueada; adentro, estante para folletos y stickers. <b>3 · Roll-up</b> 85 × 200 cm con base de aluminio. <b>Banco real</b>: un banco del campus restaurado por Mantenimiento, para sentarse en la foto. <b>4 · Quito 3D en tamaño real</b> (130 cm, base Ø 90) en el piso, apoyado contra el backwall junto al banco: es el punto de foto. <b>Vinilo de piso</b> antideslizante Ø 140 cm “Sentate, te bancamos”. Medidas en cm.</div>'''
     render('stand_planta', body, W, Hh, f'{ART}/planta.png')
 
 
@@ -261,13 +292,25 @@ def lamina_mockup():
 <div class="abs" style="left:0;right:0;top:2800px;height:170px;background:var(--navy)"></div>
 <div class="abs" style="left:150px;top:2800px;height:170px;display:flex;align-items:center;gap:40px">
 <span class="hl" style="font-size:84px;color:#fff">Estación Bancala · Stand</span>
-<span style="font:600 46px Brico;color:#fff;opacity:.85">Módulo 3 × 3 m · backwall, mostrador con Quito 3D, roll-up, banco real y vinilo de piso</span></div>
+<span style="font:600 46px Brico;color:#fff;opacity:.85">Módulo 3 × 3 m · backwall, Quito 3D en tamaño real, banco real, mostrador, roll-up y vinilo de piso</span></div>
 <div class="abs" style="right:150px;top:2800px;height:170px;display:flex;align-items:center">{logos(56)}</div>'''
     render('stand_mockup', body, W, Hh, f'{ART}/lamina_mockup.png')
 
 
+# 10 · LAMINA MOCKUP EN EL CAMPUS (foto real, A3 apaisado)
+def lamina_foto():
+    W, Hh = 4200, 2970; ih = round(W * 1660 / 2950)
+    body = f'''<div class="abs" style="inset:0;background:var(--navy)"></div>
+<div class="abs trama-b" style="left:0;right:0;top:{ih}px;bottom:0;opacity:.10;background-size:1800px auto"></div>
+<img class="abs" src="{A}mockup_foto.jpg" style="left:0;top:0;width:{W}px;height:{ih}px">
+<div class="abs" style="left:150px;top:{ih + 110}px"><span class="hl" style="font-size:96px;color:#fff">La Estación Bancala, <em>en el campus.</em></span></div>
+<div class="abs" style="left:150px;top:{ih + 290}px;width:2700px;font:600 46px/1.3 Brico;color:#fff;opacity:.88">Montaje sobre tarima en el césped, con el frente hacia el camino: el que pasa ve el backwall, se sienta en el banco al lado de Quito en tamaño real y se lleva la foto.</div>
+<div class="abs" style="right:150px;top:{ih + 200}px">{logos(56)}</div>'''
+    render('stand_mockup_foto', body, W, Hh, f'{ART}/lamina_foto.png')
+
+
 if __name__ == '__main__':
     only = sys.argv[1:]
-    for f in [backwall, mostrador, rollup, folleto, afiche, display, ficha_figura, planta, lamina_mockup]:
+    for f in [backwall, mostrador, rollup, folleto, afiche, display, ficha_figura, planta, lamina_mockup, lamina_foto]:
         if only and f.__name__ not in only: continue
         f(); print('ok', f.__name__, flush=True)

@@ -17,12 +17,13 @@ PAGES = [  # (html, w, h, nombre de la mesa de trabajo)
     ('stand_backwall.html', 3000, 2200, '01 Backwall 300x220 cm (esc 1-10)'),
     ('stand_mostrador.html', 1200, 1000, '02 Mostrador frente 120x100 cm (esc 1-10)'),
     ('stand_rollup.html', 850, 2000, '03 Roll-up 85x200 cm (esc 1-10)'),
-    ('stand_figura.html', 4200, 2970, '04 Quito 3D figura de mostrador'),
+    ('stand_figura.html', 4200, 2970, '04 Quito 3D en tamano real'),
     ('stand_folleto_ext.html', 2970, 2100, '05 Folleto A5 exterior'),
     ('stand_folleto_int.html', 2970, 2100, '06 Folleto A5 interior'),
     ('stand_afiche.html', 2970, 4200, '07 Afiche A3 convocatoria'),
     ('stand_display.html', 1480, 2100, '08 Display de mesa A5 con QR'),
     ('stand_planta.html', 4200, 2970, '09 Planta y vista frontal'),
+    ('stand_mockup_foto.html', 4200, 2970, '10 Mockup en el campus (foto real)'),
 ]
 DOCS['stand'] = dict(out=OUT + '/Stand_Bancala.ai', S=72 / 254, pages=[(h, w, hh) for h, w, hh, _ in PAGES], titles=[n for *_, n in PAGES])
 pretty = lambda s: s  # nombres tal cual

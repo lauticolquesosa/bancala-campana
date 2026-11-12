@@ -79,7 +79,7 @@
   };
   let RO = { x: 0, y: 0 };
   const R = el => { const r = el.getBoundingClientRect(); return { x: r.left - RO.x, y: r.top - RO.y, w: r.width, h: r.height }; };
-  const fam = f => /titan/i.test(f) ? 'Titan' : 'Brico';
+  const fam = f => /titan/i.test(f) ? 'Titan' : /hand/i.test(f) ? 'Hand' : /mono/i.test(f) ? 'Mono' : 'Brico';
   const raster = []; // elements needing a raster fallback for their background
   let rid = 0;
 
@@ -104,7 +104,7 @@
             const rg = document.createRange(); rg.setStart(c, i); rg.setEnd(c, i + 1);
             const rs = rg.getClientRects(); if (!rs.length) continue; const rc = rs[0];
             if (/\s/.test(ch) && rc.width < 0.01) continue;
-            const o = { ch: /\s/.test(ch) ? ' ' : (st.up ? ch.toUpperCase() : ch), x: rc.left - RO.x, r: rc.right - RO.x, bl: rc.top - RO.y + ascent(st.f === 'Titan' ? 'Titan' : 'Brico') * st.s, st };
+            const o = { ch: /\s/.test(ch) ? ' ' : (st.up ? ch.toUpperCase() : ch), x: rc.left - RO.x, r: rc.right - RO.x, bl: rc.top - RO.y + ascent(st.f) * st.s, st };
             if (xf && p.classList.contains('l')) { o.rot = Math.atan2(xf.b, xf.a) * 180 / Math.PI; o.ty = xf.f; }
             chars.push(o);
           }

@@ -72,7 +72,8 @@ def mask_alpha(g, h):
 
 from fontTools.ttLib import TTFont
 FD = 'C:/Users/Lauti/AppData/Local/Microsoft/Windows/Fonts/'
-CMAP = {'Titan': set(TTFont(FD + 'TitanOne-Regular.ttf').getBestCmap()), 'Brico': set(TTFont(FD + 'BricolageGrotesque-Bold.ttf').getBestCmap())}
+CMAP = {'Titan': set(TTFont(FD + 'TitanOne-Regular.ttf').getBestCmap()), 'Brico': set(TTFont(FD + 'BricolageGrotesque-Bold.ttf').getBestCmap()),
+        'Hand': set(TTFont(FD + 'PatrickHandSC-Regular.ttf').getBestCmap()), 'Mono': set(TTFont(FD + 'SpaceMono-Bold.ttf').getBestCmap())}
 
 
 def glyph_fallback(t):

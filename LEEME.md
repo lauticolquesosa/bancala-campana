@@ -9,7 +9,7 @@ Campaña de UCASAL Sustentable para cuidar los bancos de los espacios comunes de
 | `03_Concepto_y_Fundamentacion` | PDF de síntesis estratégica (A4, 9 páginas). |
 | `04_Recursos` | Logos (Bancala, UCASAL, UCASAL Sustentable), 12 poses de Quito en PNG transparente + stickers, tipografías, tramas limpias y fotos del campus (originales y editadas con el look Bancala). |
 | `05_Material_Original` | Presentación anterior, infografía y pieza anteriores, contexto escrito y referencias tipográficas. |
-| `06_Produccion_Scripts` | Scripts que generan el look fotográfico (`look.py`), la integración de Quito en las fotos (`comp.py`, `scenes.py`) y todas las piezas (HTML → PNG/PDF). El stand se genera con `cut_quito_real.py` (recorte de la estatua de Quito en tamaño real), `p_stand.py` (piezas) y `mockup_stand.py` (render del mockup). En `Conversion_editable/` está el conversor HTML → Illustrator (`.ai`) y HTML → PowerPoint (`.pptx`). |
+| `06_Produccion_Scripts` | Scripts que generan el look fotográfico (`look.py`), la integración de Quito en las fotos (`comp.py`, `scenes.py`) y todas las piezas (HTML → PNG/PDF). El stand se genera con `cut_quito_real.py` (recorte de la estatua de Quito en tamaño real), `p_stand.py` (piezas) y `mockup_stand.py` (render del mockup); `mockup_foto.py` monta el stand sobre una foto real del campus (cámara calibrada con los puntos de fuga de la foto, sol de mediodía). En `Conversion_editable/` está el conversor HTML → Illustrator (`.ai`) y HTML → PowerPoint (`.pptx`). |
 
 ## Archivos editables
 

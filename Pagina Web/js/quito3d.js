@@ -78,7 +78,7 @@ const frag = /* glsl */`
 export async function initQuito(canvas, { onProgress } = {}) {
   onProgress?.(.1);
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, powerPreference: 'high-performance' });
-  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  renderer.setPixelRatio(Math.min(devicePixelRatio, innerWidth < 860 ? 1.6 : 2));
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   const maxAniso = renderer.capabilities.getMaxAnisotropy();
   const scene = new THREE.Scene();

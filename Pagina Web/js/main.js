@@ -186,7 +186,7 @@ function setupQuitoInput() {
       return;
     }
     if (isTouch) return;
-    const over = !e.target.closest('a, button, input, .meet__content, .poster, .rules__list') && Q.hitTest(e.clientX, e.clientY);
+    const over = !e.target.closest('a, button, input, .meet__content, .poster, .rules__grid') && Q.hitTest(e.clientX, e.clientY);
     if (over !== hovering) { hovering = over; Q.hover(over); setCursor(over ? 'label' : '', over ? '¡Tocame!' : ''); document.body.style.cursor = over ? 'pointer' : ''; }
   }, { passive: true });
   document.addEventListener('pointerleave', () => Q.pointerLeave());
@@ -290,10 +290,11 @@ async function setupScroll() {
   setupLoupe();
 
   // ---- reglas: cada regla cambia a Quito ----
-  $$('.rules__list li').forEach((li) => {
+  $$('.rule').forEach((li) => {
     li.addEventListener('pointerenter', () => { if (!Q) return; Q.setExpression(li.dataset.expr, 2400); Q.jump(4); say(li.dataset.say, 2400); });
   });
-  gsap.from('.rules__list li', { x: -60, opacity: 0, stagger: .1, duration: 1, ease: 'expo.out', scrollTrigger: { trigger: '.rules__list', start: 'top 85%', once: true } });
+  gsap.from('.rule', { y: 50, opacity: 0, stagger: .09, duration: 1.1, ease: 'expo.out', scrollTrigger: { trigger: '.rules__grid', start: 'top 88%', once: true } });
+  gsap.from('.rules__lead', { y: 24, opacity: 0, duration: 1, ease: 'expo.out', scrollTrigger: { trigger: '.rules', start: 'top 60%', once: true } });
   ScrollTrigger.create({ trigger: '.rules', start: 'top 40%', once: true, onEnter: () => say('Cuatro reglas y listo. ¡Fácil!', 2800) });
 
   setupStickers(data.stickers);

@@ -12,7 +12,8 @@
   --f-mono: 'Space Mono', ui-monospace, monospace;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; }
+html { -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; overflow-x: hidden; }
+main > section, footer { overflow-x: clip; }
 html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth { scroll-behavior: auto !important; }
 body { font-family: var(--f-txt); font-optical-sizing: auto; color: var(--char); background: var(--blue); -webkit-font-smoothing: antialiased; overflow-x: clip; }
@@ -363,15 +364,20 @@ section { position: relative; }
 .loupe-wrap:hover .loupe { opacity: 1; transform: scale(1); }
 
 /* ---------- REGLAS ---------- */
-.rules { background: var(--blue); color: #fff; padding: 16vh var(--pad); min-height: 110vh; overflow: hidden; }
-.rules__copy { position: relative; max-width: 640px; }
-.rules__copy h2 { margin: 6px 0 4vh; }
-.rules__list { display: grid; gap: 12px; }
-.rules__list li { display: flex; gap: 18px; align-items: center; padding: 16px 20px; border-radius: 20px; background: rgba(18, 57, 102, .5); border: 2px solid rgba(255, 255, 255, .15); cursor: default; transition: background .35s, transform .5s var(--ease), border-color .3s; }
-.rules__list li:hover { background: #fff; color: var(--ink); transform: translateX(10px); border-color: var(--ink); }
-.rules__list li > span { flex: 0 0 auto; width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; font-family: var(--f-dsp); font-size: 26px; background: var(--blue); color: #fff; border: 3px solid var(--ink); }
-.rules__list b { font-family: var(--f-dsp); font-weight: 400; font-size: clamp(22px, 2vw, 30px); display: block; }
-.rules__list p { font-size: 15px; font-weight: 550; opacity: .85; }
+.rules { background: linear-gradient(180deg, var(--blue) 0%, #1d5fbd 100%); color: #fff; padding: 16vh var(--pad); min-height: 100vh; overflow: hidden; }
+.rules__wrap { position: relative; max-width: 760px; }
+.rules__head h2 { margin: 10px 0 14px; }
+.rules__lead { font-size: clamp(17px, 1.35vw, 20px); line-height: 1.5; font-weight: 450; color: rgba(255, 255, 255, .88); max-width: 30em; }
+.rules__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 6vh; counter-reset: r; }
+.rule { position: relative; display: grid; align-content: start; gap: 8px; min-height: 230px; padding: 24px 24px 26px; border-radius: 22px; background: #fff; color: var(--char); box-shadow: 0 24px 50px -24px rgba(8, 30, 70, .55); overflow: hidden; cursor: default; transition: transform .6s var(--ease), box-shadow .6s var(--ease); }
+.rule::before { content: ''; position: absolute; right: -40px; bottom: -40px; width: 170px; height: 170px; border-radius: 50%; background: #e8f0fc; transition: transform .7s var(--ease); }
+.rule:hover { transform: translateY(-6px); box-shadow: 0 34px 60px -26px rgba(8, 30, 70, .7); }
+.rule:hover::before { transform: scale(1.25); }
+.rule__n { position: relative; font-family: var(--f-mono); font-weight: 700; font-size: 13px; letter-spacing: .06em; color: var(--blue); }
+.rule__img { position: absolute; right: 14px; bottom: 10px; width: 108px; height: auto; transition: transform .7s var(--ease); }
+.rule:hover .rule__img { transform: translateY(-6px) rotate(-5deg) scale(1.06); }
+.rule h3 { position: relative; font-family: var(--f-txt); font-weight: 800; font-size: clamp(20px, 1.7vw, 25px); line-height: 1.1; letter-spacing: -.01em; color: var(--navy); max-width: calc(100% - 100px); margin-top: 18px; }
+.rule p { position: relative; font-size: 15px; line-height: 1.45; font-weight: 450; color: #4b5563; max-width: calc(100% - 100px); }
 
 /* ---------- STICKERS ---------- */
 .stickers { background: var(--cream); padding: 14vh var(--pad); display: grid; grid-template-columns: minmax(280px, 420px) 1fr; gap: 4vw; align-items: center; min-height: 100vh; }
@@ -469,6 +475,12 @@ section { position: relative; }
   .fan { width: 100%; height: 300px; }
   .highlights { justify-content: center; }
   .rules { padding-top: 16vh; }
+  .rules__grid { grid-template-columns: 1fr; gap: 12px; }
+  .rule { min-height: 0; padding: 20px 120px 22px 20px; }
+  .rule h3, .rule p { max-width: none; }
+  .rule h3 { margin-top: 8px; }
+  .rule__img { width: 96px; top: 50%; bottom: auto; transform: translateY(-50%); }
+  .rule:hover .rule__img { transform: translateY(-50%); }
   .board { height: 70vh; }
   .footer { padding-top: 16vh; }
   .footer__row { max-width: none; flex-direction: column; gap: 30px; }

@@ -10,7 +10,7 @@ export const isTouch = matchMedia('(hover: none)').matches;
 export const isMobile = () => innerWidth < 860;
 
 // ---------- smooth scroll ----------
-export const lenis = new window.Lenis({ duration: 1.15, smoothWheel: !reduced });
+export const lenis = new window.Lenis({ lerp: .085, smoothWheel: !reduced, wheelMultiplier: .9, touchMultiplier: 1.2, syncTouch: false });
 window.__lenis = lenis;
 lenis.on('scroll', ScrollTrigger.update);
 gsap.ticker.add((t) => lenis.raf(t * 1000));
@@ -42,11 +42,12 @@ addEventListener('keydown', (e) => e.key === 'Escape' && closeMenu());
 
 // ---------- header: color según la sección + se esconde al bajar ----------
 export function setupHeader(lightSel) {
-  let lastY = scrollY;
+  let lastY = scrollY, sections = null;
   const update = () => {
     if (menu?.classList.contains('open')) return;
     const probe = 40; let light = false;
-    for (const s of $$(lightSel)) { const r = s.getBoundingClientRect(); if (r.top <= probe && r.bottom >= probe) { light = s.dataset.light !== 'off'; break; } }
+    sections ??= $$(lightSel);
+    for (const s of sections) { const r = s.getBoundingClientRect(); if (r.top <= probe && r.bottom >= probe) { light = s.dataset.light !== 'off'; break; } }
     header.classList.toggle('on-light', light);
     const y = scrollY;
     header.classList.toggle('hidden', y > 300 && y > lastY + 2);

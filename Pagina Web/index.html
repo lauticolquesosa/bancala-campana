@@ -348,7 +348,7 @@ body.is-loading>main,body.is-loading>header,body.is-loading>footer,body.is-loadi
 <section class="station" id="estacion">
   <div class="station__pin">
     <div class="station__media" id="stationMedia">
-      <img decoding="async" src="/img/piezas/stand-bancala-stand-bancala-10-mockup-en-el-campus-foto-real.webp" srcset="/img/piezas/stand-bancala-stand-bancala-10-mockup-en-el-campus-foto-real-sm.webp 520w, /img/piezas/stand-bancala-stand-bancala-10-mockup-en-el-campus-foto-real-md.webp 900w, /img/piezas/stand-bancala-stand-bancala-10-mockup-en-el-campus-foto-real.webp 1800w" sizes="100vw" alt="Estación Bancala montada en el campus" width="1800" height="1273" loading="lazy">
+      <img src="/img/estacion-md.webp" srcset="/img/estacion-sm.webp 640w, /img/estacion-md.webp 1100w, /img/estacion.webp 1920w" sizes="100vw" alt="La Estación Bancala montada en el patio del campus, con Quito en tamaño real" width="1920" height="1080" loading="lazy" decoding="async">
       <div class="station__shade"></div>
     </div>
     <h2 class="station__title"><span class="station__line"><span class="dsp">Pasá,</span></span><span class="station__line"><span class="dsp dsp--mint">sentate.</span></span></h2>
@@ -413,17 +413,39 @@ body.is-loading>main,body.is-loading>header,body.is-loading>footer,body.is-loadi
 </section>
 
 <!-- ============ REGLAS ============ -->
-<section class="rules" id="reglas" data-q=".55 -.06 .66 -.3 feliz thumbs" data-only="desktop">
-  <div class="trama trama--b"></div>
+<section class="rules" id="reglas" data-q=".62 -.04 .62 -.3 feliz thumbs" data-only="desktop">
   <div class="mstage mstage--top" data-q="0 0 .52 -.2 feliz thumbs" data-only="mobile"></div>
-  <div class="rules__copy">
-    <p class="kicker kicker--mint">Cuatro reglas para que tu banco favorito siga ahí</p>
-    <h2 class="dsp dsp--xxl" data-bounce>Bancala.</h2>
-    <ol class="rules__list" data-q="0 .9 0 0 feliz thumbs" data-only="mobile">
-      <li data-expr="carrusel-04-indignado" data-say="Las patas son para el piso, no para el asiento."><span>1</span><div><b>Sentate, no te pares.</b><p>Las patas son para el piso, no para el asiento.</p></div></li>
-      <li data-expr="juntando-basura" data-say="Siempre hay un tacho cerca. Yo lo sé."><span>2</span><div><b>La basura, al tacho.</b><p>Siempre hay uno cerca. Quito lo sabe.</p></div></li>
-      <li data-expr="preocupado-sentado" data-say="¿Me llevan… y me traen?"><span>3</span><div><b>Si lo movés, devolvelo.</b><p>Que ningún banco quede solo en medio de la nada.</p></div></li>
-      <li data-expr="limpiando" data-say="¿Está roto? Escaneá mi QR y avisá."><span>4</span><div><b>¿Está roto? Avisá.</b><p>Escaneá el QR del banco o avisá a Mantenimiento.</p></div></li>
+  <div class="rules__wrap">
+    <div class="rules__head">
+      <p class="kicker kicker--light">Cuatro reglas · una campaña</p>
+      <h2 class="dsp dsp--xl" data-bounce>Bancala.</h2>
+      <p class="rules__lead">Bancar al que te banca es simple: cuatro gestos para que tu banco favorito siga ahí mañana.</p>
+    </div>
+    <ol class="rules__grid" data-q="0 .9 0 0 feliz thumbs" data-only="mobile">
+      <li class="rule" data-expr="carrusel-04-indignado" data-say="Las patas son para el piso, no para el asiento.">
+        <span class="rule__n">01</span>
+        <img class="rule__img" src="/img/quito/carrusel-04-indignado.webp" alt="" width="760" height="919" loading="lazy" decoding="async">
+        <h3>Sentate, no te pares.</h3>
+        <p>Las zapatillas van en el piso. El asiento es para sentarse.</p>
+      </li>
+      <li class="rule" data-expr="juntando-basura" data-say="Siempre hay un tacho cerca. Yo lo sé.">
+        <span class="rule__n">02</span>
+        <img class="rule__img" src="/img/quito/juntando-basura.webp" alt="" width="760" height="735" loading="lazy" decoding="async">
+        <h3>La basura, al tacho.</h3>
+        <p>Lo que dejás en el banco lo junta alguien. Siempre hay un tacho cerca.</p>
+      </li>
+      <li class="rule" data-expr="preocupado-sentado" data-say="¿Me llevan… y me traen?">
+        <span class="rule__n">03</span>
+        <img class="rule__img" src="/img/quito/preocupado-sentado.webp" alt="" width="760" height="864" loading="lazy" decoding="async">
+        <h3>Si lo movés, devolvelo.</h3>
+        <p>Que ningún banco quede solo en medio de la nada.</p>
+      </li>
+      <li class="rule" data-expr="limpiando" data-say="¿Está roto? Escaneá mi QR y avisá.">
+        <span class="rule__n">04</span>
+        <img class="rule__img" src="/img/quito/limpiando.webp" alt="" width="760" height="874" loading="lazy" decoding="async">
+        <h3>¿Está roto? Avisá.</h3>
+        <p>Escaneá el QR del banco o avisale a Mantenimiento.</p>
+      </li>
     </ol>
   </div>
 </section>

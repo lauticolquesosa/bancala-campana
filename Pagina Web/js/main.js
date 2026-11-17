@@ -5,7 +5,7 @@ import { gsap, ScrollTrigger, $, $$, lenis, reduced, isTouch, isMobile, bindAnch
 
 lenis.stop();
 bindAnchors();
-const updateHeader = setupHeader('.why, .meet, .poses, .look, .flow, .info, .stickers, .station');
+const updateHeader = setupHeader('.why, .poses, .look, .flow, .info, .stickers, .station');
 setupCursor();
 
 const DATA = loadData();
@@ -167,7 +167,7 @@ function setupQuitoInput() {
       return;
     }
     if (isTouch) return;
-    const over = !e.target.closest('a, button, input, .meet__card, .poster, .rules__list') && Q.hitTest(e.clientX, e.clientY);
+    const over = !e.target.closest('a, button, input, .meet__content, .poster, .rules__list') && Q.hitTest(e.clientX, e.clientY);
     if (over !== hovering) { hovering = over; Q.hover(over); setCursor(over ? 'label' : '', over ? '¡Tocame!' : ''); document.body.style.cursor = over ? 'pointer' : ''; }
   }, { passive: true });
   document.addEventListener('pointerleave', () => Q.pointerLeave());
@@ -213,10 +213,9 @@ async function setupScroll() {
   gsap.from('.why__media', { y: 40, opacity: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '.why', start: 'top 65%', once: true } });
 
   // ---- conocé a Quito ----
-  gsap.from('.meet__disc', { scale: 0, rotate: -90, duration: 1.4, ease: 'elastic.out(1,.6)', scrollTrigger: { trigger: '.meet', start: 'top 60%', once: true } });
-  gsap.from('.meet__card', { x: 80, opacity: 0, rotate: 3, duration: 1.2, ease: 'expo.out', scrollTrigger: { trigger: '.meet', start: 'top 55%', once: true } });
-  gsap.from('.ficha > div', { x: 30, opacity: 0, stagger: .07, duration: .8, ease: 'expo.out', scrollTrigger: { trigger: '.ficha', start: 'top 80%', once: true } });
-  gsap.from('.meet__seen li', { scale: 0, rotate: () => gsap.utils.random(-20, 20), stagger: .05, duration: .7, ease: 'back.out(2.4)', scrollTrigger: { trigger: '.meet__seen', start: 'top 92%', once: true } });
+  gsap.from('.meet__halo, .meet__ring', { scale: .6, opacity: 0, duration: 1.4, ease: 'expo.out', scrollTrigger: { trigger: '.meet', start: 'top 60%', once: true } });
+  gsap.from('.meet__content > *:not(h2)', { y: 30, opacity: 0, stagger: .08, duration: 1, ease: 'expo.out', scrollTrigger: { trigger: '.meet', start: 'top 55%', once: true } });
+  gsap.from('.ficha > div', { y: 16, opacity: 0, stagger: .05, duration: .8, ease: 'expo.out', scrollTrigger: { trigger: '.ficha', start: 'top 85%', once: true } });
   ScrollTrigger.create({ trigger: '.meet', start: 'top 30%', once: true, onEnter: () => say('Mi humor depende de vos. ¡Probá los botones!', 3200) });
   $$('#moods .mood').forEach((b) => b.addEventListener('click', () => {
     $$('#moods .mood').forEach((x) => x.classList.toggle('is-on', x === b));

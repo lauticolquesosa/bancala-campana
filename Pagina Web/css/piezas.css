@@ -9,10 +9,10 @@
 
 .filters { position: sticky; top: 0; z-index: 40; display: flex; gap: 8px; padding: 86px var(--pad) 14px; overflow-x: auto; scrollbar-width: none; background: linear-gradient(var(--paper) 78%, rgba(245, 241, 232, 0)); }
 .filters::-webkit-scrollbar { display: none; }
-.chipf { flex: 0 0 auto; height: 42px; padding: 0 18px; border-radius: 99px; border: 2.5px solid var(--ink); background: #fff; font-weight: 750; font-size: 14px; color: var(--ink); transition: background .25s, box-shadow .25s, transform .25s; }
+.chipf { flex: 0 0 auto; height: 42px; padding: 0 18px; border-radius: 99px; border: 2.5px solid var(--ink); background: var(--blue); font-weight: 750; font-size: 14px; color: #fff; transition: background .25s, box-shadow .25s, transform .25s; }
 .chipf small { font-family: var(--f-mono); font-size: 11px; margin-left: 6px; opacity: .6; }
 .chipf:hover { transform: translateY(-2px); box-shadow: 2px 3px 0 var(--ink); }
-.chipf.on { background: var(--mint); box-shadow: 3px 4px 0 var(--ink); }
+.chipf.on { background: var(--navy); box-shadow: 3px 4px 0 var(--ink); }
 
 .arc { padding: 2vh var(--pad) 14vh; }
 .arc__group { margin-top: 7vh; }
@@ -41,9 +41,9 @@
 .lb__fig b { font-size: 18px; }
 .lb__ui { position: absolute; top: 18px; right: var(--pad); display: flex; gap: 10px; align-items: center; color: #fff; }
 .lb__count { font-family: var(--f-mono); font-size: 14px; margin-right: 8px; }
-.lb__btn, .lb__nav { width: 48px; height: 48px; border-radius: 50%; background: #fff; border: 3px solid var(--ink); display: grid; place-items: center; box-shadow: 3px 4px 0 var(--ink); }
-.lb__btn svg, .lb__nav svg { width: 20px; height: 20px; stroke: var(--ink); fill: none; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
-.lb__btn:hover, .lb__nav:hover { background: var(--mint); }
+.lb__btn, .lb__nav { width: 48px; height: 48px; border-radius: 50%; background: var(--blue); border: 3px solid var(--ink); display: grid; place-items: center; box-shadow: 3px 4px 0 var(--ink); }
+.lb__btn svg, .lb__nav svg { width: 20px; height: 20px; stroke: #fff; fill: none; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+.lb__btn:hover, .lb__nav:hover { background: var(--navy); }
 .lb__nav { position: absolute; top: 50%; margin-top: -24px; }
 .lb__nav--prev { left: var(--pad); } .lb__nav--next { right: var(--pad); }
 

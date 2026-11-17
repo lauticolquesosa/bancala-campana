@@ -1,0 +1,1084 @@
+{
+ "poses": [
+  {
+   "src": "/img/quito/carrusel-04-animando.webp",
+   "name": "animando",
+   "w": 760,
+   "h": 694
+  },
+  {
+   "src": "/img/quito/carrusel-04-basura.webp",
+   "name": "basura",
+   "w": 760,
+   "h": 628
+  },
+  {
+   "src": "/img/quito/carrusel-04-despertando.webp",
+   "name": "despertando",
+   "w": 760,
+   "h": 800
+  },
+  {
+   "src": "/img/quito/carrusel-04-emocionado.webp",
+   "name": "emocionado",
+   "w": 760,
+   "h": 987
+  },
+  {
+   "src": "/img/quito/carrusel-04-enojado.webp",
+   "name": "enojado",
+   "w": 760,
+   "h": 830
+  },
+  {
+   "src": "/img/quito/carrusel-04-indignado.webp",
+   "name": "indignado",
+   "w": 760,
+   "h": 919
+  },
+  {
+   "src": "/img/quito/carrusel-04-mate.webp",
+   "name": "mate",
+   "w": 760,
+   "h": 769
+  },
+  {
+   "src": "/img/quito/carrusel-04-saludo.webp",
+   "name": "saludo",
+   "w": 760,
+   "h": 841
+  },
+  {
+   "src": "/img/quito/enojado.webp",
+   "name": "enojado",
+   "w": 760,
+   "h": 690
+  },
+  {
+   "src": "/img/quito/juntando-basura.webp",
+   "name": "juntando basura",
+   "w": 760,
+   "h": 735
+  },
+  {
+   "src": "/img/quito/limpiando.webp",
+   "name": "limpiando",
+   "w": 760,
+   "h": 874
+  },
+  {
+   "src": "/img/quito/llorando.webp",
+   "name": "llorando",
+   "w": 760,
+   "h": 892
+  },
+  {
+   "src": "/img/quito/paraguas.webp",
+   "name": "paraguas",
+   "w": 760,
+   "h": 678
+  },
+  {
+   "src": "/img/quito/policia.webp",
+   "name": "policia",
+   "w": 760,
+   "h": 820
+  },
+  {
+   "src": "/img/quito/preocupado-sentado.webp",
+   "name": "preocupado sentado",
+   "w": 760,
+   "h": 864
+  },
+  {
+   "src": "/img/quito/saludo.webp",
+   "name": "saludo",
+   "w": 760,
+   "h": 732
+  },
+  {
+   "src": "/img/quito/senalando-feliz.webp",
+   "name": "senalando feliz",
+   "w": 760,
+   "h": 782
+  },
+  {
+   "src": "/img/quito/sentado-feliz.webp",
+   "name": "sentado feliz",
+   "w": 760,
+   "h": 807
+  },
+  {
+   "src": "/img/quito/tapandose.webp",
+   "name": "tapandose",
+   "w": 760,
+   "h": 773
+  },
+  {
+   "src": "/img/quito/triste-sentado.webp",
+   "name": "triste sentado",
+   "w": 760,
+   "h": 864
+  },
+  {
+   "src": "/img/quito/stand-3d-tamano-real.webp",
+   "name": "3D tamano real",
+   "w": 760,
+   "h": 983
+  }
+ ],
+ "stickers": [
+  {
+   "src": "/img/stickers/enojado.webp",
+   "name": "enojado",
+   "w": 420,
+   "h": 385
+  },
+  {
+   "src": "/img/stickers/juntando-basura.webp",
+   "name": "juntando basura",
+   "w": 420,
+   "h": 407
+  },
+  {
+   "src": "/img/stickers/limpiando.webp",
+   "name": "limpiando",
+   "w": 420,
+   "h": 475
+  },
+  {
+   "src": "/img/stickers/llorando.webp",
+   "name": "llorando",
+   "w": 420,
+   "h": 483
+  },
+  {
+   "src": "/img/stickers/paraguas.webp",
+   "name": "paraguas",
+   "w": 420,
+   "h": 380
+  },
+  {
+   "src": "/img/stickers/policia.webp",
+   "name": "policia",
+   "w": 420,
+   "h": 449
+  },
+  {
+   "src": "/img/stickers/saludo.webp",
+   "name": "saludo",
+   "w": 420,
+   "h": 406
+  },
+  {
+   "src": "/img/stickers/senalando-feliz.webp",
+   "name": "senalando feliz",
+   "w": 420,
+   "h": 430
+  },
+  {
+   "src": "/img/stickers/sentado-feliz.webp",
+   "name": "sentado feliz",
+   "w": 420,
+   "h": 442
+  },
+  {
+   "src": "/img/stickers/tapandose.webp",
+   "name": "tapandose",
+   "w": 420,
+   "h": 427
+  }
+ ],
+ "campus": [
+  {
+   "src": "/img/campus/campus-01.webp",
+   "sm": "/img/campus/campus-01-sm.webp",
+   "w": 900,
+   "h": 1600
+  },
+  {
+   "src": "/img/campus/campus-02.webp",
+   "sm": "/img/campus/campus-02-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-03.webp",
+   "sm": "/img/campus/campus-03-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-04.webp",
+   "sm": "/img/campus/campus-04-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-05.webp",
+   "sm": "/img/campus/campus-05-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-06.webp",
+   "sm": "/img/campus/campus-06-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-07.webp",
+   "sm": "/img/campus/campus-07-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-08.webp",
+   "sm": "/img/campus/campus-08-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-09.webp",
+   "sm": "/img/campus/campus-09-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-10.webp",
+   "sm": "/img/campus/campus-10-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-11.webp",
+   "sm": "/img/campus/campus-11-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-12.webp",
+   "sm": "/img/campus/campus-12-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-13.webp",
+   "sm": "/img/campus/campus-13-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-14.webp",
+   "sm": "/img/campus/campus-14-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-15.webp",
+   "sm": "/img/campus/campus-15-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-16.webp",
+   "sm": "/img/campus/campus-16-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-17.webp",
+   "sm": "/img/campus/campus-17-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-18.webp",
+   "sm": "/img/campus/campus-18-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-19.webp",
+   "sm": "/img/campus/campus-19-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-20.webp",
+   "sm": "/img/campus/campus-20-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-21.webp",
+   "sm": "/img/campus/campus-21-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-22.webp",
+   "sm": "/img/campus/campus-22-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-23.webp",
+   "sm": "/img/campus/campus-23-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-24.webp",
+   "sm": "/img/campus/campus-24-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-25.webp",
+   "sm": "/img/campus/campus-25-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-26.webp",
+   "sm": "/img/campus/campus-26-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-27.webp",
+   "sm": "/img/campus/campus-27-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-28.webp",
+   "sm": "/img/campus/campus-28-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-29.webp",
+   "sm": "/img/campus/campus-29-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-30.webp",
+   "sm": "/img/campus/campus-30-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-31.webp",
+   "sm": "/img/campus/campus-31-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-32.webp",
+   "sm": "/img/campus/campus-32-sm.webp",
+   "w": 960,
+   "h": 720
+  },
+  {
+   "src": "/img/campus/campus-33.webp",
+   "sm": "/img/campus/campus-33-sm.webp",
+   "w": 960,
+   "h": 720
+  },
+  {
+   "src": "/img/campus/campus-34.webp",
+   "sm": "/img/campus/campus-34-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-35.webp",
+   "sm": "/img/campus/campus-35-sm.webp",
+   "w": 960,
+   "h": 720
+  },
+  {
+   "src": "/img/campus/campus-36.webp",
+   "sm": "/img/campus/campus-36-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-37.webp",
+   "sm": "/img/campus/campus-37-sm.webp",
+   "w": 960,
+   "h": 720
+  },
+  {
+   "src": "/img/campus/campus-38.webp",
+   "sm": "/img/campus/campus-38-sm.webp",
+   "w": 960,
+   "h": 720
+  },
+  {
+   "src": "/img/campus/campus-39.webp",
+   "sm": "/img/campus/campus-39-sm.webp",
+   "w": 960,
+   "h": 720
+  },
+  {
+   "src": "/img/campus/campus-40.webp",
+   "sm": "/img/campus/campus-40-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-41.webp",
+   "sm": "/img/campus/campus-41-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-42.webp",
+   "sm": "/img/campus/campus-42-sm.webp",
+   "w": 960,
+   "h": 1280
+  },
+  {
+   "src": "/img/campus/campus-43.webp",
+   "sm": "/img/campus/campus-43-sm.webp",
+   "w": 960,
+   "h": 720
+  },
+  {
+   "src": "/img/campus/campus-44.webp",
+   "sm": "/img/campus/campus-44-sm.webp",
+   "w": 960,
+   "h": 720
+  },
+  {
+   "src": "/img/campus/campus-45.webp",
+   "sm": "/img/campus/campus-45-sm.webp",
+   "w": 960,
+   "h": 720
+  },
+  {
+   "src": "/img/campus/campus-46.webp",
+   "sm": "/img/campus/campus-46-sm.webp",
+   "w": 960,
+   "h": 720
+  }
+ ],
+ "piezas": [
+  {
+   "src": "/img/piezas/posteos-post-01-lanzamiento-hola-soy-quito.webp",
+   "sm": "/img/piezas/posteos-post-01-lanzamiento-hola-soy-quito-sm.webp",
+   "w": 1080,
+   "h": 1350,
+   "cat": "redes",
+   "group": "Posteos",
+   "title": "1 · Lanzamiento: Hola, soy Quito"
+  },
+  {
+   "src": "/img/piezas/posteos-post-02-homenaje-mantenimiento.webp",
+   "sm": "/img/piezas/posteos-post-02-homenaje-mantenimiento-sm.webp",
+   "w": 1080,
+   "h": 1350,
+   "cat": "redes",
+   "group": "Posteos",
+   "title": "2 · Homenaje Mantenimiento"
+  },
+  {
+   "src": "/img/piezas/posteos-post-03-anuncio-estacion-bancala.webp",
+   "sm": "/img/piezas/posteos-post-03-anuncio-estacion-bancala-sm.webp",
+   "w": 1080,
+   "h": 1350,
+   "cat": "redes",
+   "group": "Posteos",
+   "title": "3 · Anuncio Estación Bancala"
+  },
+  {
+   "src": "/img/piezas/posteos-post-04-stickers-pegalos-en-tu-compu.webp",
+   "sm": "/img/piezas/posteos-post-04-stickers-pegalos-en-tu-compu-sm.webp",
+   "w": 1080,
+   "h": 1350,
+   "cat": "redes",
+   "group": "Posteos",
+   "title": "4 · Stickers: Pegalos en tu compu"
+  },
+  {
+   "src": "/img/piezas/carrusel-01-carrusel01-slide01-portada.webp",
+   "sm": "/img/piezas/carrusel-01-carrusel01-slide01-portada-sm.webp",
+   "w": 1080,
+   "h": 1350,
+   "cat": "redes",
+   "group": "Carrusel 01 · Conocé a Quito",
+   "title": "1 · Portada"
+  },
+  {
+   "src": "/img/piezas/carrusel-01-carrusel01-slide02-ficha.webp",
+   "sm": "/img/piezas/carrusel-01-carrusel01-slide02-ficha-sm.webp",
+   "w": 1080,
+   "h": 1350,
+   "cat": "redes",
+   "group": "Carrusel 01 · Conocé a Quito",
+   "title": "2 · Ficha"
+  },
+  {
+   "src": "/img/piezas/carrusel-01-carrusel01-slide03-testigo.webp",
+   "sm": "/img/piezas/carrusel-01-carrusel01-slide03-testigo-sm.webp",
+   "w": 1080,
+   "h": 1350,
+   "cat": "redes",
+   "group": "Carrusel 01 · Conocé a Quito",
+   "title": "3 · Testigo"
+  },
+  {
+   "src": "/img/piezas/carrusel-01-carrusel01-slide04-emociones.webp",
+   "sm": "/img/piezas/carrusel-01-carrusel01-slide04-emociones-sm.webp",
+   "w": 1080,
+   "h": 1350,
+   "cat": "redes",
+   "group": "Carrusel 01 · Conocé a Quito",
+   "title": "4 · Emociones"
+  },
+  {
+   "src": "/img/piezas/carrusel-01-carrusel01-slide05-cierre.webp",
+   "sm": "/img/piezas/carrusel-01-carrusel01-slide05-cierre-sm.webp",
+   "w": 1080,
+   "h": 1350,
+   "cat": "redes",
+   "group": "Carrusel 01 · Conocé a Quito",
+   "title": "5 · Cierre"
+  },
+  {
+   "src": "/img/piezas/carrusel-02-carrusel02-slide01-portada.webp",
+   "sm": "/img/piezas/carrusel-02-carrusel02-slide01-portada-sm.webp",
+   "w": 1080,
+   "h": 1350,
+   "cat": "redes",
+   "group": "Carrusel 02 · Te banco en todas. Menos en estas",
+   "title": "1 · Portada"
+  },
+  {
+   "src": "/img/piezas/carrusel-02-carrusel02-slide02-reposera.webp",
+   "sm": "/img/piezas/carrusel-02-carrusel02-slide02-reposera-sm.webp",
+   "w": 1080,
+   "h": 1350,
+   "cat": "redes",
+   "group": "Carrusel 02 · Te banco en todas. Menos en estas",
+   "title": "2 · Reposera"
+  },
+  {
+   "src": "/img/piezas/carrusel-02-carrusel02-slide03-peluqueria.webp",
+   "sm": "/img/piezas/carrusel-02-carrusel02-slide03-peluqueria-sm.webp",
+   "w": 1080,
+   "h": 1350,
+   "cat": "redes",
+   "group": "Carrusel 02 · Te banco en todas. Menos en estas",
+   "title": "3 · Peluquería"
+  },
+  {
+   "src": "/img/piezas/carrusel-02-carrusel02-slide04-cuaderno.webp",
+   "sm": "/img/piezas/carrusel-02-carrusel02-slide04-cuaderno-sm.webp",
+   "w": 1080,
+   "h": 1350,
+   "cat": "redes",
+   "group": "Carrusel 02 · Te banco en todas. Menos en estas",
+   "title": "4 · Cuaderno"
+  },
+  {
+   "src": "/img/piezas/carrusel-02-carrusel02-slide05-devolveme.webp",
+   "sm": "/img/piezas/carrusel-02-carrusel02-slide05-devolveme-sm.webp",
+   "w": 1080,
+   "h": 1350,
+   "cat": "redes",
+   "group": "Carrusel 02 · Te banco en todas. Menos en estas",
+   "title": "5 · Devolveme"
+  },
+  {
+   "src": "/img/piezas/carrusel-02-carrusel02-slide06-reglas.webp",
+   "sm": "/img/piezas/carrusel-02-carrusel02-slide06-reglas-sm.webp",
+   "w": 1080,
+   "h": 1350,
+   "cat": "redes",
+   "group": "Carrusel 02 · Te banco en todas. Menos en estas",
+   "title": "6 · Reglas"
+  },
+  {
+   "src": "/img/piezas/carrusel-03-carrusel03-slide01-portada.webp",
+   "sm": "/img/piezas/carrusel-03-carrusel03-slide01-portada-sm.webp",
+   "w": 1080,
+   "h": 1350,
+   "cat": "redes",
+   "group": "Carrusel 03 · La misma banca, distintas historias",
+   "title": "1 · Portada"
+  },
+  {
+   "src": "/img/piezas/carrusel-03-carrusel03-slide02-primer-dia.webp",
+   "sm": "/img/piezas/carrusel-03-carrusel03-slide02-primer-dia-sm.webp",
+   "w": 1080,
+   "h": 1350,
+   "cat": "redes",
+   "group": "Carrusel 03 · La misma banca, distintas historias",
+   "title": "2 · Primer día"
+  },
+  {
+   "src": "/img/piezas/carrusel-03-carrusel03-slide03-mates.webp",
+   "sm": "/img/piezas/carrusel-03-carrusel03-slide03-mates-sm.webp",
+   "w": 1080,
+   "h": 1350,
+   "cat": "redes",
+   "group": "Carrusel 03 · La misma banca, distintas historias",
+   "title": "3 · Mates"
+  },
+  {
+   "src": "/img/piezas/carrusel-03-carrusel03-slide04-siesta.webp",
+   "sm": "/img/piezas/carrusel-03-carrusel03-slide04-siesta-sm.webp",
+   "w": 1080,
+   "h": 1350,
+   "cat": "redes",
+   "group": "Carrusel 03 · La misma banca, distintas historias",
+   "title": "4 · Siesta"
+  },
+  {
+   "src": "/img/piezas/carrusel-03-carrusel03-slide05-almuerzo.webp",
+   "sm": "/img/piezas/carrusel-03-carrusel03-slide05-almuerzo-sm.webp",
+   "w": 1080,
+   "h": 1350,
+   "cat": "redes",
+   "group": "Carrusel 03 · La misma banca, distintas historias",
+   "title": "5 · Almuerzo"
+  },
+  {
+   "src": "/img/piezas/carrusel-03-carrusel03-slide06-participa.webp",
+   "sm": "/img/piezas/carrusel-03-carrusel03-slide06-participa-sm.webp",
+   "w": 1080,
+   "h": 1350,
+   "cat": "redes",
+   "group": "Carrusel 03 · La misma banca, distintas historias",
+   "title": "6 · Participa"
+  },
+  {
+   "src": "/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-01-portada.webp",
+   "sm": "/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-01-portada-sm.webp",
+   "w": 1080,
+   "h": 1350,
+   "cat": "redes",
+   "group": "Carrusel 04 · Un día en la vida de Quito",
+   "title": "1 · Portada"
+  },
+  {
+   "src": "/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-02-08-00-primer-ing.webp",
+   "sm": "/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-02-08-00-primer-ing-sm.webp",
+   "w": 1080,
+   "h": 1350,
+   "cat": "redes",
+   "group": "Carrusel 04 · Un día en la vida de Quito",
+   "title": "2 · 08:00 Primer ingresante"
+  },
+  {
+   "src": "/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-03-10-30-hora-del-m.webp",
+   "sm": "/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-03-10-30-hora-del-m-sm.webp",
+   "w": 1080,
+   "h": 1350,
+   "cat": "redes",
+   "group": "Carrusel 04 · Un día en la vida de Quito",
+   "title": "3 · 10:30 Hora del mate"
+  },
+  {
+   "src": "/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-04-13-00-almuerzo-a.webp",
+   "sm": "/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-04-13-00-almuerzo-a-sm.webp",
+   "w": 1080,
+   "h": 1350,
+   "cat": "redes",
+   "group": "Carrusel 04 · Un día en la vida de Quito",
+   "title": "4 · 13:00 Almuerzo al sol"
+  },
+  {
+   "src": "/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-05-15-00-hora-libre.webp",
+   "sm": "/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-05-15-00-hora-libre-sm.webp",
+   "w": 1080,
+   "h": 1350,
+   "cat": "redes",
+   "group": "Carrusel 04 · Un día en la vida de Quito",
+   "title": "5 · 15:00 Hora libre"
+  },
+  {
+   "src": "/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-06-17-00-siesta-imp.webp",
+   "sm": "/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-06-17-00-siesta-imp-sm.webp",
+   "w": 1080,
+   "h": 1350,
+   "cat": "redes",
+   "group": "Carrusel 04 · Un día en la vida de Quito",
+   "title": "6 · 17:00 Siesta improvisada"
+  },
+  {
+   "src": "/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-07-19-00-llega-mant.webp",
+   "sm": "/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-07-19-00-llega-mant-sm.webp",
+   "w": 1080,
+   "h": 1350,
+   "cat": "redes",
+   "group": "Carrusel 04 · Un día en la vida de Quito",
+   "title": "7 · 19:00 Llega Mantenimiento"
+  },
+  {
+   "src": "/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-08-20-00-cierre.webp",
+   "sm": "/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-08-20-00-cierre-sm.webp",
+   "w": 1080,
+   "h": 1350,
+   "cat": "redes",
+   "group": "Carrusel 04 · Un día en la vida de Quito",
+   "title": "8 · 20:00 Cierre"
+  },
+  {
+   "src": "/img/piezas/historias-historia-01-presentacion-link.webp",
+   "sm": "/img/piezas/historias-historia-01-presentacion-link-sm.webp",
+   "w": 900,
+   "h": 1600,
+   "cat": "historias",
+   "group": "Historias",
+   "title": "1 · Presentación con link"
+  },
+  {
+   "src": "/img/piezas/historias-historia-02-encuesta.webp",
+   "sm": "/img/piezas/historias-historia-02-encuesta-sm.webp",
+   "w": 900,
+   "h": 1600,
+   "cat": "historias",
+   "group": "Historias",
+   "title": "2 · Encuesta"
+  },
+  {
+   "src": "/img/piezas/historias-historia-03-quiz.webp",
+   "sm": "/img/piezas/historias-historia-03-quiz-sm.webp",
+   "w": 900,
+   "h": 1600,
+   "cat": "historias",
+   "group": "Historias",
+   "title": "3 · Quiz"
+  },
+  {
+   "src": "/img/piezas/historias-historia-04-slider.webp",
+   "sm": "/img/piezas/historias-historia-04-slider-sm.webp",
+   "w": 900,
+   "h": 1600,
+   "cat": "historias",
+   "group": "Historias",
+   "title": "4 · Slider"
+  },
+  {
+   "src": "/img/piezas/historias-historia-05-caja-de-preguntas.webp",
+   "sm": "/img/piezas/historias-historia-05-caja-de-preguntas-sm.webp",
+   "w": 900,
+   "h": 1600,
+   "cat": "historias",
+   "group": "Historias",
+   "title": "5 · Caja de preguntas"
+  },
+  {
+   "src": "/img/piezas/historias-historia-06-musica-playlist.webp",
+   "sm": "/img/piezas/historias-historia-06-musica-playlist-sm.webp",
+   "w": 900,
+   "h": 1600,
+   "cat": "historias",
+   "group": "Historias",
+   "title": "6 · Música / Playlist"
+  },
+  {
+   "src": "/img/piezas/historias-historia-07-cuenta-regresiva-stand.webp",
+   "sm": "/img/piezas/historias-historia-07-cuenta-regresiva-stand-sm.webp",
+   "w": 900,
+   "h": 1600,
+   "cat": "historias",
+   "group": "Historias",
+   "title": "7 · Cuenta regresiva Stand"
+  },
+  {
+   "src": "/img/piezas/destacadas-destacada-01-quito.webp",
+   "sm": "/img/piezas/destacadas-destacada-01-quito-sm.webp",
+   "w": 1080,
+   "h": 1080,
+   "cat": "historias",
+   "group": "Destacadas",
+   "title": "1 · Quito"
+  },
+  {
+   "src": "/img/piezas/destacadas-destacada-02-encuestas.webp",
+   "sm": "/img/piezas/destacadas-destacada-02-encuestas-sm.webp",
+   "w": 1080,
+   "h": 1080,
+   "cat": "historias",
+   "group": "Destacadas",
+   "title": "2 · Encuestas"
+  },
+  {
+   "src": "/img/piezas/destacadas-destacada-03-historias.webp",
+   "sm": "/img/piezas/destacadas-destacada-03-historias-sm.webp",
+   "w": 1080,
+   "h": 1080,
+   "cat": "historias",
+   "group": "Destacadas",
+   "title": "3 · Historias"
+  },
+  {
+   "src": "/img/piezas/destacadas-destacada-04-estacion.webp",
+   "sm": "/img/piezas/destacadas-destacada-04-estacion-sm.webp",
+   "w": 1080,
+   "h": 1080,
+   "cat": "historias",
+   "group": "Destacadas",
+   "title": "4 · Estación"
+  },
+  {
+   "src": "/img/piezas/destacadas-destacada-05-playlist.webp",
+   "sm": "/img/piezas/destacadas-destacada-05-playlist-sm.webp",
+   "w": 1080,
+   "h": 1080,
+   "cat": "historias",
+   "group": "Destacadas",
+   "title": "5 · Playlist"
+  },
+  {
+   "src": "/img/piezas/destacadas-destacada-06-reglas.webp",
+   "sm": "/img/piezas/destacadas-destacada-06-reglas-sm.webp",
+   "w": 1080,
+   "h": 1080,
+   "cat": "historias",
+   "group": "Destacadas",
+   "title": "6 · Reglas"
+  },
+  {
+   "src": "/img/piezas/foto-de-perfil-foto-perfil-quito.webp",
+   "sm": "/img/piezas/foto-de-perfil-foto-perfil-quito-sm.webp",
+   "w": 1080,
+   "h": 1080,
+   "cat": "redes",
+   "group": "Foto de perfil",
+   "title": "Foto de perfil"
+  },
+  {
+   "src": "/img/piezas/foto-de-perfil-foto-perfil-quito-cerca.webp",
+   "sm": "/img/piezas/foto-de-perfil-foto-perfil-quito-cerca-sm.webp",
+   "w": 1080,
+   "h": 1080,
+   "cat": "redes",
+   "group": "Foto de perfil",
+   "title": "Foto de perfil · cerca"
+  },
+  {
+   "src": "/img/piezas/afiches-a3-afiche-01-no-soy-reposera.webp",
+   "sm": "/img/piezas/afiches-a3-afiche-01-no-soy-reposera-sm.webp",
+   "w": 1400,
+   "h": 1980,
+   "cat": "impresos",
+   "group": "Afiches A3",
+   "title": "1 · No soy reposera"
+  },
+  {
+   "src": "/img/piezas/afiches-a3-afiche-02-no-soy-peluqueria.webp",
+   "sm": "/img/piezas/afiches-a3-afiche-02-no-soy-peluqueria-sm.webp",
+   "w": 1400,
+   "h": 1980,
+   "cat": "impresos",
+   "group": "Afiches A3",
+   "title": "2 · No soy peluquería"
+  },
+  {
+   "src": "/img/piezas/afiches-a3-afiche-03-no-soy-tu-cuaderno.webp",
+   "sm": "/img/piezas/afiches-a3-afiche-03-no-soy-tu-cuaderno-sm.webp",
+   "w": 1400,
+   "h": 1980,
+   "cat": "impresos",
+   "group": "Afiches A3",
+   "title": "3 · No soy tu cuaderno"
+  },
+  {
+   "src": "/img/piezas/afiches-a3-afiche-04-si-me-moves-devolveme.webp",
+   "sm": "/img/piezas/afiches-a3-afiche-04-si-me-moves-devolveme-sm.webp",
+   "w": 1400,
+   "h": 1980,
+   "cat": "impresos",
+   "group": "Afiches A3",
+   "title": "4 · Si me movés, devolveme"
+  },
+  {
+   "src": "/img/piezas/afiches-a3-afiche-05-te-banco-en-todas.webp",
+   "sm": "/img/piezas/afiches-a3-afiche-05-te-banco-en-todas-sm.webp",
+   "w": 1400,
+   "h": 1980,
+   "cat": "impresos",
+   "group": "Afiches A3",
+   "title": "5 · Te banco en todas"
+  },
+  {
+   "src": "/img/piezas/infografia-a3-infografia-a3-la-misma-banca-distintas-historias.webp",
+   "sm": "/img/piezas/infografia-a3-infografia-a3-la-misma-banca-distintas-historias-sm.webp",
+   "w": 1400,
+   "h": 1980,
+   "cat": "impresos",
+   "group": "Infografía A3",
+   "title": "La misma banca, distintas historias"
+  },
+  {
+   "src": "/img/piezas/stickers-stickers-plancha-a4.webp",
+   "sm": "/img/piezas/stickers-stickers-plancha-a4-sm.webp",
+   "w": 1400,
+   "h": 1980,
+   "cat": "impresos",
+   "group": "Stickers",
+   "title": "Plancha de stickers A4"
+  },
+  {
+   "src": "/img/piezas/panel-del-refugio-panel-refugio-rojo-mockup-referencia.webp",
+   "sm": "/img/piezas/panel-del-refugio-panel-refugio-rojo-mockup-referencia-sm.webp",
+   "w": 1800,
+   "h": 2400,
+   "cat": "arquigrafia",
+   "group": "Panel del refugio",
+   "title": "Panel del refugio · Mockup"
+  },
+  {
+   "src": "/img/piezas/panel-del-refugio-panel-refugio-rojo-panel-arte-final.webp",
+   "sm": "/img/piezas/panel-del-refugio-panel-refugio-rojo-panel-arte-final-sm.webp",
+   "w": 1800,
+   "h": 2698,
+   "cat": "arquigrafia",
+   "group": "Panel del refugio",
+   "title": "Panel del refugio · Arte final"
+  },
+  {
+   "src": "/img/piezas/mesa-mesa-vinilo-tablero-arte-final.webp",
+   "sm": "/img/piezas/mesa-mesa-vinilo-tablero-arte-final-sm.webp",
+   "w": 1800,
+   "h": 800,
+   "cat": "arquigrafia",
+   "group": "Mesa · Muro de historias",
+   "title": "Vinilo del tablero · Arte final"
+  },
+  {
+   "src": "/img/piezas/mesa-mesa-vinilo-tablero-mockup.webp",
+   "sm": "/img/piezas/mesa-mesa-vinilo-tablero-mockup-sm.webp",
+   "w": 1800,
+   "h": 2400,
+   "cat": "arquigrafia",
+   "group": "Mesa · Muro de historias",
+   "title": "Vinilo del tablero · Mockup"
+  },
+  {
+   "src": "/img/piezas/placa-de-los-bancos-placa-banco-arte-final.webp",
+   "sm": "/img/piezas/placa-de-los-bancos-placa-banco-arte-final-sm.webp",
+   "w": 1200,
+   "h": 420,
+   "cat": "arquigrafia",
+   "group": "Placa de los bancos",
+   "title": "Placa QR · Arte final"
+  },
+  {
+   "src": "/img/piezas/placa-de-los-bancos-placa-banco-mockup.webp",
+   "sm": "/img/piezas/placa-de-los-bancos-placa-banco-mockup-sm.webp",
+   "w": 1800,
+   "h": 2400,
+   "cat": "arquigrafia",
+   "group": "Placa de los bancos",
+   "title": "Placa QR · Mockup"
+  },
+  {
+   "src": "/img/piezas/stand-bancala-stand-bancala-00-mockup-del-stand.webp",
+   "sm": "/img/piezas/stand-bancala-stand-bancala-00-mockup-del-stand-sm.webp",
+   "w": 1800,
+   "h": 1273,
+   "cat": "stand",
+   "group": "Stand Bancala",
+   "title": "0 · Mockup del stand"
+  },
+  {
+   "src": "/img/piezas/stand-bancala-stand-bancala-01-backwall-300x220-cm-esc-1-10.webp",
+   "sm": "/img/piezas/stand-bancala-stand-bancala-01-backwall-300x220-cm-esc-1-10-sm.webp",
+   "w": 1800,
+   "h": 1320,
+   "cat": "stand",
+   "group": "Stand Bancala",
+   "title": "1 · Backwall 300 × 220 cm · esc. 1:10"
+  },
+  {
+   "src": "/img/piezas/stand-bancala-stand-bancala-02-mostrador-frente-120x100-cm-esc-1-10.webp",
+   "sm": "/img/piezas/stand-bancala-stand-bancala-02-mostrador-frente-120x100-cm-esc-1-10-sm.webp",
+   "w": 1418,
+   "h": 1182,
+   "cat": "stand",
+   "group": "Stand Bancala",
+   "title": "2 · Mostrador frente 120 × 100 cm · esc. 1:10"
+  },
+  {
+   "src": "/img/piezas/stand-bancala-stand-bancala-03-roll-up-85x200-cm-esc-1-10.webp",
+   "sm": "/img/piezas/stand-bancala-stand-bancala-03-roll-up-85x200-cm-esc-1-10-sm.webp",
+   "w": 1004,
+   "h": 2363,
+   "cat": "stand",
+   "group": "Stand Bancala",
+   "title": "3 · Roll-up 85 × 200 cm · esc. 1:10"
+  },
+  {
+   "src": "/img/piezas/stand-bancala-stand-bancala-04-quito-3d-en-tamano-real.webp",
+   "sm": "/img/piezas/stand-bancala-stand-bancala-04-quito-3d-en-tamano-real-sm.webp",
+   "w": 1800,
+   "h": 1273,
+   "cat": "stand",
+   "group": "Stand Bancala",
+   "title": "4 · Quito 3D en tamaño real"
+  },
+  {
+   "src": "/img/piezas/stand-bancala-stand-bancala-05-folleto-a5-exterior.webp",
+   "sm": "/img/piezas/stand-bancala-stand-bancala-05-folleto-a5-exterior-sm.webp",
+   "w": 1800,
+   "h": 1273,
+   "cat": "stand",
+   "group": "Stand Bancala",
+   "title": "5 · Folleto A5 exterior"
+  },
+  {
+   "src": "/img/piezas/stand-bancala-stand-bancala-06-folleto-a5-interior.webp",
+   "sm": "/img/piezas/stand-bancala-stand-bancala-06-folleto-a5-interior-sm.webp",
+   "w": 1800,
+   "h": 1273,
+   "cat": "stand",
+   "group": "Stand Bancala",
+   "title": "6 · Folleto A5 interior"
+  },
+  {
+   "src": "/img/piezas/stand-bancala-stand-bancala-07-afiche-a3-convocatoria.webp",
+   "sm": "/img/piezas/stand-bancala-stand-bancala-07-afiche-a3-convocatoria-sm.webp",
+   "w": 1800,
+   "h": 2546,
+   "cat": "stand",
+   "group": "Stand Bancala",
+   "title": "7 · Afiche A3 convocatoria"
+  },
+  {
+   "src": "/img/piezas/stand-bancala-stand-bancala-08-display-de-mesa-a5-con-qr.webp",
+   "sm": "/img/piezas/stand-bancala-stand-bancala-08-display-de-mesa-a5-con-qr-sm.webp",
+   "w": 1748,
+   "h": 2481,
+   "cat": "stand",
+   "group": "Stand Bancala",
+   "title": "8 · Display de mesa A5 con QR"
+  },
+  {
+   "src": "/img/piezas/stand-bancala-stand-bancala-09-planta-y-vista-frontal.webp",
+   "sm": "/img/piezas/stand-bancala-stand-bancala-09-planta-y-vista-frontal-sm.webp",
+   "w": 1800,
+   "h": 1273,
+   "cat": "stand",
+   "group": "Stand Bancala",
+   "title": "9 · Planta y vista frontal"
+  },
+  {
+   "src": "/img/piezas/stand-bancala-stand-bancala-10-mockup-en-el-campus-foto-real.webp",
+   "sm": "/img/piezas/stand-bancala-stand-bancala-10-mockup-en-el-campus-foto-real-sm.webp",
+   "w": 1800,
+   "h": 1273,
+   "cat": "stand",
+   "group": "Stand Bancala",
+   "title": "10 · Mockup en el campus (foto real)"
+  }
+ ]
+}

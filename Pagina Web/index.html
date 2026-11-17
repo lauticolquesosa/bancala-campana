@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bancala — Mucho más que un banco</title>
+<meta name="description" content="Bancala es la campaña de UCASAL Sustentable para cuidar los bancos de los patios, pasillos y galerías de la Facultad. Conocé a Quito, el banquito que te banca en todas.">
+<meta name="theme-color" content="#2d7cde">
+<meta property="og:title" content="Bancala — Mucho más que un banco">
+<meta property="og:description" content="Conocé a Quito, el banquito que te banca en todas. Una campaña de UCASAL Sustentable.">
+<meta property="og:image" content="/img/og.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Patrick+Hand+SC&family=Space+Mono:wght@700&family=Titan+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+} }
+</script>
+</head>
+<body class="is-loading home">
+
+<!-- ============ LOADER ============ -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__slats"><i></i><i></i><i></i><i></i></div>
+  <div class="loader__center">
+    <img class="loader__quito" src="/img/quito/carrusel-04-saludo.webp" alt="" width="380" height="420">
+    <img class="loader__logo" src="/img/brand/bancala-blanco.svg" alt="" width="240" height="96">
+  </div>
+  <div class="loader__bottom"><span>Armando el banco</span><span class="loader__pct"><b id="loaderPct">0</b>%</span></div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <a href="/" class="header__logo" aria-label="Bancala — inicio"><img src="/img/brand/bancala-blanco.svg" alt="Bancala" width="120" height="48"></a>
+  <nav class="header__nav" aria-label="Secciones">
+    <a href="#quito">Quito</a><a href="#menos">Menos en estas</a><a href="#un-dia">Un día</a><a href="#estacion">Estación</a><a href="/piezas">Piezas</a>
+  </nav>
+  <div class="header__right">
+    <a class="pill magnetic" href="/piezas"><span>Ver todas las piezas</span><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+    <button class="burger magnetic" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<nav class="menu" id="menu" aria-hidden="true">
+  <div class="menu__bg"><i></i><i></i><i></i><i></i></div>
+  <div class="menu__inner">
+    <p class="kicker">Recorré la campaña</p>
+    <ul class="menu__list">
+      <li><a href="#top" data-close><span>01</span>Inicio</a></li>
+      <li><a href="#quito" data-close><span>02</span>Conocé a Quito</a></li>
+      <li><a href="#menos" data-close><span>03</span>Menos en estas</a></li>
+      <li><a href="#un-dia" data-close><span>04</span>Un día en su vida</a></li>
+      <li><a href="#estacion" data-close><span>05</span>Estación Bancala</a></li>
+      <li><a href="/piezas"><span>06</span>Todas las piezas</a></li>
+    </ul>
+    <img class="menu__quito" src="/img/quito/senalando-feliz.webp" alt="" width="380" height="390" loading="lazy">
+    <div class="menu__foot"><span>#TeBancoEnTodas</span><span>UCASAL Sustentable · 2026</span></div>
+  </div>
+</nav>
+
+<!-- Quito 3D (fijo, recorre todo el home) -->
+<canvas class="quito-canvas" id="quitoCanvas" aria-hidden="true"></canvas>
+<div class="bubble" id="bubble" aria-live="polite"><span id="bubbleText">¡Hola! Soy Quito.</span></div>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero" data-q="0 .02 .62 0 feliz idle" data-qm="0 -.06 .72 0 feliz idle">
+  <div class="trama trama--b"></div>
+  <div class="hero__glow"></div>
+  <h1 class="hero__title" aria-label="Mucho más que un banco">
+    <span class="hero__row hero__row--a"><span class="dsp" data-bounce>Mucho más</span></span>
+    <span class="hero__row hero__row--b"><span class="dsp" data-bounce>que un <em>banco.</em></span></span>
+  </h1>
+  <p class="hero__kicker reveal-up"><span class="dot"></span>UCASAL Sustentable presenta</p>
+  <div class="hero__side reveal-up">
+    <a href="#quito" class="cta magnetic"><span class="cta__label">Conocé a Quito</span><span class="cta__icon"><svg viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span></a>
+  </div>
+  <div class="hero__hint reveal-up"><span class="hint__ring"></span><span>Tocá a Quito<br><small>o arrastralo para girarlo</small></span></div>
+  <div class="hero__tag reveal-up">#TeBancoEnTodas</div>
+  <div class="hero__scroll reveal-up"><span>Scroll</span><i></i></div>
+</section>
+
+<!-- ============ MANIFIESTO ============ -->
+<section class="manifesto" id="manifiesto" data-q=".56 -.05 .58 -.35 feliz thumbs" data-only="desktop">
+  <div class="trama trama--b"></div>
+  <div class="marquee marquee--a" aria-hidden="true"><div class="marquee__track"><span>Te banco en todas <i>✦</i> Mucho más que un banco <i>✦</i> Bancala <i>✦</i>&nbsp;</span><span>Te banco en todas <i>✦</i> Mucho más que un banco <i>✦</i> Bancala <i>✦</i>&nbsp;</span></div></div>
+  <div class="manifesto__body">
+    <p class="kicker kicker--mint">Manifiesto</p>
+    <p class="manifesto__text" id="manifestoText">Los bancos de la facu son testigos silenciosos de la vida universitaria. En el mismo banco conviven los nervios del primer día, las risas entre mates, la siesta entre parciales y el orgullo de recibirse. Detrás de cada uno hay materiales y horas de trabajo del equipo de Mantenimiento. Cuidar los bancos es cuidar los encuentros que pasan sobre ellos.</p>
+    <p class="manifesto__sign dsp" data-bounce>Te bancan. <em>Bancalos.</em></p>
+  </div>
+  <div class="marquee marquee--b" aria-hidden="true"><div class="marquee__track"><span>Lo que es de todos <em>no es de nadie</em> ✦ Lo que es de todos <em>no es de nadie</em> ✦&nbsp;</span><span>Lo que es de todos <em>no es de nadie</em> ✦ Lo que es de todos <em>no es de nadie</em> ✦&nbsp;</span></div></div>
+  <div class="mstage" data-q="0 -.05 .5 -.2 feliz thumbs" data-only="mobile"></div>
+</section>
+
+<!-- ============ CONOCÉ A QUITO ============ -->
+<section class="meet" id="quito" data-q="-.5 -.06 .7 .32 feliz idle" data-only="desktop">
+  <div class="trama trama--n"></div>
+  <div class="meet__stage" aria-hidden="true" data-q="0 .02 .52 0 feliz idle" data-only="mobile"><div class="meet__disc"></div></div>
+  <div class="meet__card" data-q="0 .9 0 0 feliz idle" data-only="mobile">
+    <p class="kicker">Ficha técnica</p>
+    <h2 class="dsp dsp--lg" data-bounce>¿Quién es?</h2>
+    <dl class="ficha">
+      <div><dt>Nombre</dt><dd>Quito, el banquito.</dd></div>
+      <div><dt>Vive en</dt><dd>Patios, pasillos y galerías de la facu.</dd></div>
+      <div><dt>Edad</dt><dd>Más que tu plan de estudios.</dd></div>
+      <div><dt>Le gusta</dt><dd>Los mates, las charlas largas y que lo usen.</dd></div>
+      <div><dt>No se banca</dt><dd>Los fibrones, los chicles y que lo arrastren.</dd></div>
+      <div><dt>Superpoder</dt><dd>Bancarte en todas.</dd></div>
+    </dl>
+    <div class="moods">
+      <p class="kicker">Su humor depende de vos <small>· probalo</small></p>
+      <div class="moods__btns" id="moods">
+        <button class="mood is-on" data-expr="feliz" data-pose="wave" data-say="¡Así me gusta! Usame para lo que soy."><b>Feliz</b><span>cuando lo usás para lo que es</span></button>
+        <button class="mood" data-expr="enojado" data-pose="hips" data-say="¡Eso no es un apunte! No me rayes."><b>Enojado</b><span>cuando lo rayás</span></button>
+        <button class="mood" data-expr="triste" data-pose="idle" data-say="Me dejaron lleno de basura… 😢"><b>Triste</b><span>cuando lo dejás lleno de basura</span></button>
+        <button class="mood" data-expr="avergonzado" data-pose="shy" data-say="No soy reposera… ¡tapate un poco, che!"><b>Avergonzado</b><span>cuando lo usás de cama o peluquería</span></button>
+      </div>
+    </div>
+    <ul class="meet__seen" aria-label="Vio de todo">
+    <li>primeros días</li><li>finales aprobados</li><li>rondas de mates</li><li>chismes</li><li>amores</li><li>desamores</li><li>siestas de diez minutos</li><li>“después lo leo”</li>
+  </ul>
+  </div>
+</section>
+
+<!-- ============ POSES (carrusel arrastrable) ============ -->
+<section class="poses" id="poses" data-q="-.5 -1.6 .5 .3 feliz idle" data-qm="0 -1.6 0 0 feliz idle">
+  <div class="poses__head">
+    <p class="kicker">Una sola voz para toda la campaña</p>
+    <h2 class="dsp dsp--lg" data-bounce>Veinte poses, <em>un amigo.</em></h2>
+    <p class="poses__lead">Feliz para el vínculo, avergonzado o enojado para el límite, limpiando para la acción. Cada emoción de Quito es una conducta. <span class="drag-hint">Arrastrá →</span></p>
+  </div>
+  <div class="slider" id="posesSlider"><div class="slider__track" id="posesTrack"></div></div>
+</section>
+
+<!-- ============ MENOS EN ESTAS (scroll horizontal) ============ -->
+<section class="limits" id="menos" data-q="-.74 -.12 .5 .45 enojado pointR" data-qm="0 -1.6 0 0 enojado idle">
+  <div class="limits__pin">
+    <div class="limits__track" id="limitsTrack">
+      <div class="limits__intro">
+        <p class="kicker kicker--mint">Serie 02 · Límites con humor</p>
+        <h2 class="dsp dsp--xl" data-bounce>Te banco <br>en todas.</h2>
+        <h2 class="dsp dsp--xl dsp--mint" data-bounce>Menos <br>en estas.</h2>
+        <p class="limits__lead">El humor marca la conducta sin retar a nadie. Fotos reales del campus, estudiantes reales y Quito reaccionando.</p>
+      </div>
+      <figure class="poster" data-say="¡Tapate un poco, che!"><img src="/img/piezas/afiches-a3-afiche-01-no-soy-reposera.webp" alt="Afiche No soy reposera" width="1400" height="1980" loading="lazy"><figcaption><b>No soy reposera.</b><span>Las patas son para el piso.</span></figcaption></figure>
+      <figure class="poster" data-say="¡Los pelos van al tacho, no a mí!"><img src="/img/piezas/afiches-a3-afiche-02-no-soy-peluqueria.webp" alt="Afiche No soy peluquería" width="1400" height="1980" loading="lazy"><figcaption><b>No soy peluquería.</b><span>Los pelos, al tacho.</span></figcaption></figure>
+      <figure class="poster" data-say="¡Eso no es un apunte!"><img src="/img/piezas/afiches-a3-afiche-03-no-soy-tu-cuaderno.webp" alt="Afiche No soy tu cuaderno" width="1400" height="1980" loading="lazy"><figcaption><b>No soy tu cuaderno.</b><span>Sin fibrones, por favor.</span></figcaption></figure>
+      <figure class="poster" data-say="¿Me llevan… y me traen?"><img src="/img/piezas/afiches-a3-afiche-04-si-me-moves-devolveme.webp" alt="Afiche Si me movés, devolveme" width="1400" height="1980" loading="lazy"><figcaption><b>Si me movés, devolveme.</b><span>Ningún banco solo en la nada.</span></figcaption></figure>
+      <figure class="poster poster--love" data-say="Con vos, en todas."><img src="/img/piezas/afiches-a3-afiche-05-te-banco-en-todas.webp" alt="Afiche Te banco en todas" width="1400" height="1980" loading="lazy"><figcaption><b>Te banco en todas.</b><span>Y el vínculo, también.</span></figcaption></figure>
+      <div class="limits__end">
+        <img src="/img/quito/policia.webp" alt="" width="760" height="820" loading="lazy">
+        <p class="dsp dsp--md">Fórmula fija: <em>titular, foto real y Quito reaccionando.</em></p>
+      </div>
+    </div>
+    <div class="limits__bar"><span id="limitsBar"></span></div>
+  </div>
+</section>
+
+<!-- ============ UN DÍA EN LA VIDA ============ -->
+<section class="day" id="un-dia" data-q="0 -1.6 .5 0 feliz idle">
+  <div class="day__pin">
+    <div class="day__sky" id="daySky"></div>
+    <div class="day__copy">
+      <p class="kicker">Carrusel 04</p>
+      <h2 class="dsp dsp--lg" data-bounce>Un día en la vida <em>de Quito.</em></h2>
+      <div class="day__clock">
+        <svg viewBox="0 0 200 200" class="clock" aria-hidden="true">
+          <circle cx="100" cy="100" r="92" class="clock__face"/>
+          <g class="clock__ticks"></g>
+          <line x1="100" y1="100" x2="100" y2="52" class="clock__h" id="clockH"/>
+          <line x1="100" y1="100" x2="100" y2="30" class="clock__m" id="clockM"/>
+          <circle cx="100" cy="100" r="7" class="clock__pin"/>
+        </svg>
+        <div class="day__now"><span class="chip" id="dayTime">08:00</span><p class="day__caption" id="dayCaption">Llega el primer ingresante, re nervioso.</p></div>
+      </div>
+      <div class="day__dots" id="dayDots"></div>
+    </div>
+    <div class="day__stack" id="dayStack">
+      <figure class="dslide" data-time="08:00" data-cap="Llega el primer ingresante, re nervioso."><img src="/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-02-08-00-primer-ing.webp" alt="08:00 · Llega el primer ingresante" width="1080" height="1350" loading="lazy"></figure>
+      <figure class="dslide" data-time="10:30" data-cap="Hora del mate. ¿Me pasan uno, che?"><img src="/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-03-10-30-hora-del-m.webp" alt="10:30 · Hora del mate" width="1080" height="1350" loading="lazy"></figure>
+      <figure class="dslide" data-time="13:00" data-cap="Almuerzo al sol. Lo que dejás en el banco, lo junta alguien."><img src="/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-04-13-00-almuerzo-a.webp" alt="13:00 · Almuerzo al sol" width="1080" height="1350" loading="lazy"></figure>
+      <figure class="dslide" data-time="15:00" data-cap="Hora libre y alguien se aburre… ¡Ey! No soy tu cuaderno."><img src="/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-05-15-00-hora-libre.webp" alt="15:00 · Hora libre" width="1080" height="1350" loading="lazy"></figure>
+      <figure class="dslide" data-time="17:00" data-cap="Siesta improvisada. Soy banco, no cama."><img src="/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-06-17-00-siesta-imp.webp" alt="17:00 · Siesta improvisada" width="1080" height="1350" loading="lazy"></figure>
+      <figure class="dslide" data-time="19:00" data-cap="Llega Mantenimiento: lija lo rayado, ajusta tornillos y junta lo que quedó."><img src="/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-07-19-00-llega-mant.webp" alt="19:00 · Llega Mantenimiento" width="1080" height="1350" loading="lazy"></figure>
+      <figure class="dslide" data-time="20:00" data-cap="Mañana arranca todo de nuevo. Bancarla vale."><img src="/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-08-20-00-cierre.webp" alt="20:00 · Mañana arranca todo de nuevo" width="1080" height="1350" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LA MISMA BANCA (galería en profundidad) ============ -->
+<section class="depth" id="historias">
+  <div class="depth__pin">
+    <div class="depth__stage" id="depthStage"></div>
+    <div class="depth__copy">
+      <p class="kicker kicker--mint">Carrusel 03 · Infografía</p>
+      <h2 class="dsp dsp--xl" data-bounce>La misma banca.<br><em>Distintas historias.</em></h2>
+      <p class="depth__lead">El primer día, la ronda de mates, la siesta de diez minutos, el almuerzo de todos. Fotos reales del campus con un único look: curva fílmica, sombras al azul, luces cálidas y grano fino.</p>
+    </div>
+    <div class="depth__progress"><span id="depthBar"></span></div>
+  </div>
+</section>
+
+<!-- ============ ANTES / DESPUÉS ============ -->
+<section class="look" id="look">
+  <div class="look__head">
+    <p class="kicker">Look fotográfico</p>
+    <h2 class="dsp dsp--lg" data-bounce>Un solo filtro <em>para toda la campaña.</em></h2>
+  </div>
+  <div class="compare" id="compare">
+    <img src="/img/campus/campus-12.webp" alt="Foto del campus con el look Bancala" width="960" height="1280" loading="lazy">
+    <div class="compare__before" id="compareBefore"><img src="/img/campus/antes-12.webp" alt="La misma foto, original del celular" width="960" height="1280" loading="lazy"></div>
+    <div class="compare__handle" id="compareHandle"><span>‹ ›</span></div>
+    <span class="compare__tag compare__tag--l">Original del celular</span><span class="compare__tag compare__tag--r">Look Bancala</span>
+  </div>
+  <ul class="look__list">
+    <li><b>Curva fílmica</b>Negros apenas levantados y altas luces suaves. Recupera los cielos quemados.</li>
+    <li><b>Virado</b>Sombras hacia el azul de la paleta y luces cálidas como la madera de Quito.</li>
+    <li><b>Profundidad</b>Mapa de profundidad por IA: el fondo se ordena y Quito queda nítido.</li>
+    <li><b>Grano y halación</b>Igual en todas las imágenes. La coherencia hace que 40 piezas parezcan una.</li>
+  </ul>
+</section>
+
+<!-- ============ ESTRATEGIA ============ -->
+<section class="steps" id="estrategia">
+  <div class="trama trama--b"></div>
+  <div class="steps__head">
+    <p class="kicker kicker--mint">Estrategia</p>
+    <h2 class="dsp dsp--xl" data-bounce>Del vínculo <em>a la acción.</em></h2>
+    <p class="steps__lead">El juego de palabras banco / bancar —apoyar, aguantar, estar para alguien— ordena todos los mensajes en tres pasos.</p>
+  </div>
+  <div class="steps__grid">
+    <article class="step"><span class="step__n">01</span><img src="/img/quito/sentado-feliz.webp" alt="" width="760" height="807" loading="lazy"><p class="kicker">Vínculo</p><h3 class="dsp">Te banco en todas.</h3><p>Quito acompaña los momentos reales de la facu: el primer día, los mates, el final aprobado.</p></article>
+    <article class="step"><span class="step__n">02</span><img src="/img/quito/enojado.webp" alt="" width="760" height="690" loading="lazy"><p class="kicker">Límite</p><h3 class="dsp">Menos en esta.</h3><p>El humor marca lo que no se hace sin retar: “No soy reposera”, “No soy tu cuaderno”.</p></article>
+    <article class="step"><span class="step__n">03</span><img src="/img/quito/limpiando.webp" alt="" width="760" height="874" loading="lazy"><p class="kicker">Acción</p><h3 class="dsp">Bancala.</h3><p>Bancar al banco que te banca: usarlo bien, no dañarlo y avisar si está roto.</p></article>
+  </div>
+  <div class="weeks" id="weeks">
+    <div class="weeks__line"><span id="weeksLine"></span></div>
+    <div class="week"><b>Semana 1</b><h4>Presentación</h4><p>Quito llega a la facu: lanzamiento, “Conocé a Quito”, historias con link y afiches de vínculo.</p></div>
+    <div class="week"><b>Semana 2</b><h4>Límites con humor</h4><p>“Te banco en todas. Menos en estas.” en afiches y carrusel; encuesta y quiz en historias; placas QR.</p></div>
+    <div class="week"><b>Semana 3</b><h4>Participación</h4><p>Estación Bancala en el patio: foto con Quito, encuesta física, Muro de historias y stickers.</p></div>
+    <div class="week"><b>Semana 4</b><h4>Comunidad</h4><p>Historias reales del Muro, homenaje a Mantenimiento y publicación de resultados.</p></div>
+  </div>
+  <div class="refs">
+    <p class="kicker kicker--mint">Referentes estudiados</p>
+    <div class="refs__row">
+      <div class="ref"><b>Dumb Ways to Die</b><span>McCann Melbourne · 2012</span><p>Personaje simpático + humor que evita el reto.</p></div>
+      <div class="ref"><b>Don’t Mess with Texas</b><span>GSD&amp;M · 1986</span><p>Hablar como habla el público y apelar a la pertenencia.</p></div>
+      <div class="ref"><b>Smokey Bear</b><span>Ad Council · desde 1944</span><p>Un personaje como vocero estable de todas las piezas.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ESTACIÓN BANCALA ============ -->
+<section class="station" id="estacion">
+  <div class="station__pin">
+    <div class="station__media" id="stationMedia">
+      <img src="/img/piezas/stand-bancala-stand-bancala-10-mockup-en-el-campus-foto-real.webp" alt="Estación Bancala montada en el campus" width="1800" height="1273" loading="lazy">
+      <div class="station__shade"></div>
+    </div>
+    <h2 class="station__title"><span class="station__line"><span class="dsp">Pasá,</span></span><span class="station__line"><span class="dsp dsp--mint">sentate.</span></span></h2>
+    <p class="station__sub">Estación Bancala · Martes y jueves de 10 a 14 h · Refugio rojo del patio</p>
+    <ul class="station__chips"><li>Foto con Quito</li><li>Encuesta en vivo</li><li>Muro de historias</li><li>Stickers gratis</li></ul>
+  </div>
+</section>
+
+<section class="flow" id="stand">
+  <div class="flow__head">
+    <p class="kicker">Stand y arquigrafía</p>
+    <h2 class="dsp dsp--lg" data-bounce>Nada nuevo: <em>todo bancado.</em></h2>
+    <p class="flow__lead">Vestimos el refugio rojo, la mesa y los bancos que ya están en el patio. Y para las muestras, un stand con backwall, mostrador, roll-up y un Quito 3D en tamaño real para la foto.</p>
+  </div>
+  <div class="coverflow" id="coverflow" tabindex="0" aria-label="Piezas del stand y la arquigrafía">
+    <div class="coverflow__stage" id="cfStage"></div>
+    <div class="coverflow__ui">
+      <button class="cf-btn magnetic" id="cfPrev" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <p class="coverflow__cap" id="cfCap"></p>
+      <button class="cf-btn magnetic" id="cfNext" aria-label="Siguiente"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REDES ============ -->
+<section class="social" id="redes">
+  <div class="trama trama--b"></div>
+  <div class="social__head">
+    <p class="kicker kicker--mint">Instagram · @ucasalsustentable</p>
+    <h2 class="dsp dsp--xl" data-bounce>Instagram como <em>sala de estar.</em></h2>
+  </div>
+  <div class="social__grid">
+    <div class="phone" id="phone">
+      <div class="phone__screen">
+        <div class="phone__bars" id="phoneBars"></div>
+        <div class="phone__user"><img src="/img/piezas/foto-de-perfil-foto-perfil-quito-cerca-sm.webp" alt="" width="32" height="32"><b>ucasalsustentable</b><span>Bancala</span></div>
+        <div class="phone__stories" id="phoneStories"></div>
+        <button class="phone__nav phone__nav--prev" id="storyPrev" aria-label="Historia anterior"></button>
+        <button class="phone__nav phone__nav--next" id="storyNext" aria-label="Historia siguiente"></button>
+      </div>
+    </div>
+    <div class="social__side">
+      <div class="highlights" id="highlights"></div>
+      <div class="fan" id="fan"></div>
+      <p class="social__note">El feed construye el personaje, los carruseles cuentan, las historias hacen participar y las destacadas dejan todo ordenado.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INFOGRAFÍA (lupa) ============ -->
+<section class="info" id="infografia" data-q="0 -1.6 .5 0 feliz idle" data-qm="0 -1.6 0 0 feliz idle">
+  <div class="info__copy">
+    <p class="kicker">Infografía A3 · carteleras</p>
+    <h2 class="dsp dsp--lg" data-bounce>Cuidala más que a tu mamá <em>(bueno, casi).</em></h2>
+    <p>La anatomía de Quito —respaldo, asiento, patas y morral— organiza los cinco “no se banca”. Fondo papel liso, dos bloques legibles y tres gestos que bancan. Pasá el cursor para leerla de cerca.</p>
+    <a class="cta cta--dark magnetic" href="/piezas#impresos"><span class="cta__label">Ver los impresos</span><span class="cta__icon"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span></a>
+  </div>
+  <div class="loupe-wrap" id="loupeWrap">
+    <img src="/img/piezas/infografia-a3-infografia-a3-la-misma-banca-distintas-historias.webp" alt="Infografía A3: La misma banca, distintas historias" width="1400" height="1980" loading="lazy" id="infoImg">
+    <div class="loupe" id="loupe"></div>
+  </div>
+</section>
+
+<!-- ============ REGLAS ============ -->
+<section class="rules" id="reglas" data-q=".55 -.06 .66 -.3 feliz thumbs" data-only="desktop">
+  <div class="trama trama--b"></div>
+  <div class="mstage mstage--top" data-q="0 0 .52 -.2 feliz thumbs" data-only="mobile"></div>
+  <div class="rules__copy" data-q="0 .9 0 0 feliz thumbs" data-only="mobile">
+    <p class="kicker kicker--mint">Cuatro reglas para que tu banco favorito siga ahí</p>
+    <h2 class="dsp dsp--xxl" data-bounce>Bancala.</h2>
+    <ol class="rules__list">
+      <li data-expr="enojado" data-say="Las patas son para el piso, no para el asiento."><span>1</span><div><b>Sentate, no te pares.</b><p>Las patas son para el piso, no para el asiento.</p></div></li>
+      <li data-expr="triste" data-say="Siempre hay un tacho cerca. Yo lo sé."><span>2</span><div><b>La basura, al tacho.</b><p>Siempre hay uno cerca. Quito lo sabe.</p></div></li>
+      <li data-expr="avergonzado" data-say="¿Me llevan… y me traen?"><span>3</span><div><b>Si lo movés, devolvelo.</b><p>Que ningún banco quede solo en medio de la nada.</p></div></li>
+      <li data-expr="sorprendido" data-say="¿Está roto? Escaneá mi QR y avisá."><span>4</span><div><b>¿Está roto? Avisá.</b><p>Escaneá el QR del banco o avisá a Mantenimiento.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ STICKERS ============ -->
+<section class="stickers" id="stickers" data-q="-.7 -.6 .32 .4 sorprendido pointR" data-qm="0 -1.6 0 0 feliz idle">
+  <div class="stickers__copy">
+    <p class="kicker">Stickers gratis en la Estación</p>
+    <h2 class="dsp dsp--lg" data-bounce>Pegalos en tu compu. <em>No en el banco.</em></h2>
+    <p>Agarralos, arrastralos y armá tu escritorio.</p>
+  </div>
+  <div class="board" id="board"></div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" id="footer" data-q=".72 -.3 .46 -.3 euforico wave" data-only="desktop">
+  <div class="trama trama--b"></div>
+  <div class="mstage mstage--top" data-q="0 0 .5 0 euforico wave" data-only="mobile"></div>
+  <div class="footer__big">
+    <p class="dsp dsp--huge" data-bounce>Te bancan.</p>
+    <p class="dsp dsp--huge dsp--mint" data-bounce>Bancalos.</p>
+  </div>
+  <div class="footer__row" data-q="0 .9 0 0 euforico wave" data-only="mobile">
+    <div class="footer__col">
+      <p class="kicker">La campaña</p>
+      <a href="#quito">Conocé a Quito</a><a href="#menos">Menos en estas</a><a href="#un-dia">Un día en su vida</a><a href="#estacion">Estación Bancala</a><a href="/piezas">Todas las piezas</a>
+    </div>
+    <div class="footer__col">
+      <p class="kicker">Seguila en</p>
+      <a href="https://www.instagram.com/ucasalsustentable/" target="_blank" rel="noopener">Instagram · @ucasalsustentable</a>
+      <span class="footer__hash">#TeBancoEnTodas</span>
+    </div>
+  </div>
+  <div class="footer__firm">
+    <img src="/img/brand/bancala-blanco.svg" alt="Bancala" width="150" height="60" loading="lazy"><i></i>
+    <img src="/img/brand/ucasal-sustentable-blanco.webp" alt="UCASAL Sustentable" width="170" height="60" loading="lazy"><i></i>
+    <img src="/img/brand/ucasal-blanco.svg" alt="UCASAL" width="130" height="50" loading="lazy">
+  </div>
+  <div class="footer__legal"><span>Campaña Bancala · Tecnología del Diseño · UCASAL · 2026</span><span>Quito, el banquito, es el personaje de la campaña.</span></div>
+</footer>
+
+<div class="cursor" id="cursor" aria-hidden="true"><span id="cursorLabel"></span></div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+<script type="module" src="/js/main.js"></script>
+</body>
+</html>

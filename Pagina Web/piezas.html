@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Piezas — Bancala</title>
+<meta name="description" content="Todas las piezas de la campaña Bancala: redes, historias, afiches, infografía, stickers, arquigrafía de la Estación Bancala, stand y fotos del campus.">
+<meta name="theme-color" content="#1b4d8b">
+<meta property="og:title" content="Piezas — Bancala">
+<meta property="og:description" content="Todas las piezas de la campaña Bancala, de UCASAL Sustentable.">
+<meta property="og:image" content="/img/og.jpg">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Patrick+Hand+SC&family=Space+Mono:wght@700&family=Titan+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/piezas.css">
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+} }
+</script>
+</head>
+<body class="archive">
+
+<header class="header" id="header">
+  <a href="/" class="header__logo" aria-label="Bancala — inicio"><img src="/img/brand/bancala-blanco.svg" alt="Bancala" width="120" height="48"></a>
+  <nav class="header__nav" aria-label="Secciones">
+    <a href="/#quito">Quito</a><a href="/#menos">Menos en estas</a><a href="/#un-dia">Un día</a><a href="/#estacion">Estación</a><a href="/piezas" class="is-active">Piezas</a>
+  </nav>
+  <div class="header__right">
+    <a class="pill magnetic" href="/"><span>Volver al inicio</span><svg viewBox="0 0 24 24"><path d="M17 17 7 7M15 7H7v8"/></svg></a>
+    <button class="burger magnetic" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<nav class="menu" id="menu" aria-hidden="true">
+  <div class="menu__bg"><i></i><i></i><i></i><i></i></div>
+  <div class="menu__inner">
+    <p class="kicker">Recorré la campaña</p>
+    <ul class="menu__list">
+      <li><a href="/"><span>01</span>Inicio</a></li>
+      <li><a href="/#quito"><span>02</span>Conocé a Quito</a></li>
+      <li><a href="/#menos"><span>03</span>Menos en estas</a></li>
+      <li><a href="/#un-dia"><span>04</span>Un día en su vida</a></li>
+      <li><a href="/#estacion"><span>05</span>Estación Bancala</a></li>
+      <li><a href="/piezas"><span>06</span>Todas las piezas</a></li>
+    </ul>
+    <img class="menu__quito" src="/img/quito/senalando-feliz.webp" alt="" width="380" height="390" loading="lazy">
+    <div class="menu__foot"><span>#TeBancoEnTodas</span><span>UCASAL Sustentable · 2026</span></div>
+  </div>
+</nav>
+
+<main>
+  <section class="arc-hero">
+    <div class="trama trama--b"></div>
+    <p class="kicker kicker--mint">Archivo de la campaña</p>
+    <h1 class="dsp dsp--xxl" data-bounce data-no-reveal>Todas las <em>piezas.</em></h1>
+    <div class="arc-hero__stats">
+      <div><b id="statPiezas">0</b><span>piezas</span></div>
+      <div><b id="statFotos">0</b><span>fotos del campus</span></div>
+      <div><b id="statPoses">0</b><span>poses de Quito</span></div>
+    </div>
+    <img class="arc-hero__quito" src="/img/quito/carrusel-04-emocionado.webp" alt="" width="760" height="987">
+  </section>
+
+  <div class="filters" id="filters" role="tablist" aria-label="Filtrar piezas"></div>
+
+  <section class="arc" id="archive" aria-live="polite"></section>
+</main>
+
+<footer class="footer footer--mini">
+  <div class="trama trama--b"></div>
+  <div class="footer__big"><p class="dsp dsp--xl">Te bancan. <em>Bancalos.</em></p></div>
+  <div class="footer__firm">
+    <img src="/img/brand/bancala-blanco.svg" alt="Bancala" width="150" height="60" loading="lazy"><i></i>
+    <img src="/img/brand/ucasal-sustentable-blanco.webp" alt="UCASAL Sustentable" width="170" height="60" loading="lazy"><i></i>
+    <img src="/img/brand/ucasal-blanco.svg" alt="UCASAL" width="130" height="50" loading="lazy">
+  </div>
+  <div class="footer__legal"><span>Campaña Bancala · Tecnología del Diseño · UCASAL · 2026</span><a href="/">Volver al inicio ↑</a></div>
+</footer>
+
+<!-- visor -->
+<div class="lb" id="lb" aria-hidden="true" role="dialog" aria-label="Visor de piezas">
+  <div class="lb__bg" id="lbBg"></div>
+  <figure class="lb__fig"><img id="lbImg" alt=""><figcaption><small id="lbGroup"></small><b id="lbTitle"></b></figcaption></figure>
+  <div class="lb__ui">
+    <span class="lb__count" id="lbCount"></span>
+    <a class="lb__btn" id="lbOpen" target="_blank" rel="noopener" aria-label="Abrir en tamaño completo"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+    <button class="lb__btn" id="lbClose" aria-label="Cerrar"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  </div>
+  <button class="lb__nav lb__nav--prev" id="lbPrev" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button class="lb__nav lb__nav--next" id="lbNext" aria-label="Siguiente"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+</div>
+
+<!-- Quito te acompaña -->
+<div class="buddy" id="buddy" aria-hidden="true">
+  <canvas id="buddyCanvas"></canvas>
+  <div class="buddy__bubble" id="buddyBubble">¿Buscás algo? Tocame.</div>
+</div>
+
+<div class="cursor" id="cursor" aria-hidden="true"><span id="cursorLabel"></span></div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+<script type="module" src="/js/piezas.js"></script>
+</body>
+</html>

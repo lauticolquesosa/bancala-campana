@@ -5,7 +5,7 @@ import { gsap, ScrollTrigger, $, $$, lenis, reduced, isTouch, isMobile, bindAnch
 
 lenis.stop();
 bindAnchors();
-const updateHeader = setupHeader('.meet, .poses, .look, .flow, .info, .stickers, .station');
+const updateHeader = setupHeader('.why, .meet, .poses, .look, .flow, .info, .stickers, .station');
 setupCursor();
 
 const DATA = loadData();
@@ -137,11 +137,13 @@ const PHRASES = [
   ['¡Ey! No soy tu cuaderno.', 'enojado', 'hips'],
   ['No soy reposera… ¡tapate un poco, che!', 'avergonzado', 'shy'],
   ['¡Jaja, me hacés cosquillas!', 'euforico', 'cheer'],
-  ['Si me movés, devolveme.', 'sorprendido', 'idle'],
-  ['Cuidame más que a tu mamá (bueno, casi).', 'guino', 'thumbs'],
-  ['¿Estoy roto? Escaneá mi QR y avisá.', 'triste', 'idle'],
-  ['¡El que ceba se queda!', 'feliz', 'wave'],
-  ['Los pelos van al tacho, no a mí.', 'enojado', 'pointR'],
+  ['¡El que ceba se queda!', 'carrusel-04-mate', 'idle'],
+  ['Si me movés, devolveme.', 'preocupado-sentado', 'idle'],
+  ['Cuidame más que a tu mamá (bueno, casi).', 'sentado-feliz', 'idle'],
+  ['Lo que dejás en el banco, lo junta alguien.', 'juntando-basura', 'idle'],
+  ['¿Está roto? Avisá a Mantenimiento.', 'limpiando', 'idle'],
+  ['¡Me despertaste! Estaba en la siesta…', 'carrusel-04-despertando', 'idle'],
+  ['¡Si llueve, te cubro!', 'paraguas', 'idle'],
 ];
 let phraseI = 0;
 function react() {
@@ -203,18 +205,12 @@ async function setupScroll() {
   // ---- hero: filas que se abren + Quito se aleja ----
   const heroTl = gsap.timeline({ scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
   heroTl.to('.hero__row--a', { xPercent: -18, ease: 'none' }, 0).to('.hero__row--b', { xPercent: 14, ease: 'none' }, 0)
-    .to('.hero__side, .hero__hint, .hero__kicker, .hero__tag, .hero__scroll', { opacity: 0, y: -40, ease: 'none', duration: .4 }, 0)
+    .to('.hero__side, .hero__hint, .hero__tag, .hero__scroll', { opacity: 0, y: -40, ease: 'none', duration: .4 }, 0)
     .to('.hero__glow', { scale: 1.6, opacity: 0, ease: 'none' }, 0);
 
-  // ---- manifiesto: palabras que se encienden ----
-  const mt = $('#manifestoText');
-  mt.innerHTML = mt.textContent.split(/\s+/).map((w) => `<span class="w">${w}</span>`).join(' ');
-  gsap.to('#manifestoText .w', { opacity: 1, stagger: .1, ease: 'none', scrollTrigger: { trigger: mt, start: 'top 80%', end: 'bottom 45%', scrub: true } });
-  $$('.marquee__track').forEach((t, i) => {
-    const loop = i % 2 ? gsap.fromTo(t, { xPercent: -50 }, { xPercent: 0, ease: 'none', duration: 34, repeat: -1 }) : gsap.fromTo(t, { xPercent: 0 }, { xPercent: -50, ease: 'none', duration: 34, repeat: -1 });
-    ScrollTrigger.create({ trigger: t, start: 'top bottom', end: 'bottom top', onUpdate: (s) => loop.timeScale(1 + Math.min(6, Math.abs(s.getVelocity()) / 250)) });
-  });
-  ScrollTrigger.create({ trigger: '.manifesto', start: 'top 40%', once: true, onEnter: () => say('Yo vi de todo: mates, finales, amores…', 3000) });
+  // ---- por qué cuidarlos: aparición simple ----
+  gsap.from('.why__copy > *', { y: 30, opacity: 0, stagger: .08, duration: .9, ease: 'power3.out', scrollTrigger: { trigger: '.why', start: 'top 70%', once: true } });
+  gsap.from('.why__media', { y: 40, opacity: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '.why', start: 'top 65%', once: true } });
 
   // ---- conocé a Quito ----
   gsap.from('.meet__disc', { scale: 0, rotate: -90, duration: 1.4, ease: 'elastic.out(1,.6)', scrollTrigger: { trigger: '.meet', start: 'top 60%', once: true } });

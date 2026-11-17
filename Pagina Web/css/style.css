@@ -141,19 +141,25 @@ section { position: relative; }
 .hero__scroll i::after { content: ''; position: absolute; left: 0; top: -40%; width: 100%; height: 40%; background: #fff; animation: drip 1.6s var(--ease) infinite; }
 @keyframes drip { to { top: 100%; } }
 
-/* ---------- MANIFIESTO ---------- */
-.manifesto { background: var(--navy); color: #fff; padding: 16vh 0; overflow: hidden; }
-.manifesto__body { position: relative; padding: 10vh var(--pad); max-width: 1180px; }
-.manifesto__text { font-weight: 650; font-size: clamp(26px, 3.4vw, 54px); line-height: 1.14; letter-spacing: -.012em; margin: 18px 0 40px; max-width: 18em; }
-.manifesto__text .w { opacity: .14; transition: none; }
-.manifesto__sign { font-size: clamp(44px, 6.4vw, 110px); }
+/* ---------- POR QUÉ CUIDARLOS ---------- */
+.why { background: var(--mint); color: var(--ink); padding: 18vh var(--pad); display: grid; grid-template-columns: 1.05fr .95fr; gap: 6vw; align-items: center; overflow: hidden; }
+.why__copy { max-width: 600px; }
+.why__kicker { display: inline-block; font-weight: 800; font-stretch: 80%; text-transform: uppercase; letter-spacing: .08em; font-size: 13px; padding: 7px 13px; border-radius: 99px; background: var(--ink); color: var(--mint); }
+.why__title { font-family: var(--f-dsp); font-weight: 400; font-size: clamp(40px, 4.8vw, 76px); line-height: 1; margin: 22px 0 24px; color: var(--navy); }
+.why__title span { display: block; color: #fff; -webkit-text-stroke: .07em var(--ink); paint-order: stroke fill; text-shadow: .05em .06em 0 var(--ink); }
+.why__text { font-size: clamp(17px, 1.35vw, 20px); line-height: 1.5; font-weight: 520; max-width: 34em; }
+.why__tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.why__tags li { padding: 9px 16px; border-radius: 99px; border: 2.5px solid var(--ink); font-weight: 750; font-size: 15px; background: #fff; box-shadow: 3px 4px 0 var(--ink); }
+.why__tags li:nth-child(2) { background: var(--wood); color: #fff; }
+.why__tags li:nth-child(3) { background: var(--blue); color: #fff; }
+.why__media { position: relative; justify-self: center; width: min(100%, 470px); }
+.why__main { border-radius: 26px; overflow: hidden; border: 3px solid var(--ink); box-shadow: 12px 14px 0 var(--blue), 12px 14px 0 3px var(--ink); transform: rotate(2deg); background: #fff; }
+.why__main img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+.why__small { position: absolute; left: -16%; bottom: -8%; width: 44%; border-radius: 18px; overflow: hidden; border: 3px solid var(--ink); box-shadow: 6px 8px 0 var(--wood), 6px 8px 0 3px var(--ink); transform: rotate(-6deg); background: #fff; }
+.why__small img { width: 100%; aspect-ratio: 3/4; object-fit: cover; }
+.why__note { position: absolute; right: -4%; top: -5%; font-family: var(--f-hand); font-size: 22px; padding: 6px 14px; border-radius: 10px; background: #fff; border: 2.5px solid var(--ink); transform: rotate(5deg); box-shadow: 3px 4px 0 var(--ink); }
 .marquee { overflow: hidden; white-space: nowrap; font-family: var(--f-dsp); font-size: clamp(40px, 7vw, 120px); line-height: 1.1; padding: .1em 0; }
 .marquee__track { display: inline-flex; will-change: transform; }
-.marquee__track span { padding-right: .3em; }
-.marquee--a { color: transparent; -webkit-text-stroke: 1.5px rgba(255, 255, 255, .5); transform: rotate(-2deg); }
-.marquee--a i { font-style: normal; color: var(--mint); -webkit-text-stroke: 0; }
-.marquee--b { color: var(--mint); transform: rotate(1.5deg); background: var(--ink); }
-.marquee--b em { font-style: normal; color: #fff; }
 
 /* ---------- CONOCÉ A QUITO ---------- */
 .meet { min-height: 120vh; background: var(--paper); padding: 16vh var(--pad); display: grid; grid-template-columns: 1fr minmax(320px, 560px); align-items: center; gap: 4vw; overflow: hidden; }
@@ -429,7 +435,9 @@ section { position: relative; }
   .hero__hint small { display: none; }
   .hero__scroll, .hero__tag { display: none; }
   .hero__kicker { top: 92px; }
-  .manifesto { padding: 10vh 0 0; }
+  .why { grid-template-columns: 1fr; padding: 12vh var(--pad) 16vh; gap: 9vh; }
+  .why__media { width: 82%; }
+  .why__small { left: -10%; }
   .mstage { display: block; height: 62vh; }
   .mstage--top { height: 58vh; margin: -16vh 0 0; }
   .hero__row--b { font-size: 11.6vw; }

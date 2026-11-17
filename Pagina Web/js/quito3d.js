@@ -104,7 +104,8 @@ export async function initQuito(canvas, { onProgress } = {}) {
   const body = new THREE.Group(); quito.add(body);                                 // rebote + squash (pivote en los pies)
   const fig = new THREE.Group(); body.add(fig);                                    // giro
 
-  const geo = new THREE.PlaneGeometry(1, 1, 220, 220); geo.translate(0, .5, 0);
+  const SEG = innerWidth < 860 ? 140 : 220;
+  const geo = new THREE.PlaneGeometry(1, 1, SEG, SEG); geo.translate(0, .5, 0);
   const mkMat = (isBack) => new THREE.ShaderMaterial({
     vertexShader: vert, fragmentShader: frag,
     uniforms: { uMap: { value: null }, uDepth: { value: null }, uAmt: { value: .55 }, uFlip: { value: 0 }, uBack: { value: isBack ? 1 : 0 },

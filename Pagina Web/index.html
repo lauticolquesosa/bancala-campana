@@ -29,16 +29,18 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Patrick+Hand+SC&family=Space+Mono:wght@700&family=Titan+One&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Patrick+Hand+SC&family=Space+Mono:wght@700&family=Titan+One&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Patrick+Hand+SC&family=Space+Mono:wght@700&family=Titan+One&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Patrick+Hand+SC&family=Space+Mono:wght@700&family=Titan+One&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="/css/style.css">
-<link rel="preload" as="image" href="/img/quito/hd/carrusel-04-saludo.webp" fetchpriority="high" crossorigin>
+<link rel="preload" as="image" href="/img/quito/carrusel-04-saludo.webp" fetchpriority="high">
+<link rel="preload" as="image" href="/img/quito/hd/carrusel-04-saludo.webp" crossorigin>
 <link rel="preload" as="image" href="/img/quito/depth/carrusel-04-saludo.png" crossorigin>
-<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js" crossorigin>
+<link rel="modulepreload" href="/js/vendor/three.module.min.js">
 <link rel="preload" href="/data/quito.json" as="fetch" crossorigin>
 <link rel="preload" href="/data/piezas.json" as="fetch" crossorigin>
 <script type="importmap">
-{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js" } }
+{ "imports": { "three": "/js/vendor/three.module.min.js" } }
 </script>
 <script type="application/ld+json">
 {
@@ -105,7 +107,7 @@
 <div class="loader" id="loader" aria-hidden="true">
   <div class="loader__slats"><i></i><i></i><i></i><i></i></div>
   <div class="loader__center">
-    <img class="loader__quito" src="/img/quito/carrusel-04-saludo.webp" alt="" width="380" height="420">
+    <img class="loader__quito" src="/img/quito/carrusel-04-saludo.webp" alt="" width="380" height="420" fetchpriority="high">
     <img class="loader__logo" src="/img/brand/bancala-blanco.svg" alt="" width="240" height="96">
   </div>
   <div class="loader__bottom"><span>Armando el banco</span><span class="loader__pct"><b id="loaderPct">0</b>%</span></div>
@@ -118,7 +120,7 @@
     <a href="#quito">Quito</a><a href="#menos">Menos en estas</a><a href="#un-dia">Un día</a><a href="#estacion">Estación</a><a href="/piezas">Piezas</a>
   </nav>
   <div class="header__right">
-    <a class="pill magnetic" href="/piezas"><span>Ver todas las piezas</span><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+    <a class="pill magnetic" href="/piezas" aria-label="Ver todas las piezas"><span>Ver todas las piezas</span><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
     <button class="burger magnetic" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
   </div>
 </header>
@@ -372,7 +374,7 @@
     <div class="phone" id="phone">
       <div class="phone__screen">
         <div class="phone__bars" id="phoneBars"></div>
-        <div class="phone__user"><img src="/img/piezas/foto-de-perfil-foto-perfil-quito-cerca-sm.webp" alt="" width="32" height="32"><b>ucasalsustentable</b><span>Bancala</span></div>
+        <div class="phone__user"><img src="/img/piezas/foto-de-perfil-foto-perfil-quito-cerca-sm.webp" alt="" width="32" height="32" loading="lazy" decoding="async"><b>ucasalsustentable</b><span>Bancala</span></div>
         <div class="phone__stories" id="phoneStories"></div>
         <button class="phone__nav phone__nav--prev" id="storyPrev" aria-label="Historia anterior"></button>
         <button class="phone__nav phone__nav--next" id="storyNext" aria-label="Historia siguiente"></button>
@@ -457,9 +459,9 @@
 
 <div class="cursor" id="cursor" aria-hidden="true"><span id="cursorLabel"></span></div>
 
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+<script src="/js/vendor/gsap.min.js" defer></script>
+<script src="/js/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/js/vendor/lenis.min.js" defer></script>
 <script type="module" src="/js/main.js"></script>
 </body>
 </html>

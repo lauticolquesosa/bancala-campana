@@ -2,7 +2,7 @@
    BANCALA — Mucho más que un banco
    ========================================================= */
 :root {
-  --navy: #1b4d8b; --navy-d: #123966; --blue: #2d7cde; --green: #539f73; --mint: #7ae2a6;
+  --navy: #1b4d8b; --navy-d: #123966; --blue: #2470d6; --green: #539f73; --mint: #7ae2a6;
   --ink: #3a1d0c; --wood: #e8892f; --wood-l: #f7a748; --cream: #fbf1df; --paper: #f5f1e8; --char: #2a2829; --white: #fff;
   --pad: clamp(16px, 4vw, 56px);
   --ease: cubic-bezier(.19, 1, .22, 1);
@@ -38,7 +38,7 @@ section { position: relative; }
 .dsp--huge { font-size: clamp(64px, 15.5vw, 280px); }
 .kicker { font-family: var(--f-txt); font-weight: 800; font-stretch: 80%; text-transform: uppercase; letter-spacing: .08em; font-size: 13px; color: var(--navy); }
 .kicker small { font-weight: 600; text-transform: none; letter-spacing: 0; opacity: .7; font-size: 13px; }
-.kicker--mint { color: var(--mint); }
+.kicker--mint { color: #fff; }
 
 .trama { position: absolute; inset: 0; pointer-events: none; background-size: 760px auto; background-repeat: repeat; opacity: .09; }
 .trama--b { background-image: url(/img/brand/trama-blanca.webp); }
@@ -177,8 +177,8 @@ section { position: relative; }
 .mood { text-align: left; padding: 13px 14px 14px; border-radius: 14px; background: var(--blue); color: #fff; border: 1px solid rgba(255, 255, 255, .14); transition: background .3s, transform .4s var(--ease), box-shadow .3s; }
 .mood b { display: block; font-weight: 750; font-size: 15px; }
 .mood span { display: block; font-size: 12.5px; line-height: 1.25; opacity: .75; margin-top: 3px; }
-.mood:hover { background: #3a89ea; transform: translateY(-2px); }
-.mood.is-on { background: #3f8ff0; box-shadow: 0 0 0 2px #fff inset; }
+.mood:hover { background: #1d63c4; transform: translateY(-2px); }
+.mood.is-on { background: #1d63c4; box-shadow: 0 0 0 2px #fff inset; }
 .meet__seen { margin-top: 30px; font-size: 14.5px; line-height: 1.55; color: rgba(255, 255, 255, .65); max-width: 36em; }
 .meet__seen span { font-weight: 750; color: #fff; }
 
@@ -322,7 +322,7 @@ section { position: relative; }
 .cf-btn svg { width: 22px; height: 22px; stroke: #fff; fill: none; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
 .cf-btn:hover { background: var(--navy); }
 .coverflow__cap { min-width: min(420px, 60vw); text-align: center; font-weight: 750; font-size: 17px; }
-.coverflow__cap small { display: block; font-weight: 600; font-size: 13px; opacity: .6; text-transform: uppercase; letter-spacing: .06em; }
+.coverflow__cap small { display: block; font-weight: 600; font-size: 13px; opacity: .8; text-transform: uppercase; letter-spacing: .06em; }
 
 /* ---------- REDES ---------- */
 .social { background: var(--navy); color: #fff; padding: 16vh var(--pad); overflow: hidden; }

@@ -35,7 +35,13 @@ async function boot() {
   qP.then((q) => { Q = q; if (introStarted) startQuito(); });
   const minTime = new Promise((r) => setTimeout(r, 600));
   const qWait = Promise.race([qP, new Promise((r) => setTimeout(r, 1500))]);
-  await Promise.all([qWait, fonts, minTime, DATA]);
+  // el CSS completo carga sin bloquear: la intro espera a que esté aplicado
+  const css = new Promise((r) => {
+    const ok = () => [...document.styleSheets].some((s) => s.href && s.href.includes('/css/style.css'));
+    if (ok()) return r();
+    const t = setInterval(() => { if (ok()) { clearInterval(t); r(); } }, 30);
+  });
+  await Promise.all([qWait, fonts, minTime, DATA, css]);
   prog.target = 100;
   await new Promise((r) => setTimeout(r, 250));
   intro();

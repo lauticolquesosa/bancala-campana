@@ -32,11 +32,22 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Patrick+Hand+SC&family=Space+Mono:wght@700&family=Titan+One&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Patrick+Hand+SC&family=Space+Mono:wght@700&family=Titan+One&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Patrick+Hand+SC&family=Space+Mono:wght@700&family=Titan+One&display=swap" rel="stylesheet"></noscript>
-<link rel="stylesheet" href="/css/style.css">
-<link rel="preload" as="image" href="/img/quito/carrusel-04-saludo.webp" fetchpriority="high">
-<link rel="preload" as="image" href="/img/quito/hd/carrusel-04-saludo.webp" crossorigin>
-<link rel="preload" as="image" href="/img/quito/depth/carrusel-04-saludo.png" crossorigin>
-<link rel="modulepreload" href="/js/vendor/three.module.min.js">
+<style>
+/* crítico: la pantalla de carga se dibuja antes de que llegue el CSS completo */
+html,body{margin:0;background:#2470d6}body.is-loading{overflow:hidden}
+.loader{position:fixed;inset:0;z-index:100;display:grid;place-items:center;color:#fff;font-family:system-ui,sans-serif}
+.loader__slats{position:absolute;inset:0;display:grid;grid-template-rows:repeat(4,1fr)}.loader__slats i{background:#2470d6}.loader__slats i:nth-child(2n){background:#2a76d4}
+.loader__center{position:relative;display:grid;justify-items:center;gap:22px}
+.loader__quito{width:min(220px,46vw);height:auto;animation:hop .62s cubic-bezier(.3,0,.4,1) infinite alternate;transform-origin:50% 100%}
+.loader__logo{width:min(200px,40vw);height:auto}
+.loader__bottom{position:absolute;left:24px;right:24px;bottom:28px;display:flex;justify-content:space-between;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.08em}
+@keyframes hop{from{transform:translateY(0) scale(1.04,.95)}to{transform:translateY(-26px) scale(.98,1.03) rotate(-2deg)}}
+</style>
+<link rel="preload" as="style" href="/css/style.css" id="mainCss" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+<link rel="preload" as="image" href="/img/quito/loader.webp" fetchpriority="high">
+<link rel="preload" as="image" href="/img/quito/hd/carrusel-04-saludo.webp" crossorigin fetchpriority="low">
+<link rel="preload" as="image" href="/img/quito/depth/carrusel-04-saludo.png" crossorigin fetchpriority="low">
 <link rel="preload" href="/data/quito.json" as="fetch" crossorigin>
 <link rel="preload" href="/data/piezas.json" as="fetch" crossorigin>
 <script type="importmap">
@@ -107,7 +118,7 @@
 <div class="loader" id="loader" aria-hidden="true">
   <div class="loader__slats"><i></i><i></i><i></i><i></i></div>
   <div class="loader__center">
-    <img class="loader__quito" src="/img/quito/carrusel-04-saludo.webp" alt="" width="380" height="420" fetchpriority="high">
+    <img class="loader__quito" src="/img/quito/loader.webp" alt="" width="440" height="487" fetchpriority="high">
     <img class="loader__logo" src="/img/brand/bancala-blanco.svg" alt="" width="240" height="96">
   </div>
   <div class="loader__bottom"><span>Armando el banco</span><span class="loader__pct"><b id="loaderPct">0</b>%</span></div>

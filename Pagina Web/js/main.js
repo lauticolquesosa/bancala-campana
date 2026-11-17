@@ -205,7 +205,7 @@ async function setupScroll() {
   // ---- hero: filas que se abren + Quito se aleja ----
   const heroTl = gsap.timeline({ scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
   heroTl.to('.hero__row--a', { xPercent: -18, ease: 'none' }, 0).to('.hero__row--b', { xPercent: 14, ease: 'none' }, 0)
-    .to('.hero__side, .hero__hint, .hero__tag, .hero__scroll', { opacity: 0, y: -40, ease: 'none', duration: .4 }, 0)
+    .to('.hero__side, .hero__tag, .hero__scroll', { opacity: 0, y: -40, ease: 'none', duration: .4 }, 0)
     .to('.hero__glow', { scale: 1.6, opacity: 0, ease: 'none' }, 0);
 
   // ---- por qué cuidarlos: aparición simple ----

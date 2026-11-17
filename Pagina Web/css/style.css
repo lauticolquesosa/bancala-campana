@@ -208,7 +208,7 @@ section { position: relative; }
 .poster img { width: 100%; border-radius: 16px; border: 3px solid var(--ink); box-shadow: 10px 12px 0 var(--ink); }
 .poster figcaption { margin-top: 18px; display: grid; gap: 2px; }
 .poster figcaption b { font-family: var(--f-dsp); font-weight: 400; font-size: 26px; }
-.poster figcaption span { font-weight: 600; opacity: .85; }
+.poster figcaption span { font-weight: 600; }
 .poster:nth-child(odd) { margin-top: 6vh; }
 .poster:nth-child(even) { margin-bottom: 6vh; }
 .limits__end { flex: 0 0 auto; width: min(420px, 70vw); display: grid; gap: 18px; }

@@ -31,11 +31,22 @@ async function boot() {
       .then((m) => m.initQuito($('#quitoCanvas'), { onProgress: (p) => (prog.target = 20 + p * 60) }))
       .catch((e) => { console.warn('[bancala] Quito 3D no disponible', e); document.documentElement.classList.add('no-webgl'); return null; });
   } else document.documentElement.classList.add('no-webgl');
-  const minTime = new Promise((r) => setTimeout(r, 700));
-  [Q] = await Promise.all([qP, fonts, minTime, DATA]);
+  // la página no espera al 3D más de 1,5 s: si tarda, Quito cae apenas está listo
+  qP.then((q) => { Q = q; if (introStarted) startQuito(); });
+  const minTime = new Promise((r) => setTimeout(r, 600));
+  const qWait = Promise.race([qP, new Promise((r) => setTimeout(r, 1500))]);
+  await Promise.all([qWait, fonts, minTime, DATA]);
   prog.target = 100;
-  await new Promise((r) => setTimeout(r, 500));
+  await new Promise((r) => setTimeout(r, 250));
   intro();
+}
+
+let introStarted = false, quitoStarted = false;
+function startQuito() {
+  if (!Q || quitoStarted || !introStarted) return;
+  quitoStarted = true;
+  setupQuitoInput(); computeAnchors(); placeQuito(true); Q.reveal();
+  setTimeout(() => say('¡Hola! Soy Quito, el banquito.', 3200), 900);
 }
 
 function intro() {
@@ -47,7 +58,7 @@ function intro() {
     .add(() => {
       document.body.classList.remove('is-loading'); lenis.start(); gsap.ticker.remove(progTick);
       if (location.hash && $(location.hash)) { lenis.scrollTo($(location.hash), { immediate: true }); computeAnchors(); }
-      if (Q) { placeQuito(true); Q.reveal(); setTimeout(() => say('¡Hola! Soy Quito, el banquito.', 3200), 900); }
+      introStarted = true; startQuito();
     }, '-=.75')
     .from(heroChars, { yPercent: 120, rotate: () => gsap.utils.random(-30, 30), opacity: 0, duration: 1.1, ease: 'back.out(1.8)', stagger: .025 }, '-=.6')
     .from('.header > *', { y: -40, opacity: 0, stagger: .08, duration: 1, ease: 'expo.out' }, '-=.9')
@@ -195,7 +206,6 @@ let moodExpr = null, moodPose = null;
 
 async function setupScroll() {
   const data = await DATA;
-  setupQuitoInput();
 
   computeAnchors(); placeQuito(true);
   lenis.on('scroll', () => placeQuito());

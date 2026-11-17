@@ -11,7 +11,7 @@
 .filters { position: sticky; top: 0; z-index: 40; display: flex; gap: 8px; padding: 86px var(--pad) 14px; overflow-x: auto; scrollbar-width: none; background: linear-gradient(var(--paper) 78%, rgba(245, 241, 232, 0)); }
 .filters::-webkit-scrollbar { display: none; }
 .chipf { flex: 0 0 auto; height: 42px; padding: 0 18px; border-radius: 99px; border: 2.5px solid var(--ink); background: var(--blue); font-weight: 750; font-size: 14px; color: #fff; transition: background .25s, box-shadow .25s, transform .25s; }
-.chipf small { font-family: var(--f-mono); font-size: 11px; margin-left: 6px; opacity: .9; }
+.chipf small { font-family: var(--f-mono); font-size: 12px; margin-left: 6px; }
 .chipf:hover { transform: translateY(-2px); box-shadow: 2px 3px 0 var(--ink); }
 .chipf.on { background: var(--navy); box-shadow: 3px 4px 0 var(--ink); }
 

@@ -26,6 +26,8 @@ async function boot() {
   setupBounce();
   const fonts = document.fonts?.ready ?? Promise.resolve();
   let qP = Promise.resolve(null);
+  // primero que se vea la imagen de carga; recién después baja el 3D (no compiten por la conexión)
+  await Promise.race([$('.loader__quito')?.decode?.().catch(() => {}), new Promise((r) => setTimeout(r, 800))]);
   if (webglOK()) {
     qP = import('./quito3d.js')
       .then((m) => m.initQuito($('#quitoCanvas'), { onProgress: (p) => (prog.target = 20 + p * 60) }))

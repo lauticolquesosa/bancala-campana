@@ -35,6 +35,7 @@
 <style>
 /* crítico: la pantalla de carga se dibuja antes de que llegue el CSS completo */
 html,body{margin:0;background:#2470d6}body.is-loading{overflow:hidden}
+body.is-loading>main,body.is-loading>header,body.is-loading>footer,body.is-loading>nav,body.is-loading>.bubble,body.is-loading>.cursor{visibility:hidden}
 .loader{position:fixed;inset:0;z-index:100;display:grid;place-items:center;color:#fff;font-family:system-ui,sans-serif}
 .loader__slats{position:absolute;inset:0;display:grid;grid-template-rows:repeat(4,1fr)}.loader__slats i{background:#2470d6}.loader__slats i:nth-child(2n){background:#2a76d4}
 .loader__center{position:relative;display:grid;justify-items:center;gap:22px}
@@ -46,8 +47,6 @@ html,body{margin:0;background:#2470d6}body.is-loading{overflow:hidden}
 <link rel="preload" as="style" href="/css/style.css" id="mainCss" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
 <link rel="preload" as="image" href="/img/quito/loader.webp" fetchpriority="high">
-<link rel="preload" as="image" href="/img/quito/hd/carrusel-04-saludo.webp" crossorigin fetchpriority="low">
-<link rel="preload" as="image" href="/img/quito/depth/carrusel-04-saludo.png" crossorigin fetchpriority="low">
 <link rel="preload" href="/data/quito.json" as="fetch" crossorigin>
 <link rel="preload" href="/data/piezas.json" as="fetch" crossorigin>
 <script type="importmap">

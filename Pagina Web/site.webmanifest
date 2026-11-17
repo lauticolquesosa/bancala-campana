@@ -1,0 +1,14 @@
+{
+  "name": "Bancala — Mucho más que un banco",
+  "short_name": "Bancala",
+  "description": "Campaña de UCASAL Sustentable para cuidar los bancos de la Facultad.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2d7cde",
+  "theme_color": "#2d7cde",
+  "lang": "es-AR",
+  "icons": [
+    { "src": "/img/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/img/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

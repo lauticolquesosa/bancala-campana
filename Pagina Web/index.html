@@ -1,26 +1,102 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-AR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Bancala — Mucho más que un banco</title>
+<title>Bancala — Mucho más que un banco | Campaña de UCASAL Sustentable</title>
 <meta name="description" content="Bancala es la campaña de UCASAL Sustentable para cuidar los bancos de los patios, pasillos y galerías de la Facultad. Conocé a Quito, el banquito que te banca en todas.">
+<meta name="keywords" content="Bancala, Quito el banquito, UCASAL, UCASAL Sustentable, campaña de concientización, cuidado de bancos, Salta, Tecnología del Diseño, te banco en todas">
+<meta name="author" content="Campaña Bancala · Tecnología del Diseño · UCASAL">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://bancala-alpha.vercel.app/">
 <meta name="theme-color" content="#2d7cde">
-<meta property="og:title" content="Bancala — Mucho más que un banco">
-<meta property="og:description" content="Conocé a Quito, el banquito que te banca en todas. Una campaña de UCASAL Sustentable.">
-<meta property="og:image" content="/img/og.jpg">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Bancala">
+<meta property="og:locale" content="es_AR">
+<meta property="og:url" content="https://bancala-alpha.vercel.app/">
+<meta property="og:title" content="Bancala — Mucho más que un banco | Campaña de UCASAL Sustentable">
+<meta property="og:description" content="Bancala es la campaña de UCASAL Sustentable para cuidar los bancos de los patios, pasillos y galerías de la Facultad. Conocé a Quito, el banquito que te banca en todas.">
+<meta property="og:image" content="https://bancala-alpha.vercel.app/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="La Estación Bancala con Quito, el banquito, montada en el campus de UCASAL">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bancala — Mucho más que un banco | Campaña de UCASAL Sustentable">
+<meta name="twitter:description" content="Bancala es la campaña de UCASAL Sustentable para cuidar los bancos de los patios, pasillos y galerías de la Facultad. Conocé a Quito, el banquito que te banca en todas.">
+<meta name="twitter:image" content="https://bancala-alpha.vercel.app/img/og.jpg">
 <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Patrick+Hand+SC&family=Space+Mono:wght@700&family=Titan+One&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css">
+<link rel="preload" as="image" href="/img/quito/hd/carrusel-04-saludo.webp" fetchpriority="high" crossorigin>
+<link rel="preload" as="image" href="/img/quito/depth/carrusel-04-saludo.png" crossorigin>
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js" crossorigin>
+<link rel="preload" href="/data/quito.json" as="fetch" crossorigin>
+<link rel="preload" href="/data/piezas.json" as="fetch" crossorigin>
 <script type="importmap">
-{ "imports": {
-  "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js",
-  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
-} }
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js" } }
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebSite",
+   "@id": "https://bancala-alpha.vercel.app/#web",
+   "url": "https://bancala-alpha.vercel.app/",
+   "name": "Bancala",
+   "inLanguage": "es-AR",
+   "publisher": {
+    "@id": "https://bancala-alpha.vercel.app/#org"
+   }
+  },
+  {
+   "@type": "Organization",
+   "@id": "https://bancala-alpha.vercel.app/#org",
+   "name": "UCASAL Sustentable",
+   "parentOrganization": {
+    "@type": "CollegeOrUniversity",
+    "name": "Universidad Católica de Salta (UCASAL)"
+   },
+   "sameAs": [
+    "https://www.instagram.com/ucasalsustentable/"
+   ]
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://bancala-alpha.vercel.app/#home",
+   "url": "https://bancala-alpha.vercel.app/",
+   "name": "Bancala — Mucho más que un banco",
+   "isPartOf": {
+    "@id": "https://bancala-alpha.vercel.app/#web"
+   },
+   "inLanguage": "es-AR",
+   "description": "Campaña de UCASAL Sustentable para cuidar los bancos de los patios, pasillos y galerías de la Facultad, protagonizada por Quito, el banquito.",
+   "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://bancala-alpha.vercel.app/img/og.jpg"
+   },
+   "about": {
+    "@type": "CreativeWork",
+    "name": "Campaña Bancala",
+    "alternateName": "Te banco en todas",
+    "creator": {
+     "@id": "https://bancala-alpha.vercel.app/#org"
+    },
+    "keywords": "cuidado del mobiliario, convivencia, sustentabilidad, UCASAL",
+    "character": {
+     "@type": "Person",
+     "name": "Quito, el banquito",
+     "description": "Un banco de plaza de madera con estética cartoon de los años 30. Leal, bonachón y un poco dramático."
+    }
+   }
+  }
+ ]
+}
 </script>
 </head>
 <body class="is-loading home">
@@ -94,7 +170,7 @@
     <ul class="why__tags"><li>Usalo bien</li><li>No lo dañes</li><li>Avisá si está roto</li></ul>
   </div>
   <div class="why__media">
-    <figure class="why__main"><img src="/img/campus/campus-16.webp" alt="Dos estudiantes sentados en un banco del campus charlando" width="960" height="1280" loading="lazy"></figure>
+    <figure class="why__main"><img decoding="async" src="/img/campus/campus-16.webp" srcset="/img/campus/campus-16-sm.webp 480w, /img/campus/campus-16.webp 960w" sizes="(max-width: 860px) 82vw, 470px" alt="Dos estudiantes sentados en un banco del campus charlando" width="960" height="1280" loading="lazy"></figure>
     <figure class="why__small"><img src="/img/campus/campus-12-sm.webp" alt="Estudiantes sentados en un banco bajo un árbol del campus" width="480" height="640" loading="lazy"></figure>
     <span class="why__note">nosotros, en el patio ☀</span>
   </div>
@@ -103,11 +179,11 @@
 <!-- ============ CONOCÉ A QUITO ============ -->
 <section class="meet" id="quito" data-q="-.5 -.04 .7 .32 feliz idle" data-only="desktop">
   <div class="meet__stage" aria-hidden="true" data-q="0 .02 .52 0 feliz idle" data-only="mobile"><div class="meet__halo"></div><div class="meet__ring"></div></div>
-  <div class="meet__content" data-q="0 .9 0 0 feliz idle" data-only="mobile">
+  <div class="meet__content">
     <p class="kicker kicker--light">Ficha técnica</p>
     <h2 class="dsp dsp--lg" data-bounce>¿Quién es Quito?</h2>
     <p class="meet__lead">Un banco de plaza de madera con estética cartoon de los años 30. Leal, bonachón y un poco dramático: acompaña, celebra y se queja con humor. Es testigo, no policía.</p>
-    <dl class="ficha">
+    <dl class="ficha" data-q="0 .9 0 0 feliz idle" data-only="mobile">
       <div><dt>Nombre</dt><dd>Quito, el banquito</dd></div>
       <div><dt>Vive en</dt><dd>Patios, pasillos y galerías de la facu</dd></div>
       <div><dt>Edad</dt><dd>Más que tu plan de estudios</dd></div>
@@ -148,11 +224,11 @@
         <h2 class="dsp dsp--xl dsp--mint" data-bounce>Menos <br>en estas.</h2>
         <p class="limits__lead">El humor marca la conducta sin retar a nadie. Fotos reales del campus, estudiantes reales y Quito reaccionando.</p>
       </div>
-      <figure class="poster" data-say="¡Tapate un poco, che!"><img src="/img/piezas/afiches-a3-afiche-01-no-soy-reposera.webp" alt="Afiche No soy reposera" width="1400" height="1980" loading="lazy"><figcaption><b>No soy reposera.</b><span>Las patas son para el piso.</span></figcaption></figure>
-      <figure class="poster" data-say="¡Los pelos van al tacho, no a mí!"><img src="/img/piezas/afiches-a3-afiche-02-no-soy-peluqueria.webp" alt="Afiche No soy peluquería" width="1400" height="1980" loading="lazy"><figcaption><b>No soy peluquería.</b><span>Los pelos, al tacho.</span></figcaption></figure>
-      <figure class="poster" data-say="¡Eso no es un apunte!"><img src="/img/piezas/afiches-a3-afiche-03-no-soy-tu-cuaderno.webp" alt="Afiche No soy tu cuaderno" width="1400" height="1980" loading="lazy"><figcaption><b>No soy tu cuaderno.</b><span>Sin fibrones, por favor.</span></figcaption></figure>
-      <figure class="poster" data-say="¿Me llevan… y me traen?"><img src="/img/piezas/afiches-a3-afiche-04-si-me-moves-devolveme.webp" alt="Afiche Si me movés, devolveme" width="1400" height="1980" loading="lazy"><figcaption><b>Si me movés, devolveme.</b><span>Ningún banco solo en la nada.</span></figcaption></figure>
-      <figure class="poster poster--love" data-say="Con vos, en todas."><img src="/img/piezas/afiches-a3-afiche-05-te-banco-en-todas.webp" alt="Afiche Te banco en todas" width="1400" height="1980" loading="lazy"><figcaption><b>Te banco en todas.</b><span>Y el vínculo, también.</span></figcaption></figure>
+      <figure class="poster" data-say="¡Tapate un poco, che!"><img decoding="async" src="/img/piezas/afiches-a3-afiche-01-no-soy-reposera.webp" srcset="/img/piezas/afiches-a3-afiche-01-no-soy-reposera-sm.webp 520w, /img/piezas/afiches-a3-afiche-01-no-soy-reposera-md.webp 900w, /img/piezas/afiches-a3-afiche-01-no-soy-reposera.webp 1400w" sizes="(max-width: 860px) 45vw, 26vw" alt="Afiche No soy reposera" width="1400" height="1980" loading="lazy"><figcaption><b>No soy reposera.</b><span>Las patas son para el piso.</span></figcaption></figure>
+      <figure class="poster" data-say="¡Los pelos van al tacho, no a mí!"><img decoding="async" src="/img/piezas/afiches-a3-afiche-02-no-soy-peluqueria.webp" srcset="/img/piezas/afiches-a3-afiche-02-no-soy-peluqueria-sm.webp 520w, /img/piezas/afiches-a3-afiche-02-no-soy-peluqueria-md.webp 900w, /img/piezas/afiches-a3-afiche-02-no-soy-peluqueria.webp 1400w" sizes="(max-width: 860px) 45vw, 26vw" alt="Afiche No soy peluquería" width="1400" height="1980" loading="lazy"><figcaption><b>No soy peluquería.</b><span>Los pelos, al tacho.</span></figcaption></figure>
+      <figure class="poster" data-say="¡Eso no es un apunte!"><img decoding="async" src="/img/piezas/afiches-a3-afiche-03-no-soy-tu-cuaderno.webp" srcset="/img/piezas/afiches-a3-afiche-03-no-soy-tu-cuaderno-sm.webp 520w, /img/piezas/afiches-a3-afiche-03-no-soy-tu-cuaderno-md.webp 900w, /img/piezas/afiches-a3-afiche-03-no-soy-tu-cuaderno.webp 1400w" sizes="(max-width: 860px) 45vw, 26vw" alt="Afiche No soy tu cuaderno" width="1400" height="1980" loading="lazy"><figcaption><b>No soy tu cuaderno.</b><span>Sin fibrones, por favor.</span></figcaption></figure>
+      <figure class="poster" data-say="¿Me llevan… y me traen?"><img decoding="async" src="/img/piezas/afiches-a3-afiche-04-si-me-moves-devolveme.webp" srcset="/img/piezas/afiches-a3-afiche-04-si-me-moves-devolveme-sm.webp 520w, /img/piezas/afiches-a3-afiche-04-si-me-moves-devolveme-md.webp 900w, /img/piezas/afiches-a3-afiche-04-si-me-moves-devolveme.webp 1400w" sizes="(max-width: 860px) 45vw, 26vw" alt="Afiche Si me movés, devolveme" width="1400" height="1980" loading="lazy"><figcaption><b>Si me movés, devolveme.</b><span>Ningún banco solo en la nada.</span></figcaption></figure>
+      <figure class="poster poster--love" data-say="Con vos, en todas."><img decoding="async" src="/img/piezas/afiches-a3-afiche-05-te-banco-en-todas.webp" srcset="/img/piezas/afiches-a3-afiche-05-te-banco-en-todas-sm.webp 520w, /img/piezas/afiches-a3-afiche-05-te-banco-en-todas-md.webp 900w, /img/piezas/afiches-a3-afiche-05-te-banco-en-todas.webp 1400w" sizes="(max-width: 860px) 45vw, 26vw" alt="Afiche Te banco en todas" width="1400" height="1980" loading="lazy"><figcaption><b>Te banco en todas.</b><span>Y el vínculo, también.</span></figcaption></figure>
       <div class="limits__end">
         <img src="/img/quito/policia.webp" alt="" width="760" height="820" loading="lazy">
         <p class="dsp dsp--md">Fórmula fija: <em>titular, foto real y Quito reaccionando.</em></p>
@@ -182,13 +258,13 @@
       <div class="day__dots" id="dayDots"></div>
     </div>
     <div class="day__stack" id="dayStack">
-      <figure class="dslide" data-time="08:00" data-cap="Llega el primer ingresante, re nervioso."><img src="/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-02-08-00-primer-ing.webp" alt="08:00 · Llega el primer ingresante" width="1080" height="1350" loading="lazy"></figure>
-      <figure class="dslide" data-time="10:30" data-cap="Hora del mate. ¿Me pasan uno, che?"><img src="/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-03-10-30-hora-del-m.webp" alt="10:30 · Hora del mate" width="1080" height="1350" loading="lazy"></figure>
-      <figure class="dslide" data-time="13:00" data-cap="Almuerzo al sol. Lo que dejás en el banco, lo junta alguien."><img src="/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-04-13-00-almuerzo-a.webp" alt="13:00 · Almuerzo al sol" width="1080" height="1350" loading="lazy"></figure>
-      <figure class="dslide" data-time="15:00" data-cap="Hora libre y alguien se aburre… ¡Ey! No soy tu cuaderno."><img src="/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-05-15-00-hora-libre.webp" alt="15:00 · Hora libre" width="1080" height="1350" loading="lazy"></figure>
-      <figure class="dslide" data-time="17:00" data-cap="Siesta improvisada. Soy banco, no cama."><img src="/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-06-17-00-siesta-imp.webp" alt="17:00 · Siesta improvisada" width="1080" height="1350" loading="lazy"></figure>
-      <figure class="dslide" data-time="19:00" data-cap="Llega Mantenimiento: lija lo rayado, ajusta tornillos y junta lo que quedó."><img src="/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-07-19-00-llega-mant.webp" alt="19:00 · Llega Mantenimiento" width="1080" height="1350" loading="lazy"></figure>
-      <figure class="dslide" data-time="20:00" data-cap="Mañana arranca todo de nuevo. Bancarla vale."><img src="/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-08-20-00-cierre.webp" alt="20:00 · Mañana arranca todo de nuevo" width="1080" height="1350" loading="lazy"></figure>
+      <figure class="dslide" data-time="08:00" data-cap="Llega el primer ingresante, re nervioso."><img decoding="async" src="/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-02-08-00-primer-ing.webp" srcset="/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-02-08-00-primer-ing-sm.webp 520w, /img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-02-08-00-primer-ing-md.webp 900w, /img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-02-08-00-primer-ing.webp 1080w" sizes="(max-width: 860px) 70vw, 36vw" alt="08:00 · Llega el primer ingresante" width="1080" height="1350" loading="lazy"></figure>
+      <figure class="dslide" data-time="10:30" data-cap="Hora del mate. ¿Me pasan uno, che?"><img decoding="async" src="/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-03-10-30-hora-del-m.webp" srcset="/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-03-10-30-hora-del-m-sm.webp 520w, /img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-03-10-30-hora-del-m-md.webp 900w, /img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-03-10-30-hora-del-m.webp 1080w" sizes="(max-width: 860px) 70vw, 36vw" alt="10:30 · Hora del mate" width="1080" height="1350" loading="lazy"></figure>
+      <figure class="dslide" data-time="13:00" data-cap="Almuerzo al sol. Lo que dejás en el banco, lo junta alguien."><img decoding="async" src="/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-04-13-00-almuerzo-a.webp" srcset="/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-04-13-00-almuerzo-a-sm.webp 520w, /img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-04-13-00-almuerzo-a-md.webp 900w, /img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-04-13-00-almuerzo-a.webp 1080w" sizes="(max-width: 860px) 70vw, 36vw" alt="13:00 · Almuerzo al sol" width="1080" height="1350" loading="lazy"></figure>
+      <figure class="dslide" data-time="15:00" data-cap="Hora libre y alguien se aburre… ¡Ey! No soy tu cuaderno."><img decoding="async" src="/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-05-15-00-hora-libre.webp" srcset="/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-05-15-00-hora-libre-sm.webp 520w, /img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-05-15-00-hora-libre-md.webp 900w, /img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-05-15-00-hora-libre.webp 1080w" sizes="(max-width: 860px) 70vw, 36vw" alt="15:00 · Hora libre" width="1080" height="1350" loading="lazy"></figure>
+      <figure class="dslide" data-time="17:00" data-cap="Siesta improvisada. Soy banco, no cama."><img decoding="async" src="/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-06-17-00-siesta-imp.webp" srcset="/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-06-17-00-siesta-imp-sm.webp 520w, /img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-06-17-00-siesta-imp-md.webp 900w, /img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-06-17-00-siesta-imp.webp 1080w" sizes="(max-width: 860px) 70vw, 36vw" alt="17:00 · Siesta improvisada" width="1080" height="1350" loading="lazy"></figure>
+      <figure class="dslide" data-time="19:00" data-cap="Llega Mantenimiento: lija lo rayado, ajusta tornillos y junta lo que quedó."><img decoding="async" src="/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-07-19-00-llega-mant.webp" srcset="/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-07-19-00-llega-mant-sm.webp 520w, /img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-07-19-00-llega-mant-md.webp 900w, /img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-07-19-00-llega-mant.webp 1080w" sizes="(max-width: 860px) 70vw, 36vw" alt="19:00 · Llega Mantenimiento" width="1080" height="1350" loading="lazy"></figure>
+      <figure class="dslide" data-time="20:00" data-cap="Mañana arranca todo de nuevo. Bancarla vale."><img decoding="async" src="/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-08-20-00-cierre.webp" srcset="/img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-08-20-00-cierre-sm.webp 520w, /img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-08-20-00-cierre-md.webp 900w, /img/piezas/carrusel-04-carrusel-04-un-dia-en-la-vida-de-quito-08-20-00-cierre.webp 1080w" sizes="(max-width: 860px) 70vw, 36vw" alt="20:00 · Mañana arranca todo de nuevo" width="1080" height="1350" loading="lazy"></figure>
     </div>
   </div>
 </section>
@@ -213,7 +289,7 @@
     <h2 class="dsp dsp--lg" data-bounce>Un solo filtro <em>para toda la campaña.</em></h2>
   </div>
   <div class="compare" id="compare">
-    <img src="/img/campus/campus-12.webp" alt="Foto del campus con el look Bancala" width="960" height="1280" loading="lazy">
+    <img decoding="async" src="/img/campus/campus-12.webp" srcset="/img/campus/campus-12-sm.webp 480w, /img/campus/campus-12.webp 960w" sizes="(max-width: 860px) 82vw, 470px" alt="Foto del campus con el look Bancala" width="960" height="1280" loading="lazy">
     <div class="compare__before" id="compareBefore"><img src="/img/campus/antes-12.webp" alt="La misma foto, original del celular" width="960" height="1280" loading="lazy"></div>
     <div class="compare__handle" id="compareHandle"><span>‹ ›</span></div>
     <span class="compare__tag compare__tag--l">Original del celular</span><span class="compare__tag compare__tag--r">Look Bancala</span>
@@ -260,7 +336,7 @@
 <section class="station" id="estacion">
   <div class="station__pin">
     <div class="station__media" id="stationMedia">
-      <img src="/img/piezas/stand-bancala-stand-bancala-10-mockup-en-el-campus-foto-real.webp" alt="Estación Bancala montada en el campus" width="1800" height="1273" loading="lazy">
+      <img decoding="async" src="/img/piezas/stand-bancala-stand-bancala-10-mockup-en-el-campus-foto-real.webp" srcset="/img/piezas/stand-bancala-stand-bancala-10-mockup-en-el-campus-foto-real-sm.webp 520w, /img/piezas/stand-bancala-stand-bancala-10-mockup-en-el-campus-foto-real-md.webp 900w, /img/piezas/stand-bancala-stand-bancala-10-mockup-en-el-campus-foto-real.webp 1800w" sizes="100vw" alt="Estación Bancala montada en el campus" width="1800" height="1273" loading="lazy">
       <div class="station__shade"></div>
     </div>
     <h2 class="station__title"><span class="station__line"><span class="dsp">Pasá,</span></span><span class="station__line"><span class="dsp dsp--mint">sentate.</span></span></h2>
@@ -319,7 +395,7 @@
     <a class="cta cta--dark magnetic" href="/piezas#impresos"><span class="cta__label">Ver los impresos</span><span class="cta__icon"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span></a>
   </div>
   <div class="loupe-wrap" id="loupeWrap">
-    <img src="/img/piezas/infografia-a3-infografia-a3-la-misma-banca-distintas-historias.webp" alt="Infografía A3: La misma banca, distintas historias" width="1400" height="1980" loading="lazy" id="infoImg">
+    <img decoding="async" src="/img/piezas/infografia-a3-infografia-a3-la-misma-banca-distintas-historias.webp" srcset="/img/piezas/infografia-a3-infografia-a3-la-misma-banca-distintas-historias-sm.webp 520w, /img/piezas/infografia-a3-infografia-a3-la-misma-banca-distintas-historias-md.webp 900w, /img/piezas/infografia-a3-infografia-a3-la-misma-banca-distintas-historias.webp 1400w" sizes="(max-width: 860px) 92vw, 560px" alt="Infografía A3: La misma banca, distintas historias" width="1400" height="1980" loading="lazy" id="infoImg">
     <div class="loupe" id="loupe"></div>
   </div>
 </section>
@@ -328,10 +404,10 @@
 <section class="rules" id="reglas" data-q=".55 -.06 .66 -.3 feliz thumbs" data-only="desktop">
   <div class="trama trama--b"></div>
   <div class="mstage mstage--top" data-q="0 0 .52 -.2 feliz thumbs" data-only="mobile"></div>
-  <div class="rules__copy" data-q="0 .9 0 0 feliz thumbs" data-only="mobile">
+  <div class="rules__copy">
     <p class="kicker kicker--mint">Cuatro reglas para que tu banco favorito siga ahí</p>
     <h2 class="dsp dsp--xxl" data-bounce>Bancala.</h2>
-    <ol class="rules__list">
+    <ol class="rules__list" data-q="0 .9 0 0 feliz thumbs" data-only="mobile">
       <li data-expr="carrusel-04-indignado" data-say="Las patas son para el piso, no para el asiento."><span>1</span><div><b>Sentate, no te pares.</b><p>Las patas son para el piso, no para el asiento.</p></div></li>
       <li data-expr="juntando-basura" data-say="Siempre hay un tacho cerca. Yo lo sé."><span>2</span><div><b>La basura, al tacho.</b><p>Siempre hay uno cerca. Quito lo sabe.</p></div></li>
       <li data-expr="preocupado-sentado" data-say="¿Me llevan… y me traen?"><span>3</span><div><b>Si lo movés, devolvelo.</b><p>Que ningún banco quede solo en medio de la nada.</p></div></li>

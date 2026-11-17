@@ -1,25 +1,91 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-AR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Piezas — Bancala</title>
-<meta name="description" content="Todas las piezas de la campaña Bancala: redes, historias, afiches, infografía, stickers, arquigrafía de la Estación Bancala, stand y fotos del campus.">
-<meta name="theme-color" content="#1b4d8b">
-<meta property="og:title" content="Piezas — Bancala">
-<meta property="og:description" content="Todas las piezas de la campaña Bancala, de UCASAL Sustentable.">
-<meta property="og:image" content="/img/og.jpg">
+<title>Piezas de la campaña Bancala | Redes, afiches, stand y más</title>
+<meta name="description" content="Todas las piezas de la campaña Bancala de UCASAL Sustentable: posteos y carruseles de Instagram, historias, afiches A3, infografía, stickers, arquigrafía de la Estación Bancala, stand y fotos del campus.">
+<meta name="keywords" content="Bancala, Quito el banquito, UCASAL, UCASAL Sustentable, campaña de concientización, cuidado de bancos, Salta, Tecnología del Diseño, te banco en todas">
+<meta name="author" content="Campaña Bancala · Tecnología del Diseño · UCASAL">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://bancala-alpha.vercel.app/piezas">
+<meta name="theme-color" content="#2d7cde">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bancala">
+<meta property="og:locale" content="es_AR">
+<meta property="og:url" content="https://bancala-alpha.vercel.app/piezas">
+<meta property="og:title" content="Piezas de la campaña Bancala | Redes, afiches, stand y más">
+<meta property="og:description" content="Todas las piezas de la campaña Bancala de UCASAL Sustentable: posteos y carruseles de Instagram, historias, afiches A3, infografía, stickers, arquigrafía de la Estación Bancala, stand y fotos del campus.">
+<meta property="og:image" content="https://bancala-alpha.vercel.app/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="La Estación Bancala con Quito, el banquito, montada en el campus de UCASAL">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Piezas de la campaña Bancala | Redes, afiches, stand y más">
+<meta name="twitter:description" content="Todas las piezas de la campaña Bancala de UCASAL Sustentable: posteos y carruseles de Instagram, historias, afiches A3, infografía, stickers, arquigrafía de la Estación Bancala, stand y fotos del campus.">
+<meta name="twitter:image" content="https://bancala-alpha.vercel.app/img/og.jpg">
 <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Patrick+Hand+SC&family=Space+Mono:wght@700&family=Titan+One&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/css/piezas.css">
+<link rel="preload" href="/data/piezas.json" as="fetch" crossorigin>
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js" crossorigin>
+<link rel="preload" href="/data/quito.json" as="fetch" crossorigin>
 <script type="importmap">
-{ "imports": {
-  "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js",
-  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
-} }
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js" } }
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://bancala-alpha.vercel.app/#org",
+   "name": "UCASAL Sustentable",
+   "parentOrganization": {
+    "@type": "CollegeOrUniversity",
+    "name": "Universidad Católica de Salta (UCASAL)"
+   },
+   "sameAs": [
+    "https://www.instagram.com/ucasalsustentable/"
+   ]
+  },
+  {
+   "@type": "CollectionPage",
+   "url": "https://bancala-alpha.vercel.app/piezas",
+   "name": "Piezas — Bancala",
+   "inLanguage": "es-AR",
+   "isPartOf": {
+    "@type": "WebSite",
+    "url": "https://bancala-alpha.vercel.app/",
+    "name": "Bancala"
+   },
+   "description": "Todas las piezas de la campaña Bancala: redes, historias, afiches, infografía, stickers, arquigrafía, stand y fotos del campus."
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Inicio",
+     "item": "https://bancala-alpha.vercel.app/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Piezas",
+     "item": "https://bancala-alpha.vercel.app/piezas"
+    }
+   ]
+  }
+ ]
+}
 </script>
 </head>
 <body class="archive">
@@ -57,6 +123,7 @@
     <div class="trama trama--b"></div>
     <p class="kicker kicker--mint">Archivo de la campaña</p>
     <h1 class="dsp dsp--xxl" data-bounce data-no-reveal>Todas las <em>piezas.</em></h1>
+    <p class="arc-hero__lead">El archivo completo de la campaña Bancala: posteos y carruseles de Instagram, historias, afiches A3, infografía, stickers, la arquigrafía de la Estación Bancala, el stand y las fotos del campus con el look de la campaña.</p>
     <div class="arc-hero__stats">
       <div><b id="statPiezas">0</b><span>piezas</span></div>
       <div><b id="statFotos">0</b><span>fotos del campus</span></div>

@@ -2,6 +2,7 @@
 .archive { background: var(--paper); }
 .arc-hero { position: relative; background: var(--navy); color: #fff; padding: 22vh var(--pad) 12vh; overflow: hidden; }
 .arc-hero h1 { margin: 10px 0 5vh; position: relative; z-index: 1; }
+.arc-hero__lead { position: relative; z-index: 1; max-width: 560px; font-size: 18px; line-height: 1.45; font-weight: 500; margin: -2vh 0 5vh; opacity: .9; }
 .arc-hero__stats { position: relative; z-index: 1; display: flex; gap: clamp(22px, 5vw, 70px); flex-wrap: wrap; }
 .arc-hero__stats b { display: block; font-family: var(--f-dsp); font-weight: 400; font-size: clamp(44px, 5vw, 76px); color: var(--mint); -webkit-text-stroke: .06em var(--ink); paint-order: stroke fill; text-shadow: .05em .06em 0 var(--ink); line-height: 1; }
 .arc-hero__stats span { font-weight: 700; font-size: 15px; opacity: .85; }

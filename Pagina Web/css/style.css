@@ -12,7 +12,7 @@
   --f-mono: 'Space Mono', ui-monospace, monospace;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; }
 html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth { scroll-behavior: auto !important; }
 body { font-family: var(--f-txt); font-optical-sizing: auto; color: var(--char); background: var(--blue); -webkit-font-smoothing: antialiased; overflow-x: clip; }
@@ -218,7 +218,7 @@ section { position: relative; }
 
 /* ---------- UN DÍA ---------- */
 .day { height: 520vh; background: var(--navy); color: #fff; }
-.day__pin { position: sticky; top: 0; height: 100vh; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 4vw; padding: 0 var(--pad); }
+.day__pin { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 4vw; padding: 0 var(--pad); }
 .day__sky { position: absolute; inset: 0; background: linear-gradient(180deg, #7cc0ff, #ffe2a8); transition: none; }
 .day__sky::after { content: ''; position: absolute; inset: 0; background: url(/img/brand/trama-blanca.webp) 0 0/760px auto; opacity: .08; }
 .day__copy { position: relative; z-index: 1; max-width: 560px; }
@@ -242,7 +242,7 @@ section { position: relative; }
 
 /* ---------- DEPTH ---------- */
 .depth { height: 420vh; background: var(--ink); }
-.depth__pin { position: sticky; top: 0; height: 100vh; overflow: hidden; perspective: 1000px; background: radial-gradient(90% 70% at 50% 50%, #4b2915, var(--ink) 70%); }
+.depth__pin { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; perspective: 1000px; background: radial-gradient(90% 70% at 50% 50%, #4b2915, var(--ink) 70%); }
 .depth__stage { position: absolute; inset: 0; transform-style: preserve-3d; }
 .dcard { position: absolute; left: 50%; top: 50%; border-radius: 14px; overflow: hidden; border: 3px solid #fff; box-shadow: 0 30px 60px rgba(0, 0, 0, .45); will-change: transform, opacity; background: #000; }
 .dcard img { width: 100%; height: auto; }
@@ -298,7 +298,7 @@ section { position: relative; }
 
 /* ---------- ESTACIÓN ---------- */
 .station { height: 300vh; background: var(--cream); }
-.station__pin { position: sticky; top: 0; height: 100vh; overflow: hidden; display: grid; place-items: center; }
+.station__pin { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; display: grid; place-items: center; }
 .station__media { position: absolute; inset: 0; clip-path: inset(30% 32% 30% 32% round 24px); }
 .station__media img { width: 100%; height: 100%; object-fit: cover; }
 .station__shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(14, 22, 36, .5), rgba(14, 22, 36, .05) 40%, rgba(14, 22, 36, .55)); }
@@ -457,7 +457,9 @@ section { position: relative; }
   .compare { width: 100%; }
   .steps__grid, .refs__row { grid-template-columns: 1fr; gap: 70px; }
   .refs__row { gap: 18px; }
-  .steps__grid { margin-top: 14vh; }
+  .steps__grid { margin-top: 14vh; gap: 110px; }
+  .depth__copy h2 { font-size: 40px; }
+  .depth__copy { background: radial-gradient(closest-side, rgba(58,29,12,.75), rgba(58,29,12,0)); padding: 40px 10px; }
   .weeks { grid-template-columns: 1fr 1fr; gap: 40px 18px; }
   .weeks__line { display: none; }
   .week::before { top: -30px; }

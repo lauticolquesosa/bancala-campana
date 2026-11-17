@@ -31,7 +31,7 @@ async function boot() {
       .then((m) => m.initQuito($('#quitoCanvas'), { onProgress: (p) => (prog.target = 20 + p * 60) }))
       .catch((e) => { console.warn('[bancala] Quito 3D no disponible', e); document.documentElement.classList.add('no-webgl'); return null; });
   } else document.documentElement.classList.add('no-webgl');
-  const minTime = new Promise((r) => setTimeout(r, 1300));
+  const minTime = new Promise((r) => setTimeout(r, 700));
   [Q] = await Promise.all([qP, fonts, minTime, DATA]);
   prog.target = 100;
   await new Promise((r) => setTimeout(r, 500));
@@ -284,6 +284,11 @@ async function setupScroll() {
   ScrollTrigger.create({ trigger: '.footer', start: 'top 40%', onEnter: () => { say('¡Gracias por bancarme! Nos vemos en el patio.', 3600); Q?.jump(8); } });
   gsap.from('.footer__firm > *', { y: 30, opacity: 0, stagger: .08, duration: 1, ease: 'expo.out', scrollTrigger: { trigger: '.footer__firm', start: 'top 95%', once: true } });
 
+  // las galerías que se mueven (horizontal, en profundidad, apiladas) piden sus imágenes un poco antes de llegar,
+  // así no aparecen tarde: el lazy-load nativo no ve lo que queda fuera de pantalla por transformaciones
+  ['.limits', '.day', '.depth', '.coverflow', '.social'].forEach((sel) => ScrollTrigger.create({ trigger: sel, start: 'top 250%', once: true,
+    onEnter: () => $$(sel + ' img[loading="lazy"]').forEach((im) => { im.loading = 'eager'; im.decode?.().catch(() => {}); }) }));
+
   // refrescar cuando cargan imágenes lazy
   let to; $$('img[loading="lazy"]').forEach((im) => im.addEventListener('load', () => { clearTimeout(to); to = setTimeout(() => ScrollTrigger.refresh(), 250); }, { once: true }));
   ScrollTrigger.refresh();
@@ -376,7 +381,7 @@ function setupDepth(data) {
     const camZ = p * depthMax, vw = innerWidth / 100, vh = innerHeight / 100, mob = innerWidth < 760;
     cards.forEach((c) => {
       const x = +c.dataset.x * vw * (mob ? .75 : 1), y = +c.dataset.y * vh, z = +c.dataset.z + camZ;
-      c.style.width = (+c.dataset.w * (mob ? 2.4 : 1)) + 'vw';
+      c.style.width = (+c.dataset.w * (mob ? 1.9 : 1)) + 'vw';
       let o = 1; if (z < -1700) o = 0; else if (z < -1000) o = (z + 1700) / 700; if (z > 300) o = Math.max(0, 1 - (z - 300) / 300);
       c.style.opacity = o.toFixed(3); c.style.visibility = o <= 0 ? 'hidden' : 'visible';
       c.style.transform = `translate3d(calc(-50% + ${x}px), calc(-50% + ${y}px), ${z}px)`;
@@ -419,7 +424,7 @@ function setupCoverflow(data) {
   ];
   const order = [10, 0, 4, 1, 3, 2, 7, 8, 5, 6, 9].map((i) => items[i]).filter(Boolean).concat(items.slice(11));
   const stage = $('#cfStage'), cap = $('#cfCap');
-  const els = order.map((p) => { const d = document.createElement('div'); d.className = 'cf-item'; d.innerHTML = `<img src="${p.src}" alt="${p.title}" width="${p.w}" height="${p.h}" loading="lazy" draggable="false">`; stage.appendChild(d); return d; });
+  const els = order.map((p) => { const d = document.createElement('div'); d.className = 'cf-item'; d.innerHTML = `<img src="${p.md}" srcset="${p.sm} 520w, ${p.md} 900w, ${p.src} ${p.w}w" sizes="(max-width: 860px) 82vw, 58vw" alt="${p.title}" width="${p.w}" height="${p.h}" loading="lazy" decoding="async" draggable="false">`; stage.appendChild(d); return d; });
   let cur = 0; const pos = { v: 0 };
   const layout = () => {
     const mob = innerWidth < 860;
@@ -455,7 +460,7 @@ function setupSocial(data) {
   const stories = data.piezas.filter((p) => p.group === 'Historias');
   const hls = data.piezas.filter((p) => p.group === 'Destacadas');
   const box = $('#phoneStories'), bars = $('#phoneBars');
-  box.innerHTML = stories.map((s, i) => `<img src="${s.src}" alt="Historia ${s.title}" width="${s.w}" height="${s.h}" loading="lazy"${i ? '' : ' class="on"'}>`).join('');
+  box.innerHTML = stories.map((s, i) => `<img src="${s.sm}" srcset="${s.sm} 520w, ${s.src} ${s.w}w" sizes="340px" alt="Historia de Instagram: ${s.title.replace(/^\d+ · /, '')}" width="${s.w}" height="${s.h}" loading="lazy" decoding="async"${i ? '' : ' class="on"'}>`).join('');
   bars.innerHTML = stories.map(() => '<i><b></b></i>').join('');
   const imgs = $$('img', box), fills = $$('b', bars);
   let cur = 0, tw = null, active = false;
@@ -496,7 +501,7 @@ function setupLoupe() {
   const wrap = $('#loupeWrap'), img = $('#infoImg'), loupe = $('#loupe');
   if (isTouch) { loupe.remove(); return; }
   const Z = 2.6;
-  wrap.addEventListener('pointerenter', () => { loupe.style.backgroundImage = `url(${img.currentSrc || img.src})`; });
+  wrap.addEventListener('pointerenter', () => { loupe.style.backgroundImage = `url(${img.getAttribute('src')})`; });
   wrap.addEventListener('pointermove', (e) => {
     const r = wrap.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top;
     loupe.style.left = (x - 110) + 'px'; loupe.style.top = (y - 110) + 'px';

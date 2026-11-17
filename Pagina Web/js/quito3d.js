@@ -139,7 +139,11 @@ export async function initQuito(canvas, { onProgress } = {}) {
 
   onProgress?.(.4);
   apply(await load(DEFAULT), false);
-  setTimeout(() => [...keys].forEach((k, i) => setTimeout(() => load(k), i * 150)), 2500); // precarga del resto
+  // precarga liviana: solo las poses que más aparecen, cuando el navegador está libre (en celulares, a demanda)
+  if (innerWidth > 860) {
+    const idle = window.requestIdleCallback || ((f) => setTimeout(f, 3000));
+    idle(() => ['carrusel-04-enojado', 'senalando-feliz', 'saludo', 'carrusel-04-animando'].forEach((k, i) => setTimeout(() => keys.has(k) && load(k), i * 400)));
+  }
   onProgress?.(.8);
 
   // ---------- estado ----------

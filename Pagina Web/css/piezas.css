@@ -17,7 +17,6 @@
 .arc { padding: 2vh var(--pad) 14vh; }
 .arc__group { margin-top: 7vh; }
 .arc__group h2 { font-size: clamp(30px, 3.6vw, 54px); margin-bottom: 6px; }
-.arc__group h2 em { color: var(--blue); }
 .arc__group > p { font-size: 16px; font-weight: 550; opacity: .75; margin-bottom: 22px; max-width: 640px; }
 .arc__grid { columns: 4 260px; column-gap: 18px; }
 .tile { break-inside: avoid; margin: 0 0 18px; position: relative; border-radius: 14px; overflow: hidden; border: 2.5px solid var(--ink); background: #fff; box-shadow: 4px 5px 0 var(--ink); cursor: zoom-in; transition: transform .45s var(--ease), box-shadow .45s; }

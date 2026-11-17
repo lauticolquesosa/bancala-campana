@@ -141,7 +141,7 @@ def build():
 <div class="kick" style="font-size:16px;color:var(--green)">Palo seco de texto · Bricolage Grotesque</div>
 <div class="body" style="font-size:40px;font-weight:800;margin-top:6px">Aa Bb Cc 0123 — ¿Me bancás?</div>
 <div class="body" style="font-size:19px;margin-top:6px">Reemplaza a Rock Salt en todos los textos: legible en párrafos y en pantalla, con trampas de tinta que le dan calidez.</div></div>
-<img class="abs" src="{im(r"C:/Users/Lauti/Documents/Tecnologia del Diseño - Campaña Bancala/05_Material_Original/Referencias_tipograficas/Referencia_tipografica_05.jpeg",900)}" style="left:1090px;top:110px;width:330px;height:520px;object-fit:cover;object-position:50% 20%;border-radius:14px">
+<img class="abs" src="{im(r"C:/Users/Lauti/Documents/Tecnologia del Diseño - Campaña Bancala/Presentacion/05_Material_Original/Referencias_tipograficas/Referencia_tipografica_05.jpeg",900)}" style="left:1090px;top:110px;width:330px;height:520px;object-fit:cover;object-position:50% 20%;border-radius:14px">
 {cap('Referencia evaluada (carpeta de referencias)',1090,640,330)}
 {why(['La referencia “Nostalgia Sound” funciona: combina personajes de manguera con letras gruesas, redondeadas y contorneadas. Es el mismo lenguaje de Quito.','No la copiamos: elegimos una tipografía libre (Titan One, licencia OFL) y le sumamos el tratamiento propio para que sea de la campaña.','Rock Salt era ilegible en párrafos y competía con las tramas; queda fuera del sistema.','Jerarquía fija: kicker en mayúsculas, titular display, cuerpo palo seco.'],1450,110,370)}''',sec='Sistema visual')
     # 13 COLOR Y TRAMAS
@@ -159,7 +159,7 @@ def build():
 {cap('Original del celular',110,905,420)}{cap('Con el look Bancala',560,905,420)}
 {why(['Curva fílmica: negros apenas levantados y altas luces suaves, como un negativo de cámara profesional. Recupera los cielos quemados del celular.','Virado: sombras hacia el azul de la paleta y luces cálidas como la madera de Quito. Verdes más oliva y cielos llevados al azul de marca.','Profundidad de campo: calculamos un mapa de profundidad por IA y desenfocamos el fondo como un objetivo luminoso. El fondo se ordena, el sujeto y Quito quedan nítidos y la imagen gana aire.','Halación sutil, viñeta leve y grano fino; cada foto escalada con IA para imprimir en A3.','Se aplica igual en todas las imágenes. La coherencia es lo que hace que 40 piezas parezcan una sola campaña.'],1060,330,750)}''',sec='Sistema visual')
     # 15 INFOGRAFIA
-    old=r"C:/Users/Lauti/Documents/Tecnologia del Diseño - Campaña Bancala/05_Material_Original/Infografia_version_anterior.jpeg"
+    old=r"C:/Users/Lauti/Documents/Tecnologia del Diseño - Campaña Bancala/Presentacion/05_Material_Original/Infografia_version_anterior.jpeg"
     page(f'''{label('05 · Corrección: infografía')}{h1('Quito al frente,<br>fondo limpio.',s=52)}
 <div class="abs" style="left:110px;top:300px;width:400px;height:560px;border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(42,40,41,.18)"><img src="{im(old,900)}" style="width:100%;height:auto;margin-top:-180px"></div>
 {cap('Versión anterior',110,875,400)}

@@ -5,7 +5,7 @@ import os, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 ROOT = os.path.normpath(os.path.join(HERE, '..', '..'))
 src = open(HERE + '/make.py', encoding='utf8').read()
-src = src.replace("PROJ = r'C:/Users/Lauti/Documents/Tecnologia del Diseño - Campaña Bancala'", f'PROJ = r"{ROOT}"')
+src = src.replace("PROJ = r'C:/Users/Lauti/Documents/Tecnologia del Diseño - Campaña Bancala/Presentacion'", f'PROJ = r"{ROOT}"')
 src = src.replace("FD = 'C:/Users/Lauti/AppData/Local/Microsoft/Windows/Fonts/'", "FD = os.environ['LOCALAPPDATA'].replace('\\\\', '/') + '/Microsoft/Windows/Fonts/'")
 src = src.replace("TTFont(FD + 'TitanOne-Regular.ttf')", "TTFont(FD + 'TitanOne-Regular_Display.ttf')")
 src = src.split("if __name__ == '__main__':")[0]

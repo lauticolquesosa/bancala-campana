@@ -3,7 +3,7 @@ import numpy as np
 from PIL import Image
 from extract import extract, render_bg, OLD, HERE
 
-PROJ = r'C:/Users/Lauti/Documents/Tecnologia del Diseño - Campaña Bancala'
+PROJ = r'C:/Users/Lauti/Documents/Tecnologia del Diseño - Campaña Bancala/Presentacion'
 PZ = PROJ + '/02_Piezas'
 LINKS = HERE + '/links'; os.makedirs(LINKS, exist_ok=True)
 PREV = HERE + '/preview'; os.makedirs(PREV, exist_ok=True)

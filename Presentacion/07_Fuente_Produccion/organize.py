@@ -4,7 +4,7 @@ from PIL import Image
 import numpy as np
 from look import grade
 S=os.getcwd()
-P=r"C:/Users/Lauti/Documents/Tecnologia del Diseño - Campaña Bancala"
+P=r"C:/Users/Lauti/Documents/Tecnologia del Diseño - Campaña Bancala/Presentacion"
 C=P+'/Contexto'
 def mk(d): os.makedirs(d,exist_ok=True); return d
 # 1-3 entregables

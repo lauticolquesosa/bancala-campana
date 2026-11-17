@@ -7,10 +7,10 @@ desktop.ini
 ~ai-*.tmp
 *.npy
 *.log
-06_Produccion_Scripts/Conversion_editable/links/
-06_Produccion_Scripts/Conversion_editable/run_*.jsx
-07_Fuente_Produccion/site/_ras.html
+Presentacion/06_Produccion_Scripts/Conversion_editable/links/
+Presentacion/06_Produccion_Scripts/Conversion_editable/run_*.jsx
+Presentacion/07_Fuente_Produccion/site/_ras.html
 
 # render intermedio del mockup en foto
-07_Fuente_Produccion/art/stand/foto/_render.npz
-07_Fuente_Produccion/art/stand/foto/prev*.jpg
+Presentacion/07_Fuente_Produccion/art/stand/foto/_render.npz
+Presentacion/07_Fuente_Produccion/art/stand/foto/prev*.jpg
